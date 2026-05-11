@@ -668,17 +668,17 @@ function HowItWorks({ selectedService, onSelectService }) {
     {
       n: "1",
       title: "Inquiry",
-      body: "Submit your details through the booking form, by phone, or by email. We hold your preferred time the moment we hear from you.",
+      body: "Send your details by form, phone, or email. Your time is held the moment we hear from you.",
     },
     {
       n: "2",
       title: "Speak to Desk",
-      body: "Our concierge confirms your journey, chauffeur, and route within the hour. Adjustments welcomed up to two hours before pickup.",
+      body: "Concierge confirms journey, chauffeur, and route within the hour. Changes welcome up to two hours before pickup.",
     },
     {
       n: "3",
       title: "Wait for Vehicle",
-      body: "Your chauffeur arrives thirty minutes early and waits at the kerb. Step in, depart, and arrive composed.",
+      body: "Chauffeur arrives thirty minutes early and waits kerbside. Step in and go.",
     },
   ];
 
