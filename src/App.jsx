@@ -210,7 +210,6 @@ function Nav() {
   const links = [
     ["How it works", "#how"],
     ["Services", "#services"],
-    ["The Fleet", "#features"],
     ["Clients", "#testimonials"],
   ];
   useEffect(() => {
@@ -220,57 +219,55 @@ function Nav() {
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
   return (
-    <header
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        scrolled
-          ? "bg-ink-900/80 backdrop-blur-md border-b border-white/10 shadow-[0_8px_30px_-15px_rgba(0,0,0,0.45)]"
-          : "bg-transparent border-b border-transparent"
-      }`}
-    >
+    <nav className="fixed top-0 left-0 right-0 z-50">
       <div
-        className={`container-x flex items-center justify-between font-cormorant transition-all duration-300 ${
-          scrolled ? "py-3" : "py-6"
+        className={`w-full px-8 transition-all duration-300 ${
+          scrolled
+            ? "py-4 bg-[#19181c] border-b border-white/10"
+            : "py-6 bg-transparent border-b border-transparent"
         }`}
       >
-        <a href="#top" className="flex items-center gap-4">
-          <span className="grid h-10 w-10 place-items-center rounded-full border border-gold-400/70 text-gold-400 font-display italic text-[18px] font-bold">
-            L
-          </span>
-          <div className="leading-tight">
-            <div className="font-cormorant tracking-wide text-white text-[18px] font-bold drop-shadow-[0_1px_3px_rgba(0,0,0,0.5)]">
-              Luxury Transport
+        <div className="flex items-center justify-between">
+          <a href="#top" className="flex items-center gap-3">
+            <span className="grid h-11 w-11 place-items-center rounded-full border border-gold-400/70 text-gold-400 font-display italic text-[18px] font-bold">
+              L
+            </span>
+            <div className="leading-tight font-cormorant">
+              <div className="tracking-wide text-white text-[18px] font-bold">
+                Luxury Transport
+              </div>
+              <div className="uppercase tracking-[0.28em] text-white mt-1 text-[18px] font-bold">
+                Private Chauffeur · UK
+              </div>
             </div>
-            <div className="uppercase tracking-[0.34em] text-white mt-1 text-[18px] font-bold drop-shadow-[0_1px_3px_rgba(0,0,0,0.5)]">
-              Private Chauffeur · UK
+          </a>
+          <ul className="hidden md:flex items-center gap-1 text-[18px] font-cormorant font-medium text-white">
+            {links.map(([label, href]) => (
+              <li key={href}>
+                <a
+                  href={href}
+                  className="hover:text-white transition-colors duration-300 px-4 py-2 rounded-full hover:bg-white/5"
+                >
+                  {label}
+                </a>
+              </li>
+            ))}
+          </ul>
+          <button
+            onClick={() => setOpen(!open)}
+            aria-label="Menu"
+            className="md:hidden grid h-9 w-9 place-items-center rounded-full border border-white/30"
+          >
+            <div className="space-y-1.5">
+              <span className="block h-px w-4 bg-white" />
+              <span className="block h-px w-4 bg-white" />
             </div>
-          </div>
-        </a>
-        <nav className="hidden md:flex items-center gap-10 text-[15px] uppercase tracking-[0.28em] text-white font-bold drop-shadow-[0_1px_3px_rgba(0,0,0,0.5)]">
-          {links.map(([label, href]) => (
-            <a
-              key={href}
-              href={href}
-              className="relative transition-colors hover:text-gold-300"
-            >
-              {label}
-              <span className="absolute -bottom-1 left-0 h-px w-0 bg-gold-400 transition-all duration-300 group-hover:w-full" />
-            </a>
-          ))}
-        </nav>
-        <button
-          onClick={() => setOpen(!open)}
-          aria-label="Menu"
-          className="md:hidden grid h-10 w-10 place-items-center rounded-full border border-white/30"
-        >
-          <div className="space-y-1.5">
-            <span className="block h-px w-5 bg-white" />
-            <span className="block h-px w-5 bg-white" />
-          </div>
-        </button>
+          </button>
+        </div>
       </div>
       {open && (
-        <div className="md:hidden border-t border-white/10 bg-ink-900/95 backdrop-blur text-white">
-          <div className="container-x py-4 flex flex-col gap-3">
+        <div className="md:hidden mt-2 max-w-7xl mx-auto border border-white/10 rounded-2xl bg-slate-900/80 backdrop-blur-2xl text-white">
+          <div className="py-4 px-6 flex flex-col gap-3">
             {links.map(([l, h]) => (
               <a
                 key={h}
@@ -291,7 +288,7 @@ function Nav() {
           </div>
         </div>
       )}
-    </header>
+    </nav>
   );
 }
 
@@ -305,7 +302,7 @@ function Hero() {
       className="group/hero relative overflow-hidden flex flex-col justify-center min-h-screen pt-36 pb-20 lg:pt-44 lg:pb-24"
     >
       {/* Background video — clear, with hover dim */}
-      <div className="pointer-events-none absolute inset-0 z-0 bg-ink-900">
+      <div className="pointer-events-none absolute inset-0 z-0 bg-[#4a8fc8]">
         <video
           src="/merc.mp4"
           autoPlay
@@ -316,8 +313,15 @@ function Hero() {
           aria-hidden="true"
           className="absolute inset-0 h-full w-full object-cover"
         />
-        {/* Black hover veil */}
-        <div className="pointer-events-none absolute inset-0 bg-black opacity-0 transition-opacity duration-700 ease-[cubic-bezier(0.22,1,0.36,1)] group-hover/hero:opacity-50" />
+        {/* Cinematic vignette — always on, heavier at edges and bottom */}
+        <div
+          className="pointer-events-none absolute inset-0"
+          style={{
+            background:
+              "radial-gradient(ellipse at 50% 40%, rgba(0,0,0,0) 35%, rgba(0,0,0,0.45) 75%, rgba(0,0,0,0.75) 100%)",
+          }}
+        />
+        <div className="pointer-events-none absolute inset-x-0 bottom-0 h-1/2 bg-gradient-to-t from-black/70 via-black/30 to-transparent" />
       </div>
 
       {/* atmospheric light wash */}
