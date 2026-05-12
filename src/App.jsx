@@ -511,9 +511,9 @@ function HowItWorks({ selectedService, onSelectService }) {
 
   const serviceDescriptions = {
     "Airport & Long-Distance":
-      "A private chauffeur greets you airside, tracks your flight and waits with bottled water, hot towels and a calm boot. For the miles ahead, our luxury Mercedes hires arrive with champagne, refrigerator and reclining leather — a hotel suite that happens to be moving.",
+      "A private chauffeur greets you airside, tracks your flight and waits with bottled water, hot towels and a calm boot. For the miles ahead, our luxury Mercedes hires arrive with champagne, refrigerator and reclining leather, a hotel suite that happens to be moving.",
     "Corporate & VIP":
-      "Our luxury chauffeurs are DBS-checked, uniformed and NDA-bound — chosen for composure as much as skill. Day rates, board pickups, festival transfers and paparazzi-aware routes, all handled with the kind of discretion that keeps your name out of the conversation.",
+      "Our luxury chauffeurs are DBS-checked, uniformed and NDA-bound, chosen for composure as much as skill. Day rates, board pickups, festival transfers and paparazzi-aware routes, all handled with the kind of discretion that keeps your name out of the conversation.",
     "Weddings & Group Travel":
       "A luxury chauffeur for the most photographed morning of your life. Immaculate interiors, ribbons on request, bride, groom and party coordinated to the minute. Up to eight passengers travel composed in a Mercedes V-Class with panoramic roof, massage seats and Wi-Fi.",
   };
