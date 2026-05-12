@@ -299,7 +299,7 @@ function Hero() {
     <section
       id="top"
       ref={ref}
-      className="group/hero relative overflow-hidden flex flex-col justify-end min-h-screen pt-36 pb-16 lg:pt-44 lg:pb-20"
+      className="group/hero relative overflow-hidden flex flex-col justify-end min-h-screen pt-36 pb-10 lg:pt-44 lg:pb-12"
     >
       {/* Background video — clear, with hover dim */}
       <div className="pointer-events-none absolute inset-0 z-0 bg-[#4a8fc8]">
@@ -328,7 +328,7 @@ function Hero() {
       <div className="pointer-events-none absolute -top-40 -right-40 h-[36rem] w-[36rem] rounded-full bg-gold-300/25 blur-[120px] z-0" />
       <div className="pointer-events-none absolute -bottom-48 -left-48 h-[36rem] w-[36rem] rounded-full bg-ink-900/10 blur-[120px] z-0" />
 
-      <div className="container-x relative z-10 grid grid-cols-1 lg:grid-cols-12 gap-16 items-end font-cormorant">
+      <div className="relative z-10 w-full pl-4 sm:pl-6 lg:pl-10 pr-6 grid grid-cols-1 lg:grid-cols-12 gap-16 items-end font-cormorant">
         <div className="lg:col-span-7">
           <h1
             className="reveal h-display !font-cormorant text-[72px] lg:text-[88px] leading-[1.02] text-white drop-shadow-[0_4px_18px_rgba(0,0,0,0.75)]"
