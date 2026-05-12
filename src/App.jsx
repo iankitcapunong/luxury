@@ -1155,7 +1155,7 @@ function Services({ onSelect }) {
     },
   ];
   return (
-    <section id="services" ref={ref} className="pt-12 pb-28 lg:pt-16 lg:pb-40 bg-[#e7ded1]">
+    <section id="services" ref={ref} className="pt-12 pb-28 lg:pt-16 lg:pb-40 bg-beige-50/60">
       <div className="container-x">
         <div className="reveal flex flex-col items-center text-center gap-7 max-w-2xl mx-auto">
           <div>
@@ -1312,7 +1312,7 @@ function Testimonials() {
     },
   ];
   return (
-    <section id="testimonials" ref={ref} className="pt-12 pb-28 lg:pt-16 lg:pb-40 bg-[#e7ded1]">
+    <section id="testimonials" ref={ref} className="pt-12 pb-28 lg:pt-16 lg:pb-40">
       <div className="container-x">
         <div className="reveal max-w-2xl mx-auto text-center">
           <div className="eyebrow flex items-center gap-3 justify-center">
@@ -1333,7 +1333,7 @@ function Testimonials() {
           {quotes.map((t, i) => (
             <figure
               key={t.n}
-              className="group reveal relative overflow-hidden rounded-[15px] border border-gold-500/30 bg-[#e7ded1] p-7 flex flex-col h-full min-h-[380px] cursor-pointer transition-all duration-700 ease-[cubic-bezier(0.22,1,0.36,1)] hover:-translate-y-2 hover:border-gold-500 hover:shadow-[0_30px_60px_-20px_rgba(158,126,54,0.55)] focus:-translate-y-2 focus:border-gold-500 focus:shadow-[0_30px_60px_-20px_rgba(158,126,54,0.55)]"
+              className="group reveal relative overflow-hidden rounded-[15px] border border-gold-500/30 bg-beige-50 p-7 flex flex-col h-full min-h-[380px] cursor-pointer transition-all duration-700 ease-[cubic-bezier(0.22,1,0.36,1)] hover:-translate-y-2 hover:border-gold-500 hover:shadow-[0_30px_60px_-20px_rgba(158,126,54,0.55)] focus:-translate-y-2 focus:border-gold-500 focus:shadow-[0_30px_60px_-20px_rgba(158,126,54,0.55)]"
               tabIndex={0}
               style={{ transitionDelay: `${i * 120}ms` }}
             >
