@@ -94,6 +94,10 @@ export default {
           '66.66%, 83.33%': { opacity: '1' },
           '100%': { opacity: '0' },
         },
+        waveCircle: {
+          '0%, 60%, 100%': { transform: 'translateY(0)', opacity: '0.55' },
+          '30%': { transform: 'translateY(-18px)', opacity: '1' },
+        },
       },
       animation: {
         'fade-up': 'fadeUp 0.9s cubic-bezier(0.22, 1, 0.36, 1) both',
@@ -107,6 +111,7 @@ export default {
         'hero-trip-1': 'heroTrip1 18s ease-in-out infinite',
         'hero-trip-2': 'heroTrip2 18s ease-in-out infinite',
         'hero-trip-3': 'heroTrip3 18s ease-in-out infinite',
+        'wave-circle': 'waveCircle 1.1s ease-in-out infinite',
       },
     },
   },

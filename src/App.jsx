@@ -1,5 +1,16 @@
 import { useEffect, useRef, useState } from "react";
+import { Link, Route, Routes, useLocation, useNavigate } from "react-router-dom";
 import Chatbot from "./Chatbot";
+import Loader from "./Loader";
+import Blog from "./Blog";
+
+const SERVICE_BLOG_SLUGS = {
+  "Airport Transfers": "airport-transfers",
+  "Corporate Chauffeur": "corporate-chauffeur",
+  "VIP & Celebrity": "vip-celebrity",
+  "Weddings & Events": "weddings-events",
+  "Long Distance Hire": "long-distance-hire",
+};
 
 // --- Tiny inline SVG icon set (no external lib) ----------------------------
 const Icon = {
@@ -207,10 +218,13 @@ function useReveal() {
 function Nav() {
   const [open, setOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+  const location = useLocation();
+  const navigate = useNavigate();
+  const isHome = location.pathname === "/";
   const links = [
-    ["How it works", "#how"],
-    ["Services", "#services"],
-    ["Clients", "#testimonials"],
+    ["How it works", "how"],
+    ["Services", "services"],
+    ["Clients", "testimonials"],
   ];
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 24);
@@ -218,6 +232,28 @@ function Nav() {
     window.addEventListener("scroll", onScroll, { passive: true });
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
+
+  const goToSection = (e, id) => {
+    e.preventDefault();
+    setOpen(false);
+    if (isHome) {
+      const el = document.getElementById(id);
+      if (el) el.scrollIntoView({ behavior: "smooth", block: "start" });
+    } else {
+      navigate(`/#${id}`);
+    }
+  };
+
+  const goHomeTop = (e) => {
+    e.preventDefault();
+    setOpen(false);
+    if (isHome) {
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    } else {
+      navigate("/");
+    }
+  };
+
   return (
     <nav className="fixed top-0 left-0 right-0 z-50">
       <div
@@ -228,7 +264,11 @@ function Nav() {
         }`}
       >
         <div className="flex items-center justify-between">
-          <a href="#top" className="flex items-center gap-3">
+          <a
+            href="/"
+            onClick={goHomeTop}
+            className="flex items-center gap-3"
+          >
             <span className="grid h-11 w-11 place-items-center rounded-full border border-gold-400/70 text-gold-400 font-display italic text-[18px] font-bold">
               L
             </span>
@@ -242,10 +282,11 @@ function Nav() {
             </div>
           </a>
           <ul className="hidden md:flex items-center gap-1 text-[18px] font-cormorant font-medium text-white">
-            {links.map(([label, href]) => (
-              <li key={href}>
+            {links.map(([label, id]) => (
+              <li key={id}>
                 <a
-                  href={href}
+                  href={`/#${id}`}
+                  onClick={(e) => goToSection(e, id)}
                   className="hover:text-white transition-colors duration-300 px-4 py-2 rounded-full hover:bg-white/5"
                 >
                   {label}
@@ -268,19 +309,19 @@ function Nav() {
       {open && (
         <div className="md:hidden mt-2 max-w-7xl mx-auto border border-white/10 rounded-2xl bg-slate-900/80 backdrop-blur-2xl text-white">
           <div className="py-4 px-6 flex flex-col gap-3">
-            {links.map(([l, h]) => (
+            {links.map(([l, id]) => (
               <a
-                key={h}
-                href={h}
-                onClick={() => setOpen(false)}
+                key={id}
+                href={`/#${id}`}
+                onClick={(e) => goToSection(e, id)}
                 className="py-2 text-sm"
               >
                 {l}
               </a>
             ))}
             <a
-              href="#contact"
-              onClick={() => setOpen(false)}
+              href="/#contact"
+              onClick={(e) => goToSection(e, "contact")}
               className="btn-primary !py-3 mt-2 text-xs"
             >
               Get Started
@@ -1449,16 +1490,28 @@ function Footer() {
             <div key={c.h} className="lg:col-span-3">
               <div className="eyebrow !text-gold-300">{c.h}</div>
               <ul className="mt-5 space-y-3 text-sm text-cream-100/80 font-light">
-                {c.l.map((x) => (
-                  <li key={x}>
-                    <a
-                      href="#"
-                      className="hover:text-gold-300 transition-colors duration-500"
-                    >
-                      {x}
-                    </a>
-                  </li>
-                ))}
+                {c.l.map((x) => {
+                  const slug = SERVICE_BLOG_SLUGS[x];
+                  return (
+                    <li key={x}>
+                      {slug ? (
+                        <Link
+                          to={`/blog/${slug}`}
+                          className="hover:text-gold-300 transition-colors duration-500"
+                        >
+                          {x}
+                        </Link>
+                      ) : (
+                        <a
+                          href="#"
+                          className="hover:text-gold-300 transition-colors duration-500"
+                        >
+                          {x}
+                        </a>
+                      )}
+                    </li>
+                  );
+                })}
               </ul>
             </div>
           ))}
@@ -1497,22 +1550,59 @@ function Footer() {
   );
 }
 
+// --- Home page --------------------------------------------------------------
+function Home() {
+  const [selectedService, setSelectedService] = useState(null);
+  const location = useLocation();
+
+  useEffect(() => {
+    if (location.hash) {
+      const id = location.hash.slice(1);
+      // Wait a tick for sections to render before scrolling.
+      const tid = setTimeout(() => {
+        const el = document.getElementById(id);
+        if (el) el.scrollIntoView({ behavior: "smooth", block: "start" });
+      }, 80);
+      return () => clearTimeout(tid);
+    }
+    window.scrollTo({ top: 0, behavior: "instant" });
+  }, [location.pathname, location.hash]);
+
+  return (
+    <>
+      <Hero />
+      <HowItWorks
+        selectedService={selectedService}
+        onSelectService={setSelectedService}
+      />
+      <SocialProof />
+      <Services onSelect={setSelectedService} />
+      <Testimonials />
+      <CTA />
+    </>
+  );
+}
+
 // --- App --------------------------------------------------------------------
 export default function App() {
-  const [selectedService, setSelectedService] = useState(null);
+  const location = useLocation();
+  const [loading, setLoading] = useState(false);
+
+  useEffect(() => {
+    setLoading(true);
+    const tid = setTimeout(() => setLoading(false), 600);
+    return () => clearTimeout(tid);
+  }, [location.pathname]);
+
   return (
     <div className="min-h-screen font-sans text-ink-900">
+      {loading && <Loader />}
       <Nav />
       <main>
-        <Hero />
-        <HowItWorks
-          selectedService={selectedService}
-          onSelectService={setSelectedService}
-        />
-        <SocialProof />
-        <Services onSelect={setSelectedService} />
-        <Testimonials />
-        <CTA />
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/blog/:slug" element={<Blog />} />
+        </Routes>
       </main>
       <Footer />
       <Chatbot />
