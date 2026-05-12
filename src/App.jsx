@@ -742,7 +742,7 @@ function HowItWorks({ selectedService, onSelectService }) {
     <section
       id="how"
       ref={ref}
-      className="relative pt-12 pb-28 lg:pt-16 lg:pb-40 bg-beige-50/50"
+      className="relative pt-12 pb-28 lg:pt-16 lg:pb-40 bg-[#e7ded1]"
     >
       <div className="container-x">
         <div className="max-w-2xl mx-auto text-center">
@@ -1155,7 +1155,7 @@ function Services({ onSelect }) {
     },
   ];
   return (
-    <section id="services" ref={ref} className="pt-12 pb-28 lg:pt-16 lg:pb-40 bg-beige-50/60">
+    <section id="services" ref={ref} className="pt-12 pb-28 lg:pt-16 lg:pb-40 bg-[#e7ded1]">
       <div className="container-x">
         <div className="reveal flex flex-col items-center text-center gap-7 max-w-2xl mx-auto">
           <div>
