@@ -813,7 +813,7 @@ function HowItWorks({ selectedService, onSelectService }) {
               </div>
             )}
           </div>
-          <div id="contact" className="reveal w-full lg:max-w-lg lg:ml-auto">
+          <div id="contact" className="reveal w-full lg:max-w-sm lg:ml-auto">
             <div className="relative">
               <div className="absolute -inset-6 rounded-2xl bg-gradient-to-tr from-gold-300/20 via-transparent to-gold-300/10 blur-3xl" />
               <div className="absolute -top-2 -left-2 h-5 w-5 border-l border-t border-gold-500/60" />
