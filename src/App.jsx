@@ -872,7 +872,7 @@ function HowItWorks({ selectedService, onSelectService }) {
                   e.preventDefault();
                   alert("Thank you. The team will be in touch shortly.");
                 }}
-                className="relative bg-beige-50 text-ink-900 p-5 lg:p-6 border border-gold-500/40 rounded-[15px] shadow-[0_30px_70px_-15px_rgba(158,126,54,0.55),0_8px_24px_-10px_rgba(158,126,54,0.45)] transition-all duration-700 ease-[cubic-bezier(0.22,1,0.36,1)] hover:-translate-y-1.5 hover:shadow-[0_50px_100px_-20px_rgba(158,126,54,0.7),0_10px_30px_-10px_rgba(158,126,54,0.55)]"
+                className="relative bg-[#e7ded1] text-ink-900 p-5 lg:p-6 border border-gold-500/40 rounded-[15px] shadow-[0_30px_70px_-15px_rgba(158,126,54,0.55),0_8px_24px_-10px_rgba(158,126,54,0.45)] transition-all duration-700 ease-[cubic-bezier(0.22,1,0.36,1)] hover:-translate-y-1.5 hover:shadow-[0_50px_100px_-20px_rgba(158,126,54,0.7),0_10px_30px_-10px_rgba(158,126,54,0.55)]"
               >
                 <h3 className="font-display text-xl text-ink-900">
                   Begin your{" "}
@@ -890,7 +890,7 @@ function HowItWorks({ selectedService, onSelectService }) {
                       onSelectService &&
                       onSelectService(e.target.value || null)
                     }
-                    className="w-full rounded-lg border border-ink-900/15 bg-cream-50 px-3 py-2 text-xs text-ink-900 focus:outline-none focus:border-gold-500 transition appearance-none bg-no-repeat bg-right pr-8"
+                    className="w-full rounded-lg border border-ink-900/15 bg-[#e7ded1] px-3 py-2 text-xs text-ink-900 focus:outline-none focus:border-gold-500 transition appearance-none bg-no-repeat bg-right pr-8"
                     style={{
                       backgroundImage:
                         "url(\"data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20' fill='%239E7E36'><path d='M5.5 7.5l4.5 5 4.5-5z'/></svg>\")",
@@ -912,7 +912,7 @@ function HowItWorks({ selectedService, onSelectService }) {
                     required
                     type="email"
                     placeholder="Email address"
-                    className="w-full rounded-lg border border-ink-900/15 bg-cream-50 px-3 py-2 text-xs placeholder:text-beige-200 focus:outline-none focus:border-gold-500 transition"
+                    className="w-full rounded-lg border border-ink-900/15 bg-[#e7ded1] px-3 py-2 text-xs placeholder:text-beige-200 focus:outline-none focus:border-gold-500 transition"
                   />
                   <div className="grid grid-cols-2 gap-2.5">
                     <input
@@ -920,20 +920,20 @@ function HowItWorks({ selectedService, onSelectService }) {
                       type="tel"
                       placeholder="Phone number"
                       pattern="[0-9+\s()-]{7,}"
-                      className="rounded-lg border border-ink-900/15 bg-cream-50 px-3 py-2 text-xs placeholder:text-beige-200 focus:outline-none focus:border-gold-500 transition"
+                      className="rounded-lg border border-ink-900/15 bg-[#e7ded1] px-3 py-2 text-xs placeholder:text-beige-200 focus:outline-none focus:border-gold-500 transition"
                     />
                     <input
                       required
                       type="date"
                       aria-label="Journey date"
-                      className="rounded-lg border border-ink-900/15 bg-cream-50 px-3 py-2 text-xs text-ink-900 focus:outline-none focus:border-gold-500 transition"
+                      className="rounded-lg border border-ink-900/15 bg-[#e7ded1] px-3 py-2 text-xs text-ink-900 focus:outline-none focus:border-gold-500 transition"
                     />
                   </div>
                   <div className="grid grid-cols-2 gap-2.5">
                     <select
                       value={pickup}
                       onChange={(e) => setPickup(e.target.value)}
-                      className="rounded-lg border border-ink-900/15 bg-cream-50 px-3 py-2 text-xs text-ink-900 focus:outline-none focus:border-gold-500 transition appearance-none bg-no-repeat bg-right pr-8"
+                      className="rounded-lg border border-ink-900/15 bg-[#e7ded1] px-3 py-2 text-xs text-ink-900 focus:outline-none focus:border-gold-500 transition appearance-none bg-no-repeat bg-right pr-8"
                       style={{
                         backgroundImage:
                           "url(\"data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20' fill='%239E7E36'><path d='M5.5 7.5l4.5 5 4.5-5z'/></svg>\")",
@@ -958,7 +958,7 @@ function HowItWorks({ selectedService, onSelectService }) {
                     <select
                       value={destination}
                       onChange={(e) => setDestination(e.target.value)}
-                      className="rounded-lg border border-ink-900/15 bg-cream-50 px-3 py-2 text-xs text-ink-900 focus:outline-none focus:border-gold-500 transition appearance-none bg-no-repeat bg-right pr-8"
+                      className="rounded-lg border border-ink-900/15 bg-[#e7ded1] px-3 py-2 text-xs text-ink-900 focus:outline-none focus:border-gold-500 transition appearance-none bg-no-repeat bg-right pr-8"
                       style={{
                         backgroundImage:
                           "url(\"data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20' fill='%239E7E36'><path d='M5.5 7.5l4.5 5 4.5-5z'/></svg>\")",
@@ -990,21 +990,21 @@ function HowItWorks({ selectedService, onSelectService }) {
                       <input
                         required
                         placeholder="Street address"
-                        className="w-full rounded-md border border-ink-900/15 bg-cream-50 px-3 py-2 text-sm placeholder:text-beige-200 focus:outline-none focus:border-gold-500 transition"
+                        className="w-full rounded-md border border-ink-900/15 bg-[#e7ded1] px-3 py-2 text-sm placeholder:text-beige-200 focus:outline-none focus:border-gold-500 transition"
                       />
                       <div className="grid grid-cols-2 gap-3">
                         <input
                           placeholder="City / Town"
-                          className="rounded-md border border-ink-900/15 bg-cream-50 px-3 py-2 text-sm placeholder:text-beige-200 focus:outline-none focus:border-gold-500 transition"
+                          className="rounded-md border border-ink-900/15 bg-[#e7ded1] px-3 py-2 text-sm placeholder:text-beige-200 focus:outline-none focus:border-gold-500 transition"
                         />
                         <input
                           placeholder="Postcode"
-                          className="rounded-md border border-ink-900/15 bg-cream-50 px-3 py-2 text-sm placeholder:text-beige-200 focus:outline-none focus:border-gold-500 transition"
+                          className="rounded-md border border-ink-900/15 bg-[#e7ded1] px-3 py-2 text-sm placeholder:text-beige-200 focus:outline-none focus:border-gold-500 transition"
                         />
                       </div>
                       <input
                         placeholder="Notes for the driver (gate code, floor…)"
-                        className="w-full rounded-md border border-ink-900/15 bg-cream-50 px-3 py-2 text-sm placeholder:text-beige-200 focus:outline-none focus:border-gold-500 transition"
+                        className="w-full rounded-md border border-ink-900/15 bg-[#e7ded1] px-3 py-2 text-sm placeholder:text-beige-200 focus:outline-none focus:border-gold-500 transition"
                       />
                     </div>
                   )}
@@ -1017,21 +1017,21 @@ function HowItWorks({ selectedService, onSelectService }) {
                       <input
                         required
                         placeholder="Street address"
-                        className="w-full rounded-md border border-ink-900/15 bg-cream-50 px-3 py-2 text-sm placeholder:text-beige-200 focus:outline-none focus:border-gold-500 transition"
+                        className="w-full rounded-md border border-ink-900/15 bg-[#e7ded1] px-3 py-2 text-sm placeholder:text-beige-200 focus:outline-none focus:border-gold-500 transition"
                       />
                       <div className="grid grid-cols-2 gap-3">
                         <input
                           placeholder="City / Town"
-                          className="rounded-md border border-ink-900/15 bg-cream-50 px-3 py-2 text-sm placeholder:text-beige-200 focus:outline-none focus:border-gold-500 transition"
+                          className="rounded-md border border-ink-900/15 bg-[#e7ded1] px-3 py-2 text-sm placeholder:text-beige-200 focus:outline-none focus:border-gold-500 transition"
                         />
                         <input
                           placeholder="Postcode"
-                          className="rounded-md border border-ink-900/15 bg-cream-50 px-3 py-2 text-sm placeholder:text-beige-200 focus:outline-none focus:border-gold-500 transition"
+                          className="rounded-md border border-ink-900/15 bg-[#e7ded1] px-3 py-2 text-sm placeholder:text-beige-200 focus:outline-none focus:border-gold-500 transition"
                         />
                       </div>
                       <input
                         placeholder="Arrival notes (entrance, contact name…)"
-                        className="w-full rounded-md border border-ink-900/15 bg-cream-50 px-3 py-2 text-sm placeholder:text-beige-200 focus:outline-none focus:border-gold-500 transition"
+                        className="w-full rounded-md border border-ink-900/15 bg-[#e7ded1] px-3 py-2 text-sm placeholder:text-beige-200 focus:outline-none focus:border-gold-500 transition"
                       />
                     </div>
                   )}
@@ -1039,7 +1039,7 @@ function HowItWorks({ selectedService, onSelectService }) {
                   <textarea
                     rows="2"
                     placeholder="A line about your journey"
-                    className="w-full rounded-lg border border-ink-900/15 bg-cream-50 px-3 py-2 text-xs placeholder:text-beige-200 focus:outline-none focus:border-gold-500 transition resize-none"
+                    className="w-full rounded-lg border border-ink-900/15 bg-[#e7ded1] px-3 py-2 text-xs placeholder:text-beige-200 focus:outline-none focus:border-gold-500 transition resize-none"
                   />
 
                   <button
@@ -1312,7 +1312,7 @@ function Testimonials() {
     },
   ];
   return (
-    <section id="testimonials" ref={ref} className="pt-12 pb-28 lg:pt-16 lg:pb-40">
+    <section id="testimonials" ref={ref} className="pt-12 pb-28 lg:pt-16 lg:pb-40 bg-[#e7ded1]">
       <div className="container-x">
         <div className="reveal max-w-2xl mx-auto text-center">
           <div className="eyebrow flex items-center gap-3 justify-center">
