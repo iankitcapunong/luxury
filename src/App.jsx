@@ -1395,13 +1395,13 @@ function CTA() {
           Begin Inquiry
         </div>
         <h2 className="reveal h-display mt-8 text-5xl sm:text-6xl lg:text-7xl text-mask-gold-bright">
-          One enquiry.
+          A single message.
           <br />
-          <span className="italic font-light">Every detail attended to.</span>
+          <span className="italic font-light">The rest is on us.</span>
         </h2>
         <p className="reveal mt-8 text-cream-100/75 leading-relaxed italic font-light max-w-xl mx-auto">
-          Share your date, pickup and destination. We respond within the hour
-          with a confirmed vehicle, a dedicated chauffeur and a fixed price.
+          Tell us when, where from, and where to. We return inside the hour,
+          with a vehicle, a driver, and a price.
         </p>
         <div className="reveal mt-12 flex flex-wrap items-center justify-center gap-4">
           <a
