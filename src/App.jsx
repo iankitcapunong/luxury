@@ -390,7 +390,7 @@ function Hero() {
   );
 }
 
-// Decorative V-Class outline (no external image dependency)
+// Decorative V Class outline (no external image dependency)
 function VClassSVG() {
   return (
     <svg
@@ -500,26 +500,26 @@ function HowItWorks({ selectedService, onSelectService }) {
     }
   }, [selectedService]);
   const serviceTabs = [
-    "Airport & Long-Distance",
+    "Airport & Long Distance",
     "Corporate & VIP",
     "Weddings & Group Travel",
   ];
 
   const defaultServiceTitle = "A Private Chauffeur House";
   const defaultServiceCopy =
-    "Every journey begins with a luxury chauffeur, uniformed, DBS-checked, NDA-bound, and trained for the quiet things: the chilled water, the door already open, the unspoken route. Choose a service above and the inquiry adjusts itself to suit the journey.";
+    "Every journey begins with a luxury chauffeur, uniformed, DBS checked, NDA bound, and trained for the quiet things: the chilled water, the door already open, the unspoken route. Choose a service above and the inquiry adjusts itself to suit the journey.";
 
   const serviceDescriptions = {
-    "Airport & Long-Distance":
+    "Airport & Long Distance":
       "A private chauffeur greets you airside, tracks your flight and waits with bottled water, hot towels and a calm boot. For the miles ahead, our luxury Mercedes hires arrive with champagne, refrigerator and reclining leather, a hotel suite that happens to be moving.",
     "Corporate & VIP":
-      "Our luxury chauffeurs are DBS-checked, uniformed and NDA-bound, chosen for composure as much as skill. Day rates, board pickups, festival transfers and paparazzi-aware routes, all handled with the kind of discretion that keeps your name out of the conversation.",
+      "Our luxury chauffeurs are DBS checked, uniformed and NDA bound, chosen for composure as much as skill. Day rates, board pickups, festival transfers and paparazzi aware routes, all handled with the kind of discretion that keeps your name out of the conversation.",
     "Weddings & Group Travel":
-      "A luxury chauffeur for the most photographed morning of your life. Immaculate interiors, ribbons on request, bride, groom and party coordinated to the minute. Up to eight passengers travel composed in a Mercedes V-Class with panoramic roof, massage seats and Wi-Fi.",
+      "A luxury chauffeur for the most photographed morning of your life. Immaculate interiors, ribbons on request, bride, groom and party coordinated to the minute. Up to eight passengers travel composed in a Mercedes V Class with panoramic roof, massage seats and WiFi.",
   };
 
   const locationGroupsByService = {
-    "Airport & Long-Distance": [
+    "Airport & Long Distance": [
       {
         label: "London Areas",
         options: ["Mayfair", "Knightsbridge", "Belgravia"],
@@ -549,7 +549,7 @@ function HowItWorks({ selectedService, onSelectService }) {
         ],
       },
       {
-        label: "Long-Distance Landmarks",
+        label: "Long Distance Landmarks",
         options: [
           "Windsor Castle",
           "Royal Ascot",
@@ -1097,22 +1097,22 @@ function Services({ onSelect }) {
     {
       icon: Icon.Plane,
       icon2: Icon.Road,
-      t: "Airport & Long-Distance",
-      d: "All UK airports with met-and-greet, flight tracking and a calm boot for your luggage; plus city-to-city long-distance hires with champagne bar, refrigerator and reclining leather for the miles ahead.",
-      tags: ["Airport Transfers", "Long-Distance Private Hire"],
+      t: "Airport & Long Distance",
+      d: "All UK airports with meet and greet, flight tracking and a calm boot for your luggage; plus city to city long distance hires with champagne bar, refrigerator and reclining leather for the miles ahead.",
+      tags: ["Airport Transfers", "Long Distance Private Hire"],
     },
     {
       icon: Icon.Briefcase,
       icon2: Icon.Crown,
       t: "Corporate & VIP",
-      d: "Day rates, board pickups and multi-stop schedules handled with the discretion your business needs. Tinted glass, NDAs as standard, paparazzi-aware route planning for festivals, labels and talent transfers.",
+      d: "Day rates, board pickups and multi stop schedules handled with the discretion your business needs. Tinted glass, NDAs as standard, paparazzi aware route planning for festivals, labels and talent transfers.",
       tags: ["Corporate Chauffeur", "VIP & Celebrity"],
     },
     {
       icon: Icon.Ring,
       icon2: Icon.Champagne,
       t: "Weddings & Group Travel",
-      d: "Ribbons optional, immaculate interiors essential. Bride, groom and party coordinated to the minute. Mercedes V-Class with panoramic roof, massage seats and Wi-Fi for up to eight passengers, zero compromise.",
+      d: "Ribbons optional, immaculate interiors essential. Bride, groom and party coordinated to the minute. Mercedes V Class with panoramic roof, massage seats and WiFi for up to eight passengers, zero compromise.",
       tags: ["Weddings & Events", "Group Travel · Up to 8"],
     },
   ];
@@ -1210,7 +1210,7 @@ function Services({ onSelect }) {
                   "Climate control",
                   "Phone chargers",
                   "Bottled water",
-                  "Optional Wi-Fi",
+                  "Optional WiFi",
                   "Uniformed drivers",
                   "Child seats",
                   "Umbrellas & tissues",
@@ -1253,7 +1253,7 @@ function Testimonials() {
   const ref = useReveal();
   const quotes = [
     {
-      q: "“They moved an artist from a sold-out show to a private dinner in twenty minutes, and you wouldn't have known either was happening. Exactly what we needed.”",
+      q: "“They moved an artist from a sold out show to a private dinner in twenty minutes, and you wouldn't have known either was happening. Exactly what we needed.”",
       n: "Adaeze Williams",
       r: "Tour Manager · Independent label",
       i: "AW",
@@ -1383,7 +1383,7 @@ function Footer() {
         "Corporate Chauffeur",
         "VIP & Celebrity",
         "Weddings & Events",
-        "Long-Distance Hire",
+        "Long Distance Hire",
       ],
     },
     { h: "Company", l: ["About", "The Fleet", "Drivers", "Press", "Careers"] },

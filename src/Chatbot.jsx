@@ -19,7 +19,7 @@ const intents = [
   {
     keys: ["hi", "hello", "hey", "good morning", "good afternoon", "good evening"],
     reply:
-      "Hello, welcome. Whatever you need today, I'll keep it brief and discreet. Are you looking at a one-off journey, a wedding, or a corporate arrangement?",
+      "Hello, welcome. Whatever you need today, I'll keep it brief and discreet. Are you looking at a one off journey, a wedding, or a corporate arrangement?",
   },
   {
     keys: ["book", "booking", "reserve", "reservation", "schedule"],
@@ -34,12 +34,12 @@ const intents = [
   {
     keys: ["vehicle", "car", "fleet", "sprinter", "v-class", "vito", "mercedes", "mpv"],
     reply:
-      "Our primary vehicle is the Mercedes Sprinter (8-seater) with leather, panoramic roof, refrigerator, champagne bar, massage seats, 360° camera and Wi-Fi. Mercedes V-Class and Vito MPVs are also available on request.",
+      "Our primary vehicle is the Mercedes Sprinter (8 seater) with leather, panoramic roof, refrigerator, champagne bar, massage seats, 360° camera and WiFi. Mercedes V Class and Vito MPVs are also available on request.",
   },
   {
     keys: ["airport", "heathrow", "gatwick", "stansted", "luton", "city airport", "manchester airport", "edinburgh airport"],
     reply:
-      "We cover every UK airport with meet-and-greet, live flight tracking and a thirty-minute grace period after landing. Driver awaits airside; we'll handle the luggage and a chilled bottle of water is already in the boot.",
+      "We cover every UK airport with meet and greet, live flight tracking and a thirty minute grace period after landing. Driver awaits airside; we'll handle the luggage and a chilled bottle of water is already in the boot.",
   },
   {
     keys: ["wedding", "bride", "groom", "ceremony"],
@@ -49,52 +49,52 @@ const intents = [
   {
     keys: ["corporate", "business", "executive", "office", "company"],
     reply:
-      "For corporate accounts we offer day rates, multi-stop schedules, board pickups and monthly invoicing. Drivers sign NDAs as standard. Email bookings@luxurytransport.co.uk and we'll set up an account within 24 hours.",
+      "For corporate accounts we offer day rates, multi stop schedules, board pickups and monthly invoicing. Drivers sign NDAs as standard. Email bookings@luxurytransport.co.uk and we'll set up an account within 24 hours.",
   },
   {
     keys: ["vip", "celebrity", "artist", "talent", "festival", "label", "tour"],
     reply:
-      "Festival, label and talent transfers, we handle these often. Tinted glass, NDAs as standard, paparazzi-aware route planning on request. Share the run sheet and we'll fit around it discreetly.",
+      "Festival, label and talent transfers, we handle these often. Tinted glass, NDAs as standard, paparazzi aware route planning on request. Share the run sheet and we'll fit around it discreetly.",
   },
   {
     keys: ["wifi", "wi-fi", "internet", "charger", "phone", "water", "drink", "refreshment", "champagne", "bar", "fridge", "refrigerator", "massage", "seat", "child seat", "panoramic", "fire", "fireplace"],
     reply:
-      "Onboard you'll find leather seats, climate control, phone chargers, complimentary bottled water, optional Wi-Fi, child seats on request, umbrellas, tissues, a panoramic roof, refrigerator, champagne bar, massage seats and a 360° camera.",
+      "Onboard you'll find leather seats, climate control, phone chargers, complimentary bottled water, optional WiFi, child seats on request, umbrellas, tissues, a panoramic roof, refrigerator, champagne bar, massage seats and a 360° camera.",
   },
   {
     keys: ["how long", "duration", "wait", "waiting"],
     reply:
-      "Drivers arrive 10–15 minutes ahead of pickup and wait at no extra charge for up to 30 minutes (longer at airports). Hourly day-hire is also available if you'd prefer the car on standby throughout the day.",
+      "Drivers arrive 10 to 15 minutes ahead of pickup and wait at no extra charge for up to 30 minutes (longer at airports). Hourly day hire is also available if you'd prefer the car on standby throughout the day.",
   },
   {
     keys: ["area", "where", "city", "london", "manchester", "birmingham", "edinburgh", "uk", "travel", "long distance", "long-distance"],
     reply:
-      "We're UK-wide. London, Manchester, Birmingham, Edinburgh and city-to-city long-distance hires are all routine. If you're crossing borders for a job, let us know the schedule and we'll plan around it.",
+      "We're UK wide. London, Manchester, Birmingham, Edinburgh and city to city long distance hires are all routine. If you're crossing borders for a job, let us know the schedule and we'll plan around it.",
   },
   {
     keys: ["passenger", "people", "group", "seats", "size", "many"],
     reply:
-      "Our Mercedes Sprinter seats up to 8 passengers comfortably with full luggage. For larger groups we can arrange a coordinated multi-vehicle run, just tell us the headcount.",
+      "Our Mercedes Sprinter seats up to 8 passengers comfortably with full luggage. For larger groups we can arrange a coordinated multi vehicle run, just tell us the headcount.",
   },
   {
     keys: ["driver", "chauffeur", "uniform"],
     reply:
-      "All drivers are uniformed, DBS-checked, NDA-bound and trained in close-protection-aware driving. They're chosen for composure as much as skill. You'll find them quiet, punctual and immaculate.",
+      "All drivers are uniformed, DBS checked, NDA bound and trained in close protection aware driving. They're chosen for composure as much as skill. You'll find them quiet, punctual and immaculate.",
   },
   {
     keys: ["safe", "insurance", "license", "licensed"],
     reply:
-      "Fully licensed for private hire across the UK, fully insured, with comprehensive public liability cover. Vehicles are inspected weekly and serviced on Mercedes' main-dealer schedule.",
+      "Fully licensed for private hire across the UK, fully insured, with comprehensive public liability cover. Vehicles are inspected weekly and serviced on Mercedes' main dealer schedule.",
   },
   {
     keys: ["pay", "payment", "card", "invoice"],
     reply:
-      "We accept card, bank transfer and account invoicing. Corporate clients can be set up on net-30 monthly billing. Personal bookings are confirmed with a small holding deposit refunded against the final invoice.",
+      "We accept card, bank transfer and account invoicing. Corporate clients can be set up on net 30 monthly billing. Personal bookings are confirmed with a small holding deposit refunded against the final invoice.",
   },
   {
     keys: ["cancel", "cancellation", "refund"],
     reply:
-      "Cancellations made more than 24 hours before pickup are refunded in full. Within 24 hours, we hold the deposit; same-day cancellations are charged at 50%. Reschedules are free at any time, subject to availability.",
+      "Cancellations made more than 24 hours before pickup are refunded in full. Within 24 hours, we hold the deposit; same day cancellations are charged at 50%. Reschedules are free at any time, subject to availability.",
   },
   {
     keys: ["contact", "phone", "call", "email", "speak", "human"],
