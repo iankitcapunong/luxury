@@ -1253,18 +1253,21 @@ function Testimonials() {
       n: "Adaeze Williams",
       r: "Tour Manager · Independent label",
       i: "AW",
+      img: "/vip_celeb.png",
     },
     {
       q: "“Our concierge desk has used a dozen firms. Luxury Transport is the only one we hand the phone to and stop watching the clock. Drivers are immaculate.”",
       n: "Henry Caldwell",
       r: "Head Concierge · Mayfair hotel",
       i: "HC",
+      img: "/executive.png",
     },
     {
       q: "“Six pickups across three counties on the wedding morning. Not a single late minute, not a single crumpled dress. We've already booked them for next year.”",
       n: "Priya Shah",
       r: "Wedding Planner · Cotswolds",
       i: "PS",
+      img: "/wedding.png",
     },
   ];
   return (
@@ -1285,32 +1288,41 @@ function Testimonials() {
           </p>
         </div>
 
-        <div className="mt-20 grid grid-cols-1 lg:grid-cols-3 gap-12 lg:gap-10 items-stretch">
+        <div className="mt-16 grid grid-cols-1 lg:grid-cols-3 gap-8 items-stretch">
           {quotes.map((t, i) => (
             <figure
               key={t.n}
-              className="reveal relative pl-6 border-l border-gold-500/40 transition-all duration-700 ease-[cubic-bezier(0.22,1,0.36,1)] hover:border-gold-500 flex flex-col h-full"
+              className="group reveal relative overflow-hidden rounded-[15px] border border-gold-500/30 bg-beige-50 p-7 flex flex-col h-full min-h-[380px] cursor-pointer transition-all duration-700 ease-[cubic-bezier(0.22,1,0.36,1)] hover:-translate-y-2 hover:border-gold-500 hover:shadow-[0_30px_60px_-20px_rgba(158,126,54,0.55)] focus:-translate-y-2 focus:border-gold-500 focus:shadow-[0_30px_60px_-20px_rgba(158,126,54,0.55)]"
+              tabIndex={0}
               style={{ transitionDelay: `${i * 120}ms` }}
             >
-              <div className="absolute -left-3 -top-2 font-display italic font-light text-7xl text-gold-500/60 leading-none">
-                “
+              <div
+                className="pointer-events-none absolute inset-0 bg-cover bg-center opacity-0 transition-opacity duration-700 group-hover:opacity-100 group-focus:opacity-100"
+                style={{ backgroundImage: `url(${t.img})` }}
+              />
+              <div className="pointer-events-none absolute inset-0 bg-gradient-to-b from-black/40 via-black/55 to-black/75 opacity-0 transition-opacity duration-700 group-hover:opacity-100 group-focus:opacity-100" />
+
+              <div className="relative flex flex-col h-full">
+                <div className="absolute -left-1 -top-3 font-display italic font-light text-6xl leading-none text-gold-500/60 transition-colors duration-700 group-hover:text-gold-300/90 group-focus:text-gold-300/90">
+                  “
+                </div>
+                <blockquote className="font-display font-light text-base leading-[1.65] italic text-ink-900 transition-colors duration-700 group-hover:text-cream-50 group-focus:text-cream-50 flex-1 [text-shadow:none] group-hover:[text-shadow:0_2px_6px_rgba(0,0,0,0.7)] group-focus:[text-shadow:0_2px_6px_rgba(0,0,0,0.7)]">
+                  {t.q.replace(/[“”]/g, "")}
+                </blockquote>
+                <figcaption className="mt-6 flex items-center gap-4 border-t border-ink-900/15 pt-5 transition-colors duration-700 group-hover:border-cream-50/30 group-focus:border-cream-50/30">
+                  <div className="grid h-11 w-11 shrink-0 place-items-center rounded-full border border-gold-500/50 text-gold-500 font-display italic transition-colors duration-700 group-hover:border-gold-300 group-hover:text-gold-300 group-focus:border-gold-300 group-focus:text-gold-300">
+                    {t.i}
+                  </div>
+                  <div>
+                    <div className="font-display text-sm text-ink-900 transition-colors duration-700 group-hover:text-cream-50 group-focus:text-cream-50">
+                      {t.n}
+                    </div>
+                    <div className="mt-1 text-[10px] uppercase tracking-[0.28em] text-ink-500 transition-colors duration-700 group-hover:text-cream-100/85 group-focus:text-cream-100/85">
+                      {t.r}
+                    </div>
+                  </div>
+                </figcaption>
               </div>
-              <blockquote className="font-display font-light text-xl text-ink-900 leading-[1.55] italic flex-1">
-                {t.q.replace(/[“”]/g, "")}
-              </blockquote>
-              <figcaption className="mt-10 flex items-center gap-4 border-t border-ink-900/15 pt-6">
-                <div className="grid h-12 w-12 shrink-0 place-items-center rounded-full border border-gold-500/50 text-gold-500 font-display italic">
-                  {t.i}
-                </div>
-                <div>
-                  <div className="font-display text-base text-ink-900">
-                    {t.n}
-                  </div>
-                  <div className="mt-1 text-[10px] uppercase tracking-[0.28em] text-ink-500">
-                    {t.r}
-                  </div>
-                </div>
-              </figcaption>
             </figure>
           ))}
         </div>
