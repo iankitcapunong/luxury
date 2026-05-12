@@ -299,7 +299,7 @@ function Hero() {
     <section
       id="top"
       ref={ref}
-      className="group/hero relative overflow-hidden flex flex-col justify-center min-h-screen pt-36 pb-20 lg:pt-44 lg:pb-24"
+      className="group/hero relative overflow-hidden flex flex-col justify-end min-h-screen pt-36 pb-16 lg:pt-44 lg:pb-20"
     >
       {/* Background video — clear, with hover dim */}
       <div className="pointer-events-none absolute inset-0 z-0 bg-[#4a8fc8]">
@@ -328,44 +328,50 @@ function Hero() {
       <div className="pointer-events-none absolute -top-40 -right-40 h-[36rem] w-[36rem] rounded-full bg-gold-300/25 blur-[120px] z-0" />
       <div className="pointer-events-none absolute -bottom-48 -left-48 h-[36rem] w-[36rem] rounded-full bg-ink-900/10 blur-[120px] z-0" />
 
-      {/* vertical edition stamp */}
-      <div className="hidden xl:block pointer-events-none absolute left-6 top-1/2 -translate-y-1/2 v-text text-[10px] uppercase tracking-[0.4em] text-white drop-shadow-[0_1px_3px_rgba(0,0,0,0.55)] z-10">
-        Edition MMXXVI · Vol. I
-      </div>
-
-      <div className="container-x relative z-10 grid grid-cols-1 lg:grid-cols-12 gap-16 items-center font-cormorant">
-        <div className="lg:col-span-6">
-          <div
-            className="reveal eyebrow !text-[13px] flex items-center gap-3 !text-white font-bold drop-shadow-[0_1px_3px_rgba(0,0,0,0.55)]"
-            style={{ transitionDelay: "100ms" }}
-          >
-            <span className="h-px w-14 bg-white" /> Est. London · Serving the
-            United Kingdom
-          </div>
+      <div className="container-x relative z-10 grid grid-cols-1 lg:grid-cols-12 gap-16 items-end font-cormorant">
+        <div className="lg:col-span-7">
           <h1
-            className="reveal h-display !font-cormorant mt-8 text-[60px] leading-[1.05] text-white drop-shadow-[0_2px_6px_rgba(0,0,0,0.55)]"
-            style={{ transitionDelay: "250ms" }}
+            className="reveal h-display !font-cormorant text-[72px] lg:text-[88px] leading-[1.02] text-white drop-shadow-[0_4px_18px_rgba(0,0,0,0.75)]"
+            style={{ transitionDelay: "150ms" }}
           >
-            Arrive
-            <br />
-            <span className="italic font-light text-gold-400 font-cormorant">
+            <span
+              className="block bg-clip-text text-transparent"
+              style={{
+                backgroundImage:
+                  "linear-gradient(180deg, #ffffff 0%, #f8efd5 60%, #daba7f 100%)",
+                textShadow: "0 2px 12px rgba(0,0,0,0.55)",
+              }}
+            >
+              Arrive
+            </span>
+            <span
+              className="block italic font-light"
+              style={{
+                backgroundImage:
+                  "linear-gradient(90deg, #f97316 0%, #fbbf24 40%, #ffe9b0 70%, #ffffff 100%)",
+                WebkitBackgroundClip: "text",
+                backgroundClip: "text",
+                color: "transparent",
+                filter: "drop-shadow(0 4px 18px rgba(249,115,22,0.35))",
+              }}
+            >
               Composed.
             </span>
           </h1>
           <div
-            className="reveal mt-8 flex items-start gap-4 max-w-xl"
-            style={{ transitionDelay: "450ms" }}
+            className="reveal mt-7 flex items-start gap-4 max-w-xl"
+            style={{ transitionDelay: "350ms" }}
           >
-            <span className="mt-3 h-px w-8 bg-gold-400 shrink-0" />
-            <p className="text-[22px] text-white leading-relaxed drop-shadow-[0_1px_3px_rgba(0,0,0,0.55)]">
+            <span className="mt-3 h-px w-10 bg-gold-400 shrink-0" />
+            <p className="text-[24px] text-white leading-relaxed font-light drop-shadow-[0_2px_6px_rgba(0,0,0,0.7)]">
               A private chauffeur house, fluent in the small things: the chilled
               water, the unspoken route, the door already open.
             </p>
           </div>
 
           <div
-            className="reveal mt-8 ml-12 inline-block animate-gentle-bounce"
-            style={{ transitionDelay: "650ms" }}
+            className="reveal mt-10 ml-14 inline-block animate-gentle-bounce"
+            style={{ transitionDelay: "550ms" }}
           >
             <a
               href="#contact"
