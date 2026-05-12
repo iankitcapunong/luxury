@@ -372,7 +372,7 @@ function Hero() {
               className="group flex gap-2 text-lg transition-all duration-500 hover:scale-[1.03] active:scale-[0.98] text-white font-semibold h-14 rounded-full pr-10 pl-10 relative gap-x-2 gap-y-2 items-center justify-center"
               style={{
                 background:
-                  "linear-gradient(#000, #000) padding-box, linear-gradient(90deg, #f97316 0%, #fbbf24 50%, #ffffff 100%) border-box",
+                  "linear-gradient(#D9B97A, #D9B97A) padding-box, linear-gradient(90deg, #f97316 0%, #fbbf24 50%, #ffffff 100%) border-box",
                 border: "1.5px solid transparent",
                 boxShadow:
                   "-15px 0 40px -5px rgba(249, 115, 22, 0.6), 15px 0 40px -5px rgba(255, 255, 255, 0.4)",
@@ -813,7 +813,7 @@ function HowItWorks({ selectedService, onSelectService }) {
               </div>
             )}
           </div>
-          <div id="contact" className="reveal w-full lg:max-w-md lg:ml-auto">
+          <div id="contact" className="reveal w-full lg:max-w-lg lg:ml-auto">
             <div className="relative">
               <div className="absolute -inset-6 rounded-2xl bg-gradient-to-tr from-gold-300/20 via-transparent to-gold-300/10 blur-3xl" />
               <div className="absolute -top-2 -left-2 h-5 w-5 border-l border-t border-gold-500/60" />
