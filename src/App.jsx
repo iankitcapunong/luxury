@@ -1280,24 +1280,54 @@ function Services({ onSelect }) {
           return (
             <div
               key={p.slug}
-              className="reveal grid grid-cols-1 lg:grid-cols-2 items-stretch border-t border-gold-500/15 last:border-b last:border-gold-500/15"
+              className="group grid grid-cols-1 lg:grid-cols-2 items-stretch border-t border-gold-500/15 last:border-b last:border-gold-500/15"
             >
               <div
-                className={`relative min-h-[360px] lg:min-h-[560px] overflow-hidden ${
-                  reverse ? "lg:order-2" : ""
-                }`}
+                className={`reveal ${
+                  reverse ? "from-right lg:order-2" : "from-left"
+                } relative px-6 sm:px-8 lg:px-12 py-10 lg:py-14`}
               >
-                <img
-                  src={p.img}
-                  alt={p.title}
-                  className="absolute inset-0 h-full w-full object-cover transition-transform duration-[1400ms] ease-out hover:scale-[1.04]"
+                {/* Decorative offset gold frame */}
+                <span
+                  aria-hidden="true"
+                  className={`pointer-events-none absolute hidden lg:block w-[88%] h-[78%] border border-gold-400/35 rounded-[18px] gold-shimmer transition-all duration-700 ease-[cubic-bezier(0.22,1,0.36,1)] group-hover:border-gold-400/70 ${
+                    reverse
+                      ? "bottom-6 right-6 lg:bottom-8 lg:right-8 group-hover:bottom-5 group-hover:right-5"
+                      : "top-6 left-6 lg:top-8 lg:left-8 group-hover:top-5 group-hover:left-5"
+                  }`}
                 />
-                <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-black/15 via-transparent to-transparent" />
+
+                <div className="relative overflow-hidden rounded-[15px] shadow-[0_30px_70px_-22px_rgba(0,0,0,0.45)] min-h-[340px] lg:min-h-[520px]">
+                  <img
+                    src={p.img}
+                    alt={p.title}
+                    className="ken-burns absolute inset-0 h-full w-full object-cover transition-transform duration-[1800ms] ease-out group-hover:scale-[1.15]"
+                  />
+                  <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-black/35 via-black/5 to-transparent" />
+
+                  {/* Corner brackets */}
+                  <span aria-hidden="true" className="pointer-events-none absolute top-3 left-3 h-7 w-7 border-l border-t border-gold-300/80 transition-all duration-700 ease-out group-hover:h-12 group-hover:w-12 group-hover:top-2 group-hover:left-2 group-hover:border-gold-300" />
+                  <span aria-hidden="true" className="pointer-events-none absolute top-3 right-3 h-7 w-7 border-r border-t border-gold-300/80 transition-all duration-700 ease-out group-hover:h-12 group-hover:w-12 group-hover:top-2 group-hover:right-2 group-hover:border-gold-300" />
+                  <span aria-hidden="true" className="pointer-events-none absolute bottom-3 left-3 h-7 w-7 border-l border-b border-gold-300/80 transition-all duration-700 ease-out group-hover:h-12 group-hover:w-12 group-hover:bottom-2 group-hover:left-2 group-hover:border-gold-300" />
+                  <span aria-hidden="true" className="pointer-events-none absolute bottom-3 right-3 h-7 w-7 border-r border-b border-gold-300/80 transition-all duration-700 ease-out group-hover:h-12 group-hover:w-12 group-hover:bottom-2 group-hover:right-2 group-hover:border-gold-300" />
+
+                  {/* Slow gold sweep on hover */}
+                  <span
+                    aria-hidden="true"
+                    className="pointer-events-none absolute -top-1/2 -left-1/3 h-[200%] w-[55%] rotate-[20deg] bg-gradient-to-r from-transparent via-gold-200/30 to-transparent opacity-0 group-hover:opacity-100 group-hover:translate-x-[280%] transition-all duration-[1600ms] ease-out"
+                  />
+
+                  {/* Numeral */}
+                  <span className="pointer-events-none absolute bottom-5 right-6 font-display italic font-light text-5xl lg:text-6xl leading-none text-gold-300/85 drop-shadow-[0_2px_8px_rgba(0,0,0,0.5)]">
+                    {String(i + 1).padStart(2, "0")}
+                  </span>
+                </div>
               </div>
+
               <div
-                className={`flex items-center px-8 lg:px-16 xl:px-24 py-16 lg:py-24 ${
-                  reverse ? "lg:order-1" : ""
-                }`}
+                className={`reveal ${
+                  reverse ? "from-left lg:order-1" : "from-right"
+                } flex items-center px-8 lg:px-16 xl:px-24 py-12 lg:py-20`}
               >
                 <div className="max-w-md">
                   <div className="eyebrow flex items-center gap-3">
@@ -1306,7 +1336,7 @@ function Services({ onSelect }) {
                   <h3 className="h-display !font-cormorant mt-5 text-4xl lg:text-5xl text-mask-gold leading-[1.04]">
                     {p.title}
                   </h3>
-                  <div className="mt-5 h-px w-12 bg-gold-500/60" />
+                  <div className="mt-5 h-px w-12 bg-gold-500/60 transition-all duration-700 group-hover:w-24 group-hover:bg-gold-500" />
                   <p className="mt-7 text-ink-700 leading-[1.85] font-light">
                     {p.body}
                   </p>
@@ -1316,7 +1346,7 @@ function Services({ onSelect }) {
                       className="inline-flex items-center gap-2 text-[10px] uppercase tracking-[0.34em] text-gold-600 hover:text-gold-700 transition-colors border-b border-gold-500/40 hover:border-gold-700 pb-1"
                     >
                       Read more
-                      <Icon.ArrowRight className="h-3.5 w-3.5" />
+                      <Icon.ArrowRight className="h-3.5 w-3.5 transition-transform duration-500 group-hover:translate-x-1" />
                     </Link>
                     <a
                       href="#contact"
