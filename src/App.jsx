@@ -1478,30 +1478,31 @@ function CTA() {
         }}
       />
       <div className="container-x relative text-center max-w-3xl mx-auto">
-        <div className="reveal editorial-rule justify-center mx-auto max-w-md !text-gold-300">
-          Begin Inquiry
+        <div className="reveal !text-white text-[13px] uppercase tracking-[0.34em] flex items-center gap-3 justify-center">
+          <span className="h-px w-12 bg-white" /> Request Your Booking <span className="h-px w-12 bg-white" />
         </div>
-        <h2 className="reveal h-display mt-8 text-5xl sm:text-6xl lg:text-7xl text-mask-gold-bright">
-          A single message.
+        <h2 className="reveal h-display !font-cormorant mt-8 text-5xl sm:text-6xl lg:text-7xl text-white">
+          One enquiry.
           <br />
-          <span className="italic font-light">The rest is on us.</span>
+          <span className="italic font-light text-white">Every detail attended.</span>
         </h2>
-        <p className="reveal mt-8 text-cream-100/75 leading-relaxed italic font-light max-w-xl mx-auto">
-          Tell us when, where from, and where to. We return inside the hour,
-          with a vehicle, a driver, and a price.
+        <p className="reveal mt-8 text-white/85 leading-relaxed font-light max-w-xl mx-auto">
+          Share your date, pickup location, and destination. Our team will
+          respond within the hour with vehicle availability, driver
+          assignment, and a confirmed quotation.
         </p>
         <div className="reveal mt-12 flex flex-wrap items-center justify-center gap-4">
           <a
             href="mailto:bookings@luxurytransport.co.uk"
-            className="btn-primary !rounded-[15px] !bg-gold-400 !text-black hover:!bg-cream-50"
+            className="btn-primary !rounded-[15px] !bg-white !text-black hover:!bg-white/90"
           >
-            Email the Team <Icon.ArrowRight className="h-4 w-4" />
+            Email Our Team <Icon.ArrowRight className="h-4 w-4" />
           </a>
           <a
             href="tel:+440000000000"
-            className="btn-ghost !rounded-[15px] !text-cream-50 !border-cream-50/30 hover:!border-gold-300 hover:!text-gold-300"
+            className="btn-ghost !rounded-[15px] !text-white !border-white/40 hover:!border-white hover:!text-white"
           >
-            <Icon.Phone className="h-4 w-4" /> Speak to the team
+            <Icon.Phone className="h-4 w-4" /> Call Our Team
           </a>
         </div>
       </div>
