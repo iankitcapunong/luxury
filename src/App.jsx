@@ -256,44 +256,6 @@ function Nav() {
 
   return (
     <header className="fixed top-0 left-0 right-0 z-50">
-      {/* Utility strip */}
-      <div
-        className={`hidden md:block bg-[#19181c] text-cream-100/70 text-[10px] uppercase tracking-[0.32em] transition-[max-height,opacity] duration-300 ease-out overflow-hidden ${
-          scrolled
-            ? "max-h-0 opacity-0 border-b-0"
-            : "max-h-12 opacity-100 border-b border-white/5"
-        }`}
-      >
-        <div className="px-8 py-2.5 flex items-center justify-between">
-          <div className="flex items-center gap-7">
-            <span className="text-cream-100/55">United Kingdom · English</span>
-          </div>
-          <div className="flex items-center gap-7">
-            <a
-              href="tel:+442000000000"
-              className="hover:text-gold-300 transition-colors duration-300"
-            >
-              +44 (0)20 0000 0000
-            </a>
-            <span aria-hidden="true" className="h-3 w-px bg-white/15" />
-            <a
-              href="mailto:bookings@luxurytransport.co.uk"
-              className="hover:text-gold-300 transition-colors duration-300"
-            >
-              Contact
-            </a>
-            <span aria-hidden="true" className="h-3 w-px bg-white/15" />
-            <a
-              href="/#contact"
-              onClick={(e) => goToSection(e, "contact")}
-              className="hover:text-gold-300 transition-colors duration-300"
-            >
-              Find a Chauffeur
-            </a>
-          </div>
-        </div>
-      </div>
-
       {/* Main nav */}
       <nav
         className={`w-full px-8 transition-all duration-300 ${
@@ -334,44 +296,6 @@ function Nav() {
               </li>
             ))}
           </ul>
-
-          <div className="hidden md:flex items-center gap-5 shrink-0">
-            <button
-              type="button"
-              aria-label="Search"
-              className="grid h-9 w-9 place-items-center rounded-full border border-white/15 text-white/85 hover:border-gold-300 hover:text-gold-300 transition-colors duration-300"
-            >
-              <svg
-                viewBox="0 0 24 24"
-                className="h-4 w-4"
-                fill="none"
-                stroke="currentColor"
-                strokeWidth="1.6"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-              >
-                <circle cx="11" cy="11" r="7" />
-                <path d="m20 20-3.5-3.5" />
-              </svg>
-            </button>
-            <a
-              href="tel:+442000000000"
-              aria-label="Call us"
-              className="grid h-9 w-9 place-items-center rounded-full border border-white/15 text-white/85 hover:border-gold-300 hover:text-gold-300 transition-colors duration-300"
-            >
-              <svg
-                viewBox="0 0 24 24"
-                className="h-4 w-4"
-                fill="none"
-                stroke="currentColor"
-                strokeWidth="1.6"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-              >
-                <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.95.36 1.88.7 2.77a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.31-1.27a2 2 0 0 1 2.11-.45c.89.34 1.82.57 2.77.7A2 2 0 0 1 22 16.92z" />
-              </svg>
-            </a>
-          </div>
 
           <button
             onClick={() => setOpen(!open)}
@@ -822,7 +746,7 @@ function HowItWorks({ selectedService, onSelectService }) {
     <section
       id="how"
       ref={ref}
-      className="relative pt-12 pb-28 lg:pt-16 lg:pb-40 bg-[#d2d2d2] font-futura text-black"
+      className="relative pt-12 pb-28 lg:pt-16 lg:pb-40 bg-[#d2d2d2] font-cormorant text-black"
     >
       <div className="container-x">
         <div className="max-w-2xl mx-auto text-center">
@@ -1716,7 +1640,7 @@ function Discover() {
   return (
     <section
       ref={ref}
-      className="relative overflow-hidden bg-ink-900 text-cream-50"
+      className="relative overflow-hidden bg-ink-900 text-cream-50 font-cormorant"
     >
       <div className="grid grid-cols-1 lg:grid-cols-12 items-stretch min-h-[420px] lg:min-h-[640px]">
         <div className="relative lg:col-span-7 min-h-[360px]">
