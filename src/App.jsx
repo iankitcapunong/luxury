@@ -1211,27 +1211,46 @@ function SocialProof() {
 // --- Features ---------------------------------------------------------------
 function Services({ onSelect }) {
   const ref = useReveal();
-  const groups = [
+  const panels = [
     {
-      icon: Icon.Plane,
-      icon2: Icon.Road,
-      t: "Airport & Long Distance",
-      d: "All UK airports with meet and greet, flight tracking and a calm boot for your luggage; plus city to city long distance hires with champagne bar, refrigerator and reclining leather for the miles ahead.",
-      tags: ["Airport Transfers", "Long Distance Private Hire"],
+      eyebrow: "Service · One",
+      title: "Airport Transfers",
+      body: "Met airside with a name card, a hot towel and a bottle of chilled water. Flights tracked from gate to kerbside, luggage attended before you can ask.",
+      img: "/airport.png",
+      slug: "airport-transfers",
+      tag: "Airport Transfers",
     },
     {
-      icon: Icon.Briefcase,
-      icon2: Icon.Crown,
-      t: "Corporate & VIP",
-      d: "Day rates, board pickups and multi stop schedules handled with the discretion your business needs. Tinted glass, NDAs as standard, paparazzi aware route planning for festivals, labels and talent transfers.",
-      tags: ["Corporate Chauffeur", "VIP & Celebrity"],
+      eyebrow: "Service · Two",
+      title: "Corporate Chauffeur",
+      body: "Day rates, board pickups, multi-stop schedules. Uniformed, DBS-checked and NDA-bound. Tinted glass standard. Silence, when you want it, standard too.",
+      img: "/chauff.png",
+      slug: "corporate-chauffeur",
+      tag: "Corporate Chauffeur",
     },
     {
-      icon: Icon.Ring,
-      icon2: Icon.Champagne,
-      t: "Weddings & Group Travel",
-      d: "Ribbons optional, immaculate interiors essential. Bride, groom and party coordinated to the minute. Mercedes V Class with panoramic roof, massage seats and WiFi for up to eight passengers, zero compromise.",
-      tags: ["Weddings & Events", "Group Travel · Up to 8"],
+      eyebrow: "Service · Three",
+      title: "VIP & Celebrity",
+      body: "Paparazzi-aware route planning, side entrances and private terminals. Drivers chosen for composure as much as for skill, and trained to forget what they have seen.",
+      img: "/vip_celeb.png",
+      slug: "vip-celebrity",
+      tag: "VIP & Celebrity",
+    },
+    {
+      eyebrow: "Service · Four",
+      title: "Weddings & Events",
+      body: "Bride, groom and party coordinated to the minute. Ribbons optional, immaculate interiors essential. Mercedes V Class for up to eight passengers, panoramic roof above them.",
+      img: "/wedding.png",
+      slug: "weddings-events",
+      tag: "Weddings & Events",
+    },
+    {
+      eyebrow: "Service · Five",
+      title: "Long Distance Hire",
+      body: "City to country, county to coast. Champagne bar, refrigerator and reclining leather for the miles ahead. Your driver knows the better coffee and the discreet stop.",
+      img: "/longride.png",
+      slug: "long-distance-hire",
+      tag: "Long Distance Hire",
     },
   ];
   return (
@@ -1249,68 +1268,81 @@ function Services({ onSelect }) {
             </h2>
           </div>
           <p className="max-w-md text-ink-700 leading-relaxed italic font-light">
-            Three ways to travel. One standard of service.
+            Every way to travel. One standard of service.
           </p>
         </div>
+      </div>
 
-        {/* Three grouped cards — static grid, white background, no hover */}
-        <div
-          id="features"
-          className="reveal mt-20 grid grid-cols-1 md:grid-cols-3 gap-7"
-        >
-          {groups.map(({ icon: I, icon2: I2, t, d, tags }, i) => (
-            <a
-              key={t}
-              href="#contact"
-              onClick={() => onSelect && onSelect(t)}
-              className="group relative flex flex-col h-full min-h-[400px] overflow-hidden
-                         rounded-[15px] border border-gold-500/30 bg-[#3c2f1c] text-cream-50 p-7
-                         shadow-[0_24px_50px_-18px_rgba(0,0,0,0.45)]
-                         transition-all duration-700 ease-[cubic-bezier(0.22,1,0.36,1)]
-                         hover:-translate-y-3 hover:scale-[1.02]
-                         hover:border-gold-500
-                         hover:shadow-[0_45px_90px_-20px_rgba(158,126,54,0.55),0_15px_40px_-15px_rgba(158,126,54,0.45)]"
+      {/* Editorial panels — alternating image/text rows, full bleed */}
+      <div id="features" className="mt-16 lg:mt-20">
+        {panels.map((p, i) => {
+          const reverse = i % 2 === 1;
+          return (
+            <div
+              key={p.slug}
+              className="reveal grid grid-cols-1 lg:grid-cols-2 items-stretch border-t border-gold-500/15 last:border-b last:border-gold-500/15"
             >
-              {/* Gold sweep highlight on hover */}
-              <span className="pointer-events-none absolute -top-1/2 -left-1/4 h-[200%] w-[60%] rotate-[20deg] bg-gradient-to-r from-transparent via-gold-200/40 to-transparent opacity-0 group-hover:opacity-100 group-hover:translate-x-[260%] transition-all duration-[1500ms] ease-out" />
-
-              <div className="relative flex items-start justify-between">
-                <div className="flex items-center gap-3">
-                  <I className="h-6 w-6 text-gold-400 transition-transform duration-700 group-hover:-translate-y-1" />
-                  <span className="h-px w-3 bg-gold-400/70 transition-all duration-700 group-hover:w-6" />
-                  <I2 className="h-6 w-6 text-gold-400 transition-transform duration-700 group-hover:-translate-y-1" />
+              <div
+                className={`relative min-h-[360px] lg:min-h-[560px] overflow-hidden ${
+                  reverse ? "lg:order-2" : ""
+                }`}
+              >
+                <img
+                  src={p.img}
+                  alt={p.title}
+                  className="absolute inset-0 h-full w-full object-cover transition-transform duration-[1400ms] ease-out hover:scale-[1.04]"
+                />
+                <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-black/15 via-transparent to-transparent" />
+              </div>
+              <div
+                className={`flex items-center px-8 lg:px-16 xl:px-24 py-16 lg:py-24 ${
+                  reverse ? "lg:order-1" : ""
+                }`}
+              >
+                <div className="max-w-md">
+                  <div className="eyebrow flex items-center gap-3">
+                    <span className="hairline" /> {p.eyebrow}
+                  </div>
+                  <h3 className="h-display !font-cormorant mt-5 text-4xl lg:text-5xl text-mask-gold leading-[1.04]">
+                    {p.title}
+                  </h3>
+                  <div className="mt-5 h-px w-12 bg-gold-500/60" />
+                  <p className="mt-7 text-ink-700 leading-[1.85] font-light">
+                    {p.body}
+                  </p>
+                  <div className="mt-9 flex items-center gap-5">
+                    <Link
+                      to={`/blog/${p.slug}`}
+                      className="inline-flex items-center gap-2 text-[10px] uppercase tracking-[0.34em] text-gold-600 hover:text-gold-700 transition-colors border-b border-gold-500/40 hover:border-gold-700 pb-1"
+                    >
+                      Read more
+                      <Icon.ArrowRight className="h-3.5 w-3.5" />
+                    </Link>
+                    <a
+                      href="#contact"
+                      onClick={(e) => {
+                        e.preventDefault();
+                        onSelect && onSelect(p.tag);
+                        const el = document.getElementById("contact");
+                        if (el)
+                          el.scrollIntoView({
+                            behavior: "smooth",
+                            block: "start",
+                          });
+                      }}
+                      className="inline-flex items-center gap-2 text-[10px] uppercase tracking-[0.34em] text-ink-700 hover:text-gold-700 transition-colors"
+                    >
+                      Enquire
+                    </a>
+                  </div>
                 </div>
-                <span className="font-display italic font-light text-lg text-mask-gold-bright">
-                  {String(i + 1).padStart(2, "0")}
-                </span>
               </div>
-              <div className="relative mt-6 h-px w-10 bg-gold-400/70 transition-all duration-700 group-hover:w-20" />
-              <h3 className="relative font-display font-normal text-xl mt-5 leading-tight text-mask-gold-bright">
-                {t}
-              </h3>
-              <p className="relative mt-3 text-[14px] text-cream-100/85 leading-[1.75] flex-1">
-                {d}
-              </p>
-              <div className="relative mt-5 flex flex-wrap gap-2">
-                {tags.map((tag) => (
-                  <span
-                    key={tag}
-                    className="text-[10px] uppercase tracking-[0.28em] text-mask-gold-bright border border-gold-400/40 rounded-full px-3 py-1 transition-colors duration-700 group-hover:border-gold-400"
-                  >
-                    {tag}
-                  </span>
-                ))}
-              </div>
-              <div className="relative mt-6 flex items-center gap-2 text-[10px] uppercase tracking-[0.34em] text-cream-50">
-                <span className="border-b border-gold-400 group-hover:text-mask-gold-bright transition-colors duration-700">
-                  Book Now
-                </span>
-                <Icon.ArrowRight className="h-3.5 w-3.5 text-gold-400 transition-transform duration-700 group-hover:translate-x-1.5" />
-              </div>
-            </a>
-          ))}
-        </div>
+            </div>
+          );
+        })}
+      </div>
 
+      <div className="container-x">
         {/* In-vehicle card */}
         <div className="reveal mt-16 rounded-[15px] border border-gold-500/50 bg-ink-900 text-cream-50 overflow-hidden shadow-[0_30px_70px_-15px_rgba(158,126,54,0.6),0_10px_30px_-12px_rgba(158,126,54,0.45)] transition-all duration-700 ease-[cubic-bezier(0.22,1,0.36,1)] hover:-translate-y-1.5 hover:shadow-[0_50px_100px_-20px_rgba(158,126,54,0.75),0_15px_40px_-12px_rgba(158,126,54,0.55)]">
           <div className="grid grid-cols-1 lg:grid-cols-2 items-stretch">
@@ -1391,63 +1423,81 @@ function Testimonials() {
       img: "/wedding.png",
     },
   ];
+  const [idx, setIdx] = useState(0);
+  useEffect(() => {
+    const id = setInterval(() => setIdx((n) => (n + 1) % quotes.length), 7000);
+    return () => clearInterval(id);
+  }, [quotes.length]);
+
   return (
-    <section id="testimonials" ref={ref} className="pt-12 pb-28 lg:pt-16 lg:pb-40">
-      <div className="container-x">
-        <div className="reveal max-w-2xl mx-auto text-center">
-          <div className="eyebrow flex items-center gap-3 justify-center">
-            <span className="hairline" /> In Their Words
-          </div>
-          <h2 className="h-display mt-7 text-5xl sm:text-6xl text-mask-gold">
-            Quietly
-            <br />
-            <span className="italic font-light">recommended.</span>
-          </h2>
-          <p className="mt-7 text-ink-700 leading-relaxed italic font-light max-w-xl mx-auto">
-            Ninety-seven percent of our private clients return within twelve
-            months. A number we mention only because they have asked us to.
-          </p>
+    <section
+      id="testimonials"
+      ref={ref}
+      className="relative overflow-hidden text-cream-50"
+    >
+      {quotes.map((q, i) => (
+        <div
+          key={q.n}
+          aria-hidden={i !== idx}
+          className={`absolute inset-0 transition-opacity duration-[1200ms] ease-out ${
+            i === idx ? "opacity-100" : "opacity-0"
+          }`}
+        >
+          <img
+            src={q.img}
+            alt=""
+            className="absolute inset-0 h-full w-full object-cover"
+          />
+          <div className="absolute inset-0 bg-gradient-to-b from-ink-900/70 via-ink-900/65 to-ink-900/85" />
         </div>
+      ))}
 
-        <div className="mt-16 grid grid-cols-1 lg:grid-cols-3 gap-8 items-stretch">
-          {quotes.map((t, i) => (
-            <figure
-              key={t.n}
-              className="group reveal relative overflow-hidden rounded-[15px] border border-gold-500/30 bg-beige-50 p-7 flex flex-col h-full min-h-[380px] cursor-pointer transition-all duration-700 ease-[cubic-bezier(0.22,1,0.36,1)] hover:-translate-y-2 hover:border-gold-500 hover:shadow-[0_30px_60px_-20px_rgba(158,126,54,0.55)] focus:-translate-y-2 focus:border-gold-500 focus:shadow-[0_30px_60px_-20px_rgba(158,126,54,0.55)]"
-              tabIndex={0}
-              style={{ transitionDelay: `${i * 120}ms` }}
+      <div className="relative container-x py-28 lg:py-44 max-w-4xl mx-auto text-center">
+        <div className="reveal eyebrow !text-gold-300 flex items-center gap-3 justify-center">
+          <span className="h-px w-12 bg-gold-300" /> In Their Words
+        </div>
+        <h2 className="reveal mt-7 h-display !font-cormorant text-4xl sm:text-5xl lg:text-6xl text-cream-50 drop-shadow-[0_3px_10px_rgba(0,0,0,0.6)]">
+          Quietly
+          <br />
+          <span className="italic font-light text-gold-300">recommended.</span>
+        </h2>
+
+        <div className="reveal mt-14 grid">
+          {quotes.map((q, i) => (
+            <blockquote
+              key={q.n}
+              aria-hidden={i !== idx}
+              className={`col-start-1 row-start-1 transition-opacity duration-700 ease-out ${
+                i === idx ? "opacity-100" : "opacity-0 pointer-events-none"
+              }`}
             >
-              <div
-                className="pointer-events-none absolute inset-0 bg-cover bg-center opacity-0 transition-opacity duration-700 group-hover:opacity-100 group-focus:opacity-100"
-                style={{ backgroundImage: `url(${t.img})` }}
-              />
-              <div className="pointer-events-none absolute inset-0 bg-gradient-to-b from-black/40 via-black/55 to-black/75 opacity-0 transition-opacity duration-700 group-hover:opacity-100 group-focus:opacity-100" />
-
-              <div className="relative flex flex-col h-full">
-                <div className="absolute -left-1 -top-3 font-display italic font-light text-6xl leading-none text-gold-500/60 transition-colors duration-700 group-hover:text-gold-300/90 group-focus:text-gold-300/90">
-                  “
+              <p className="font-display !font-cormorant italic font-light text-2xl sm:text-3xl lg:text-[34px] leading-[1.5] text-cream-50 max-w-3xl mx-auto drop-shadow-[0_2px_8px_rgba(0,0,0,0.55)]">
+                {q.q.replace(/[“”]/g, "")}
+              </p>
+              <footer className="mt-10 text-[11px] uppercase tracking-[0.34em] text-cream-100/85">
+                <div className="font-display normal-case tracking-normal text-lg text-gold-300">
+                  {q.n}
                 </div>
-                <blockquote className="font-display font-light text-base leading-[1.65] italic text-ink-900 transition-colors duration-700 group-hover:text-cream-50 group-focus:text-cream-50 flex-1 [text-shadow:none] group-hover:[text-shadow:0_2px_6px_rgba(0,0,0,0.7)] group-focus:[text-shadow:0_2px_6px_rgba(0,0,0,0.7)]">
-                  {t.q.replace(/[“”]/g, "")}
-                </blockquote>
-                <figcaption className="mt-6 flex items-center gap-4 border-t border-ink-900/15 pt-5 transition-colors duration-700 group-hover:border-cream-50/30 group-focus:border-cream-50/30">
-                  <div className="grid h-11 w-11 shrink-0 place-items-center rounded-full border border-gold-500/50 text-gold-500 font-display italic transition-colors duration-700 group-hover:border-gold-300 group-hover:text-gold-300 group-focus:border-gold-300 group-focus:text-gold-300">
-                    {t.i}
-                  </div>
-                  <div>
-                    <div className="font-display text-sm text-ink-900 transition-colors duration-700 group-hover:text-cream-50 group-focus:text-cream-50">
-                      {t.n}
-                    </div>
-                    <div className="mt-1 text-[10px] uppercase tracking-[0.28em] text-ink-500 transition-colors duration-700 group-hover:text-cream-100/85 group-focus:text-cream-100/85">
-                      {t.r}
-                    </div>
-                  </div>
-                </figcaption>
-              </div>
-            </figure>
+                <div className="mt-2">{q.r}</div>
+              </footer>
+            </blockquote>
           ))}
         </div>
 
+        <div className="reveal mt-14 flex items-center justify-center gap-3">
+          {quotes.map((q, i) => (
+            <button
+              key={q.n}
+              type="button"
+              onClick={() => setIdx(i)}
+              aria-label={`Show testimonial ${i + 1}`}
+              aria-current={i === idx}
+              className={`h-[2px] transition-all duration-500 ${
+                i === idx ? "w-14 bg-gold-300" : "w-8 bg-white/25 hover:bg-white/45"
+              }`}
+            />
+          ))}
+        </div>
       </div>
     </section>
   );
@@ -1630,6 +1680,109 @@ function Footer() {
   );
 }
 
+// --- Discover (editorial intro) --------------------------------------------
+function Discover() {
+  const ref = useReveal();
+  return (
+    <section
+      ref={ref}
+      className="relative overflow-hidden bg-ink-900 text-cream-50"
+    >
+      <div className="grid grid-cols-1 lg:grid-cols-12 items-stretch min-h-[420px] lg:min-h-[640px]">
+        <div className="relative lg:col-span-7 min-h-[360px]">
+          <img
+            src="/chauff.png"
+            alt="Inside the cabin"
+            className="absolute inset-0 h-full w-full object-cover"
+          />
+          <div className="pointer-events-none absolute inset-0 bg-gradient-to-r from-ink-900/65 via-ink-900/15 to-transparent" />
+        </div>
+        <div className="lg:col-span-5 flex items-center px-8 lg:px-14 py-16 lg:py-24">
+          <div className="reveal max-w-md">
+            <div className="eyebrow !text-gold-300 flex items-center gap-3">
+              <span className="h-px w-12 bg-gold-300" /> Discover
+            </div>
+            <h2 className="font-display !font-cormorant mt-6 text-4xl lg:text-5xl leading-[1.05]">
+              A house built on
+              <span className="italic font-light text-gold-300">
+                {" "}
+                quiet precision.
+              </span>
+            </h2>
+            <div className="mt-5 h-px w-12 bg-gold-400/70" />
+            <p className="mt-7 text-cream-100/80 leading-[1.85] font-light">
+              Discretion, punctuality and composure are not features of the
+              journey; they are the journey. Every chauffeur, every vehicle and
+              every minute in between is rehearsed so that the only thing left
+              for you to consider is what comes next.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+}
+
+// --- Newsletter -------------------------------------------------------------
+function Newsletter() {
+  const ref = useReveal();
+  return (
+    <section
+      ref={ref}
+      className="relative bg-ink-900 text-cream-50 py-20 lg:py-28 border-t border-white/5"
+    >
+      <div
+        className="pointer-events-none absolute inset-0 opacity-[0.05]"
+        style={{
+          backgroundImage:
+            "radial-gradient(rgba(255,255,255,0.5) 1px, transparent 1px)",
+          backgroundSize: "4px 4px",
+        }}
+      />
+      <div className="container-x relative">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 items-center">
+          <div className="lg:col-span-6 reveal">
+            <div className="eyebrow !text-gold-300 flex items-center gap-3">
+              <span className="h-px w-12 bg-gold-300" /> Stay Informed
+            </div>
+            <h3 className="font-display !font-cormorant mt-5 text-3xl lg:text-4xl leading-[1.1]">
+              Editions, journeys and quiet
+              <span className="italic font-light text-gold-300">
+                {" "}
+                announcements.
+              </span>
+            </h3>
+            <p className="mt-5 text-cream-100/70 leading-[1.85] font-light max-w-md">
+              An occasional dispatch from the desk. Never more than once a
+              month, never anything you wouldn't read aloud.
+            </p>
+          </div>
+          <form
+            onSubmit={(e) => {
+              e.preventDefault();
+              alert("Thank you. The first dispatch arrives shortly.");
+            }}
+            className="lg:col-span-6 reveal flex flex-col sm:flex-row items-stretch gap-3"
+          >
+            <input
+              required
+              type="email"
+              placeholder="Email address"
+              className="flex-1 rounded-lg border border-white/15 bg-white/5 px-4 py-3 text-sm text-cream-50 placeholder:text-cream-100/40 focus:outline-none focus:border-gold-400 transition"
+            />
+            <button
+              type="submit"
+              className="btn-primary !rounded-[15px] !px-7 !py-3 !text-[11px] !tracking-[0.28em] !bg-gold-400 !text-ink-900 hover:!bg-cream-50"
+            >
+              Subscribe <Icon.ArrowRight className="h-3.5 w-3.5" />
+            </button>
+          </form>
+        </div>
+      </div>
+    </section>
+  );
+}
+
 // --- Home page --------------------------------------------------------------
 function Home() {
   const [selectedService, setSelectedService] = useState(null);
@@ -1651,6 +1804,7 @@ function Home() {
   return (
     <>
       <Hero />
+      <Discover />
       <HowItWorks
         selectedService={selectedService}
         onSelectService={setSelectedService}
@@ -1658,6 +1812,7 @@ function Home() {
       <SocialProof />
       <Services onSelect={setSelectedService} />
       <Testimonials />
+      <Newsletter />
       <CTA />
     </>
   );
