@@ -323,13 +323,6 @@ function Nav() {
                 {l}
               </a>
             ))}
-            <a
-              href="/#contact"
-              onClick={(e) => goToSection(e, "contact")}
-              className="btn-primary !py-3 mt-2 text-xs"
-            >
-              Get Started
-            </a>
           </div>
         </div>
       )}
