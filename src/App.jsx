@@ -838,7 +838,7 @@ function HowItWorks({ selectedService, onSelectService }) {
         </div>
 
         {/* Quick inquiry form — fixed in the right column, description animates in/out on the left */}
-        <div className="mt-16 grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-14 items-start max-w-5xl mx-auto">
+        <div className="mt-16 grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-14 items-start">
           <div className="lg:pt-6 min-h-[1px]">
             {displayService ? (
               <div
