@@ -255,19 +255,58 @@ function Nav() {
   };
 
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50">
+    <header className="fixed top-0 left-0 right-0 z-50">
+      {/* Utility strip */}
       <div
+        className={`hidden md:block bg-[#19181c] text-cream-100/70 text-[10px] uppercase tracking-[0.32em] transition-[max-height,opacity] duration-300 ease-out overflow-hidden ${
+          scrolled
+            ? "max-h-0 opacity-0 border-b-0"
+            : "max-h-12 opacity-100 border-b border-white/5"
+        }`}
+      >
+        <div className="px-8 py-2.5 flex items-center justify-between">
+          <div className="flex items-center gap-7">
+            <span className="text-cream-100/55">United Kingdom · English</span>
+          </div>
+          <div className="flex items-center gap-7">
+            <a
+              href="tel:+442000000000"
+              className="hover:text-gold-300 transition-colors duration-300"
+            >
+              +44 (0)20 0000 0000
+            </a>
+            <span aria-hidden="true" className="h-3 w-px bg-white/15" />
+            <a
+              href="mailto:bookings@luxurytransport.co.uk"
+              className="hover:text-gold-300 transition-colors duration-300"
+            >
+              Contact
+            </a>
+            <span aria-hidden="true" className="h-3 w-px bg-white/15" />
+            <a
+              href="/#contact"
+              onClick={(e) => goToSection(e, "contact")}
+              className="hover:text-gold-300 transition-colors duration-300"
+            >
+              Find a Chauffeur
+            </a>
+          </div>
+        </div>
+      </div>
+
+      {/* Main nav */}
+      <nav
         className={`w-full px-8 transition-all duration-300 ${
           scrolled
             ? "py-4 bg-[#19181c] border-b border-white/10"
-            : "py-6 bg-transparent border-b border-transparent"
+            : "py-5 bg-[#19181c]/85 backdrop-blur-md border-b border-white/5"
         }`}
       >
-        <div className="flex items-center justify-between">
+        <div className="flex items-center justify-between gap-8">
           <a
             href="/"
             onClick={goHomeTop}
-            className="flex items-center gap-3"
+            className="flex items-center gap-3 shrink-0"
           >
             <span className="grid h-11 w-11 place-items-center rounded-full border border-gold-400/70 text-gold-400 font-display italic text-[18px] font-bold">
               L
@@ -276,24 +315,64 @@ function Nav() {
               <div className="tracking-wide text-white text-[18px] font-bold">
                 Luxury Transport
               </div>
-              <div className="uppercase tracking-[0.28em] text-white mt-1 text-[18px] font-bold">
+              <div className="uppercase tracking-[0.28em] text-white mt-1 text-[12px] font-bold">
                 Private Chauffeur · UK
               </div>
             </div>
           </a>
-          <ul className="hidden md:flex items-center gap-1 text-[18px] font-cormorant font-medium text-white">
+
+          <ul className="hidden md:flex items-center gap-10 text-[11px] uppercase tracking-[0.34em] font-medium text-white/90">
             {links.map(([label, id]) => (
               <li key={id}>
                 <a
                   href={`/#${id}`}
                   onClick={(e) => goToSection(e, id)}
-                  className="hover:text-white transition-colors duration-300 px-4 py-2 rounded-full hover:bg-white/5"
+                  className="relative inline-block py-1 hover:text-gold-300 transition-colors duration-300 after:absolute after:left-0 after:bottom-0 after:h-px after:w-0 after:bg-gold-400 after:transition-all after:duration-300 hover:after:w-full"
                 >
                   {label}
                 </a>
               </li>
             ))}
           </ul>
+
+          <div className="hidden md:flex items-center gap-5 shrink-0">
+            <button
+              type="button"
+              aria-label="Search"
+              className="grid h-9 w-9 place-items-center rounded-full border border-white/15 text-white/85 hover:border-gold-300 hover:text-gold-300 transition-colors duration-300"
+            >
+              <svg
+                viewBox="0 0 24 24"
+                className="h-4 w-4"
+                fill="none"
+                stroke="currentColor"
+                strokeWidth="1.6"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+              >
+                <circle cx="11" cy="11" r="7" />
+                <path d="m20 20-3.5-3.5" />
+              </svg>
+            </button>
+            <a
+              href="tel:+442000000000"
+              aria-label="Call us"
+              className="grid h-9 w-9 place-items-center rounded-full border border-white/15 text-white/85 hover:border-gold-300 hover:text-gold-300 transition-colors duration-300"
+            >
+              <svg
+                viewBox="0 0 24 24"
+                className="h-4 w-4"
+                fill="none"
+                stroke="currentColor"
+                strokeWidth="1.6"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+              >
+                <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.95.36 1.88.7 2.77a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.31-1.27a2 2 0 0 1 2.11-.45c.89.34 1.82.57 2.77.7A2 2 0 0 1 22 16.92z" />
+              </svg>
+            </a>
+          </div>
+
           <button
             onClick={() => setOpen(!open)}
             aria-label="Menu"
@@ -305,9 +384,10 @@ function Nav() {
             </div>
           </button>
         </div>
-      </div>
+      </nav>
+
       {open && (
-        <div className="md:hidden mt-2 max-w-7xl mx-auto border border-white/10 rounded-2xl bg-slate-900/80 backdrop-blur-2xl text-white">
+        <div className="md:hidden mt-2 mx-4 border border-white/10 rounded-2xl bg-slate-900/85 backdrop-blur-2xl text-white">
           <div className="py-4 px-6 flex flex-col gap-3">
             {links.map(([l, id]) => (
               <a
@@ -329,7 +409,7 @@ function Nav() {
           </div>
         </div>
       )}
-    </nav>
+    </header>
   );
 }
 
