@@ -1683,30 +1683,30 @@ function Newsletter() {
   return (
     <section
       ref={ref}
-      className="relative bg-ink-900 text-cream-50 py-20 lg:py-28 border-t border-white/5"
+      className="relative bg-[#d2d3d3] text-black py-20 lg:py-28 border-t border-black/10"
     >
       <div
-        className="pointer-events-none absolute inset-0 opacity-[0.05]"
+        className="pointer-events-none absolute inset-0 opacity-[0.06]"
         style={{
           backgroundImage:
-            "radial-gradient(rgba(255,255,255,0.5) 1px, transparent 1px)",
+            "radial-gradient(rgba(0,0,0,0.6) 1px, transparent 1px)",
           backgroundSize: "4px 4px",
         }}
       />
       <div className="container-x relative">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 items-center">
           <div className="lg:col-span-6 reveal">
-            <div className="eyebrow !text-gold-300 flex items-center gap-3">
-              <span className="h-px w-12 bg-gold-300" /> Stay Informed
+            <div className="eyebrow !text-gold-600 flex items-center gap-3">
+              <span className="h-px w-12 bg-gold-600" /> Stay Informed
             </div>
-            <h3 className="font-display !font-cormorant mt-5 text-3xl lg:text-4xl leading-[1.1]">
+            <h3 className="font-display !font-cormorant mt-5 text-3xl lg:text-4xl leading-[1.1] text-black">
               Editions, journeys and quiet
-              <span className="italic font-light text-gold-300">
+              <span className="italic font-light text-gold-600">
                 {" "}
                 announcements.
               </span>
             </h3>
-            <p className="mt-5 text-cream-100/70 leading-[1.85] font-light max-w-md">
+            <p className="mt-5 text-black/75 leading-[1.85] font-light max-w-md">
               An occasional dispatch from the desk. Never more than once a
               month, never anything you wouldn't read aloud.
             </p>
@@ -1722,11 +1722,11 @@ function Newsletter() {
               required
               type="email"
               placeholder="Email address"
-              className="flex-1 rounded-lg border border-white/15 bg-white/5 px-4 py-3 text-sm text-cream-50 placeholder:text-cream-100/40 focus:outline-none focus:border-gold-400 transition"
+              className="flex-1 rounded-lg border border-black/15 bg-white px-4 py-3 text-sm text-black placeholder:text-black/40 focus:outline-none focus:border-gold-500 transition"
             />
             <button
               type="submit"
-              className="btn-primary !rounded-[15px] !px-7 !py-3 !text-[11px] !tracking-[0.28em] !bg-gold-400 !text-ink-900 hover:!bg-cream-50"
+              className="btn-primary !rounded-[15px] !px-7 !py-3 !text-[11px] !tracking-[0.28em] !bg-gold-500 !text-white hover:!bg-gold-600"
             >
               Subscribe <Icon.ArrowRight className="h-3.5 w-3.5" />
             </button>
