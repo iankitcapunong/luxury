@@ -750,13 +750,13 @@ function HowItWorks({ selectedService, onSelectService }) {
     >
       <div className="container-x">
         <div className="max-w-2xl mx-auto text-center">
-          <div className="reveal eyebrow flex items-center gap-3 justify-center">
+          <div className="reveal eyebrow !text-black !text-[12px] flex items-center gap-3 justify-center">
             <span className="hairline" /> The Process
           </div>
-          <h2 className="reveal h-display mt-7 text-5xl sm:text-6xl text-mask-gold">
+          <h2 className="reveal h-display mt-7 text-5xl sm:text-6xl text-black">
             Three steps.
           </h2>
-          <p className="reveal mt-7 text-ink-700 leading-relaxed italic font-light max-w-xl mx-auto">
+          <p className="reveal mt-7 text-black/80 leading-relaxed italic font-light max-w-xl mx-auto">
             Reduced to a single message. We attend to the rest.
           </p>
         </div>
@@ -773,11 +773,11 @@ function HowItWorks({ selectedService, onSelectService }) {
                     : "animate-fade-up"
                 }`}
               >
-                <div className="eyebrow flex items-center gap-3">
+                <div className="eyebrow !text-black !text-[12px] flex items-center gap-3">
                   <span className="hairline" /> Selected Service
                 </div>
                 <h3
-                  className="font-display text-3xl mt-4 text-mask-gold"
+                  className="font-display text-3xl mt-4 text-black"
                   style={
                     isExiting
                       ? undefined
@@ -803,7 +803,7 @@ function HowItWorks({ selectedService, onSelectService }) {
                   }
                 />
                 <p
-                  className="mt-5 text-ink-700 leading-relaxed italic font-light"
+                  className="mt-5 text-black/80 leading-relaxed italic font-light"
                   style={
                     isExiting
                       ? undefined
@@ -819,7 +819,7 @@ function HowItWorks({ selectedService, onSelectService }) {
                 <button
                   type="button"
                   onClick={() => onSelectService && onSelectService(null)}
-                  className="mt-6 text-[10px] uppercase tracking-[0.28em] text-gold-600 hover:text-gold-700 underline underline-offset-4 decoration-gold-500/60 transition-colors"
+                  className="mt-6 text-[12px] uppercase tracking-[0.28em] text-black hover:text-black/80 underline underline-offset-4 decoration-black/60 transition-colors"
                   style={
                     isExiting
                       ? undefined
@@ -836,7 +836,7 @@ function HowItWorks({ selectedService, onSelectService }) {
             ) : (
               <div key="default" className="animate-fade-up">
                 <h3
-                  className="font-display text-3xl text-mask-gold"
+                  className="font-display text-3xl text-black"
                   style={{
                     animation: "fadeUp 0.8s cubic-bezier(0.22,1,0.36,1) both",
                     animationDelay: "120ms",
@@ -852,7 +852,7 @@ function HowItWorks({ selectedService, onSelectService }) {
                   }}
                 />
                 <p
-                  className="mt-5 text-ink-700 leading-relaxed italic font-light"
+                  className="mt-5 text-black/80 leading-relaxed italic font-light"
                   style={{
                     animation: "fadeUp 0.8s cubic-bezier(0.22,1,0.36,1) both",
                     animationDelay: "280ms",
@@ -876,11 +876,11 @@ function HowItWorks({ selectedService, onSelectService }) {
                   e.preventDefault();
                   alert("Thank you. The team will be in touch shortly.");
                 }}
-                className="relative bg-[#d2d2d2] text-ink-900 p-5 lg:p-6 border border-gold-500/40 rounded-[15px] shadow-[0_30px_70px_-15px_rgba(158,126,54,0.55),0_8px_24px_-10px_rgba(158,126,54,0.45)] transition-all duration-700 ease-[cubic-bezier(0.22,1,0.36,1)] hover:-translate-y-1.5 hover:shadow-[0_50px_100px_-20px_rgba(158,126,54,0.7),0_10px_30px_-10px_rgba(158,126,54,0.55)]"
+                className="relative bg-[#d2d2d2] text-black p-5 lg:p-6 border border-gold-500/40 rounded-[15px] shadow-[0_30px_70px_-15px_rgba(158,126,54,0.55),0_8px_24px_-10px_rgba(158,126,54,0.45)] transition-all duration-700 ease-[cubic-bezier(0.22,1,0.36,1)] hover:-translate-y-1.5 hover:shadow-[0_50px_100px_-20px_rgba(158,126,54,0.7),0_10px_30px_-10px_rgba(158,126,54,0.55)]"
               >
-                <h3 className="font-display text-xl text-ink-900">
+                <h3 className="font-display text-xl text-black">
                   Begin your{" "}
-                  <span className="italic font-light text-gold-600">
+                  <span className="italic font-light text-black">
                     journey.
                   </span>
                 </h3>
@@ -894,7 +894,7 @@ function HowItWorks({ selectedService, onSelectService }) {
                       onSelectService &&
                       onSelectService(e.target.value || null)
                     }
-                    className="w-full rounded-lg border border-ink-900/15 bg-[#d2d2d2] px-3 py-2 text-xs text-ink-900 focus:outline-none focus:border-gold-500 transition appearance-none bg-no-repeat bg-right pr-8"
+                    className="w-full rounded-lg border border-ink-900/15 bg-[#d2d2d2] px-3 py-2 text-xs text-black focus:outline-none focus:border-gold-500 transition appearance-none bg-no-repeat bg-right pr-8"
                     style={{
                       backgroundImage:
                         "url(\"data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20' fill='%239E7E36'><path d='M5.5 7.5l4.5 5 4.5-5z'/></svg>\")",
@@ -930,14 +930,14 @@ function HowItWorks({ selectedService, onSelectService }) {
                       required
                       type="date"
                       aria-label="Journey date"
-                      className="rounded-lg border border-ink-900/15 bg-[#d2d2d2] px-3 py-2 text-xs text-ink-900 focus:outline-none focus:border-gold-500 transition"
+                      className="rounded-lg border border-ink-900/15 bg-[#d2d2d2] px-3 py-2 text-xs text-black focus:outline-none focus:border-gold-500 transition"
                     />
                   </div>
                   <div className="grid grid-cols-2 gap-2.5">
                     <select
                       value={pickup}
                       onChange={(e) => setPickup(e.target.value)}
-                      className="rounded-lg border border-ink-900/15 bg-[#d2d2d2] px-3 py-2 text-xs text-ink-900 focus:outline-none focus:border-gold-500 transition appearance-none bg-no-repeat bg-right pr-8"
+                      className="rounded-lg border border-ink-900/15 bg-[#d2d2d2] px-3 py-2 text-xs text-black focus:outline-none focus:border-gold-500 transition appearance-none bg-no-repeat bg-right pr-8"
                       style={{
                         backgroundImage:
                           "url(\"data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20' fill='%239E7E36'><path d='M5.5 7.5l4.5 5 4.5-5z'/></svg>\")",
@@ -962,7 +962,7 @@ function HowItWorks({ selectedService, onSelectService }) {
                     <select
                       value={destination}
                       onChange={(e) => setDestination(e.target.value)}
-                      className="rounded-lg border border-ink-900/15 bg-[#d2d2d2] px-3 py-2 text-xs text-ink-900 focus:outline-none focus:border-gold-500 transition appearance-none bg-no-repeat bg-right pr-8"
+                      className="rounded-lg border border-ink-900/15 bg-[#d2d2d2] px-3 py-2 text-xs text-black focus:outline-none focus:border-gold-500 transition appearance-none bg-no-repeat bg-right pr-8"
                       style={{
                         backgroundImage:
                           "url(\"data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20' fill='%239E7E36'><path d='M5.5 7.5l4.5 5 4.5-5z'/></svg>\")",
@@ -988,7 +988,7 @@ function HowItWorks({ selectedService, onSelectService }) {
 
                   {pickup === "Custom address" && (
                     <div className="animate-fade-up rounded-lg border border-gold-500/40 bg-cream-100/60 p-4 space-y-3">
-                      <div className="text-[11px] uppercase tracking-[0.28em] text-gold-600">
+                      <div className="text-[13px] uppercase tracking-[0.28em] text-black">
                         Pickup address
                       </div>
                       <input
@@ -1015,7 +1015,7 @@ function HowItWorks({ selectedService, onSelectService }) {
 
                   {destination === "Custom address" && (
                     <div className="animate-fade-up rounded-lg border border-gold-500/40 bg-cream-100/60 p-4 space-y-3">
-                      <div className="text-[11px] uppercase tracking-[0.28em] text-gold-600">
+                      <div className="text-[13px] uppercase tracking-[0.28em] text-black">
                         Destination address
                       </div>
                       <input
@@ -1066,14 +1066,14 @@ function HowItWorks({ selectedService, onSelectService }) {
               className="reveal group text-center transition-all duration-700 ease-[cubic-bezier(0.22,1,0.36,1)]"
               style={{ transitionDelay: `${i * 100}ms` }}
             >
-              <div className="font-display italic font-light text-7xl leading-none bg-gradient-to-br from-gold-300 via-gold-500 to-gold-600 bg-clip-text text-transparent transition-all duration-700 group-hover:bg-gradient-to-tr group-hover:from-gold-400 group-hover:via-gold-600 group-hover:to-ink-900">
+              <div className="font-display italic font-light text-7xl leading-none text-black transition-all duration-700">
                 {s.n}
               </div>
-              <div className="mt-4 mx-auto h-px w-12 bg-gold-500/40 transition-all duration-700 group-hover:bg-gold-500 group-hover:w-20" />
-              <h3 className="mt-6 font-display font-normal text-2xl bg-gradient-to-br from-gold-300 via-gold-500 to-gold-600 bg-clip-text text-transparent transition-all duration-700 group-hover:bg-gradient-to-tr group-hover:from-gold-400 group-hover:via-gold-600 group-hover:to-ink-900">
+              <div className="mt-4 mx-auto h-px w-12 bg-black/40 transition-all duration-700 group-hover:bg-black group-hover:w-20" />
+              <h3 className="mt-6 font-display font-normal text-2xl text-black transition-all duration-700">
                 {s.title}
               </h3>
-              <p className="mt-4 text-sm leading-[1.85] bg-gradient-to-br from-ink-700 via-ink-700 to-ink-700 bg-clip-text text-transparent transition-all duration-700 group-hover:bg-gradient-to-tr group-hover:from-gold-500 group-hover:via-ink-700 group-hover:to-ink-900">
+              <p className="mt-4 text-[15px] leading-[1.85] text-black/80 transition-all duration-700">
                 {s.body}
               </p>
             </div>
@@ -1182,16 +1182,16 @@ function Services({ onSelect }) {
       <div className="container-x">
         <div className="reveal flex flex-col items-center text-center gap-7 max-w-2xl mx-auto">
           <div>
-            <div className="eyebrow flex items-center gap-3 justify-center">
+            <div className="eyebrow !text-black !text-[12px] flex items-center gap-3 justify-center">
               <span className="hairline" /> The Offering
             </div>
-            <h2 className="h-display mt-7 text-5xl sm:text-6xl text-mask-gold">
+            <h2 className="h-display mt-7 text-5xl sm:text-6xl text-black">
               A fleet for
               <br />
               <span className="italic font-light">every occasion.</span>
             </h2>
           </div>
-          <p className="max-w-md text-ink-700 leading-relaxed italic font-light">
+          <p className="max-w-md text-black/80 leading-relaxed italic font-light">
             Every way to travel. One standard of service.
           </p>
         </div>
@@ -1242,7 +1242,7 @@ function Services({ onSelect }) {
                   />
 
                   {/* Numeral */}
-                  <span className="pointer-events-none absolute bottom-5 right-6 font-display italic font-light text-5xl lg:text-6xl leading-none text-gold-300/85 drop-shadow-[0_2px_8px_rgba(0,0,0,0.5)]">
+                  <span className="pointer-events-none absolute bottom-5 right-6 font-display italic font-light text-5xl lg:text-6xl leading-none text-white drop-shadow-[0_2px_8px_rgba(0,0,0,0.65)]">
                     {String(i + 1).padStart(2, "0")}
                   </span>
                 </div>
@@ -1254,20 +1254,20 @@ function Services({ onSelect }) {
                 } flex items-center px-8 lg:px-16 xl:px-24 py-12 lg:py-20`}
               >
                 <div className="max-w-md">
-                  <div className="eyebrow flex items-center gap-3">
+                  <div className="eyebrow !text-black !text-[12px] flex items-center gap-3">
                     <span className="hairline" /> {p.eyebrow}
                   </div>
-                  <h3 className="h-display !font-cormorant mt-5 text-4xl lg:text-5xl text-mask-gold leading-[1.04]">
+                  <h3 className="h-display !font-cormorant mt-5 text-4xl lg:text-5xl text-black leading-[1.04]">
                     {p.title}
                   </h3>
                   <div className="mt-5 h-px w-12 bg-gold-500/60 transition-all duration-700 group-hover:w-24 group-hover:bg-gold-500" />
-                  <p className="mt-7 text-ink-700 leading-[1.85] font-light">
+                  <p className="mt-7 text-black/80 leading-[1.85] font-light">
                     {p.body}
                   </p>
                   <div className="mt-9 flex items-center gap-5">
                     <Link
                       to={`/blog/${p.slug}`}
-                      className="inline-flex items-center gap-2 text-[10px] uppercase tracking-[0.34em] text-gold-600 hover:text-gold-700 transition-colors border-b border-gold-500/40 hover:border-gold-700 pb-1"
+                      className="inline-flex items-center gap-2 text-[12px] uppercase tracking-[0.34em] text-black hover:text-black/70 transition-colors border-b border-black/40 hover:border-black pb-1"
                     >
                       Read more
                       <Icon.ArrowRight className="h-3.5 w-3.5 transition-transform duration-500 group-hover:translate-x-1" />
@@ -1284,7 +1284,7 @@ function Services({ onSelect }) {
                             block: "start",
                           });
                       }}
-                      className="inline-flex items-center gap-2 text-[10px] uppercase tracking-[0.34em] text-ink-700 hover:text-gold-700 transition-colors"
+                      className="inline-flex items-center gap-2 text-[12px] uppercase tracking-[0.34em] text-black hover:text-black/70 transition-colors"
                     >
                       Enquire
                     </a>
@@ -1298,16 +1298,16 @@ function Services({ onSelect }) {
 
       <div className="container-x">
         {/* In-vehicle card */}
-        <div className="reveal mt-16 rounded-[15px] border border-gold-500/50 bg-ink-900 text-cream-50 overflow-hidden shadow-[0_30px_70px_-15px_rgba(158,126,54,0.6),0_10px_30px_-12px_rgba(158,126,54,0.45)] transition-all duration-700 ease-[cubic-bezier(0.22,1,0.36,1)] hover:-translate-y-1.5 hover:shadow-[0_50px_100px_-20px_rgba(158,126,54,0.75),0_15px_40px_-12px_rgba(158,126,54,0.55)]">
+        <div className="reveal mt-16 rounded-[15px] border border-white/30 bg-ink-900 text-white overflow-hidden shadow-[0_30px_70px_-15px_rgba(0,0,0,0.55),0_10px_30px_-12px_rgba(0,0,0,0.45)] transition-all duration-700 ease-[cubic-bezier(0.22,1,0.36,1)] hover:-translate-y-1.5 hover:shadow-[0_50px_100px_-20px_rgba(0,0,0,0.7),0_15px_40px_-12px_rgba(0,0,0,0.5)]">
           <div className="grid grid-cols-1 lg:grid-cols-2 items-stretch">
             {/* Left — features */}
             <div className="p-8 lg:p-12 flex flex-col">
-              <div className="eyebrow !text-gold-300">Inside the Sprinter</div>
-              <h3 className="font-display italic font-light text-4xl lg:text-5xl mt-4">
-                <span className="text-mask-gold-bright">Quietly equipped.</span>
+              <div className="text-[12px] uppercase tracking-[0.34em] !text-white">Inside the Sprinter</div>
+              <h3 className="font-display italic font-light text-4xl lg:text-5xl mt-4 text-white">
+                Quietly equipped.
               </h3>
-              <div className="mt-5 h-px w-12 bg-gold-500/60" />
-              <div className="mt-8 grid grid-cols-2 gap-x-6 gap-y-3 text-sm text-cream-100/85">
+              <div className="mt-5 h-px w-12 bg-white/60" />
+              <div className="mt-8 grid grid-cols-2 gap-x-6 gap-y-3 text-[15px] text-white/85">
                 {[
                   "Leather seats",
                   "Climate control",
@@ -1325,7 +1325,7 @@ function Services({ onSelect }) {
                   "360° camera",
                 ].map((f) => (
                   <div key={f} className="flex items-center gap-2">
-                    <span className="h-1 w-1 rounded-full bg-gold-400" />
+                    <span className="h-1 w-1 rounded-full bg-white" />
                     {f}
                   </div>
                 ))}
@@ -1387,7 +1387,7 @@ function Testimonials() {
     <section
       id="testimonials"
       ref={ref}
-      className="relative overflow-hidden font-cormorant text-black"
+      className="relative overflow-hidden font-cormorant text-white"
     >
       {quotes.map((q, i) => (
         <div
@@ -1407,13 +1407,13 @@ function Testimonials() {
       ))}
 
       <div className="relative container-x py-28 lg:py-44 max-w-4xl mx-auto text-center">
-        <div className="reveal eyebrow !text-gold-300 flex items-center gap-3 justify-center">
-          <span className="h-px w-12 bg-gold-300" /> In Their Words
+        <div className="reveal !text-white text-[13px] uppercase tracking-[0.34em] flex items-center gap-3 justify-center">
+          <span className="h-px w-12 bg-white" /> In Their Words
         </div>
-        <h2 className="reveal mt-7 h-display !font-cormorant text-4xl sm:text-5xl lg:text-6xl text-cream-50 drop-shadow-[0_3px_10px_rgba(0,0,0,0.6)]">
+        <h2 className="reveal mt-7 h-display !font-cormorant text-4xl sm:text-5xl lg:text-6xl text-white drop-shadow-[0_3px_10px_rgba(0,0,0,0.6)]">
           Quietly
           <br />
-          <span className="italic font-light text-gold-300">recommended.</span>
+          <span className="italic font-light text-white">recommended.</span>
         </h2>
 
         <div className="reveal mt-14 grid">
@@ -1425,11 +1425,11 @@ function Testimonials() {
                 i === idx ? "opacity-100" : "opacity-0 pointer-events-none"
               }`}
             >
-              <p className="font-display !font-cormorant italic font-light text-2xl sm:text-3xl lg:text-[34px] leading-[1.5] text-cream-50 max-w-3xl mx-auto drop-shadow-[0_2px_8px_rgba(0,0,0,0.55)]">
+              <p className="font-display !font-cormorant italic font-light text-2xl sm:text-3xl lg:text-[34px] leading-[1.5] text-white max-w-3xl mx-auto drop-shadow-[0_2px_8px_rgba(0,0,0,0.55)]">
                 {q.q.replace(/[“”]/g, "")}
               </p>
-              <footer className="mt-10 text-[11px] uppercase tracking-[0.34em] text-cream-100/85">
-                <div className="font-display normal-case tracking-normal text-lg text-gold-300">
+              <footer className="mt-10 text-[13px] uppercase tracking-[0.34em] text-white/90">
+                <div className="font-display normal-case tracking-normal text-xl text-white">
                   {q.n}
                 </div>
                 <div className="mt-2">{q.r}</div>
@@ -1447,7 +1447,7 @@ function Testimonials() {
               aria-label={`Show testimonial ${i + 1}`}
               aria-current={i === idx}
               className={`h-[2px] transition-all duration-500 ${
-                i === idx ? "w-14 bg-gold-300" : "w-8 bg-white/25 hover:bg-white/45"
+                i === idx ? "w-14 bg-white" : "w-8 bg-white/25 hover:bg-white/45"
               }`}
             />
           ))}
@@ -1490,7 +1490,7 @@ function CTA() {
         <div className="reveal mt-12 flex flex-wrap items-center justify-center gap-4">
           <a
             href="mailto:bookings@luxurytransport.co.uk"
-            className="btn-primary !rounded-[15px] !bg-gold-400 !text-ink-900 hover:!bg-cream-50"
+            className="btn-primary !rounded-[15px] !bg-gold-400 !text-black hover:!bg-cream-50"
           >
             Email the Team <Icon.ArrowRight className="h-4 w-4" />
           </a>
@@ -1521,7 +1521,7 @@ function Footer() {
     },
   ];
   return (
-    <footer className="bg-ink-900 text-black font-cormorant border-t border-gold-500/20 relative overflow-hidden">
+    <footer className="bg-ink-900 text-white font-cormorant border-t border-white/15 relative overflow-hidden">
       <div
         className="pointer-events-none absolute inset-0 opacity-[0.04]"
         style={{
@@ -1532,26 +1532,28 @@ function Footer() {
       />
       <div className="container-x py-20 lg:py-24 relative">
         {/* Editorial signature line */}
-        <div className="editorial-rule justify-center mx-auto max-w-md !text-gold-300 mb-16">
+        <div className="flex items-center justify-center mx-auto max-w-md mb-16 text-[12px] uppercase tracking-[0.34em] text-white">
+          <span className="h-px flex-1 bg-white/30 mr-5" />
           Luxury Transport · Est. MMXXVI
+          <span className="h-px flex-1 bg-white/30 ml-5" />
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12">
           <div className="lg:col-span-5">
             <a href="#top" className="group flex items-center gap-4">
-              <span className="grid h-12 w-12 place-items-center rounded-[15px] border border-gold-400/60 text-gold-400 font-display italic text-2xl transition-all duration-500 ease-[cubic-bezier(0.22,1,0.36,1)] group-hover:-translate-y-1.5 group-hover:scale-110 group-hover:border-gold-400 group-hover:shadow-[0_15px_30px_-10px_rgba(191,156,83,0.55)]">
+              <span className="grid h-12 w-12 place-items-center rounded-[15px] border border-white/40 text-white font-display italic text-2xl transition-all duration-500 ease-[cubic-bezier(0.22,1,0.36,1)] group-hover:-translate-y-1.5 group-hover:scale-110">
                 L
               </span>
               <div className="leading-tight">
-                <div className="font-display text-xl tracking-wide">
+                <div className="font-display text-xl tracking-wide text-white">
                   Luxury Transport
                 </div>
-                <div className="mt-1 text-[10px] uppercase tracking-[0.34em] text-cream-100/60">
+                <div className="mt-1 text-[12px] uppercase tracking-[0.34em] text-white/70">
                   Private Chauffeur · United Kingdom
                 </div>
               </div>
             </a>
-            <p className="mt-7 max-w-sm text-sm text-cream-100/70 leading-[1.85] italic font-light">
+            <p className="mt-7 max-w-sm text-[15px] text-white/80 leading-[1.85] italic font-light">
               Safe, stylish and quietly professional passenger transport. A
               Mercedes house, available across the United Kingdom, every hour of
               every day.
@@ -1562,7 +1564,7 @@ function Footer() {
                   key={i}
                   href="#"
                   aria-label="social"
-                  className="group grid h-10 w-10 place-items-center rounded-[15px] border border-cream-100/20 text-cream-100/70 transition-all duration-500 ease-[cubic-bezier(0.22,1,0.36,1)] hover:border-gold-400 hover:text-gold-400 hover:-translate-y-1.5 hover:scale-110 hover:shadow-[0_15px_30px_-10px_rgba(191,156,83,0.55)]"
+                  className="group grid h-10 w-10 place-items-center rounded-[15px] border border-white/25 text-white/85 transition-all duration-500 ease-[cubic-bezier(0.22,1,0.36,1)] hover:border-white hover:text-white hover:-translate-y-1.5 hover:scale-110"
                 >
                   <I className="h-4 w-4 transition-transform duration-500 group-hover:rotate-12" />
                 </a>
@@ -1572,8 +1574,8 @@ function Footer() {
 
           {cols.map((c) => (
             <div key={c.h} className="lg:col-span-3">
-              <div className="eyebrow !text-gold-300">{c.h}</div>
-              <ul className="mt-5 space-y-3 text-sm text-cream-100/80 font-light">
+              <div className="text-[12px] uppercase tracking-[0.34em] text-white font-medium">{c.h}</div>
+              <ul className="mt-5 space-y-3 text-[15px] text-white/85 font-light">
                 {c.l.map((x) => {
                   const slug = SERVICE_BLOG_SLUGS[x];
                   return (
@@ -1581,14 +1583,14 @@ function Footer() {
                       {slug ? (
                         <Link
                           to={`/blog/${slug}`}
-                          className="hover:text-gold-300 transition-colors duration-500"
+                          className="hover:text-white transition-colors duration-500"
                         >
                           {x}
                         </Link>
                       ) : (
                         <a
                           href="#"
-                          className="hover:text-gold-300 transition-colors duration-500"
+                          className="hover:text-white transition-colors duration-500"
                         >
                           {x}
                         </a>
@@ -1601,17 +1603,17 @@ function Footer() {
           ))}
 
           <div className="lg:col-span-4">
-            <div className="eyebrow !text-gold-300">Contact</div>
-            <ul className="mt-5 space-y-3 text-sm text-cream-100/80 font-light">
+            <div className="text-[12px] uppercase tracking-[0.34em] text-white font-medium">Contact</div>
+            <ul className="mt-5 space-y-3 text-[15px] text-white/85 font-light">
               <li className="flex items-center gap-3">
-                <Icon.Phone className="h-3.5 w-3.5 text-gold-400" /> +44 (0)20
+                <Icon.Phone className="h-3.5 w-3.5 text-white" /> +44 (0)20
                 0000 0000
               </li>
               <li className="flex items-center gap-3">
-                <Icon.Mail className="h-3.5 w-3.5 text-gold-400" />{" "}
+                <Icon.Mail className="h-3.5 w-3.5 text-white" />{" "}
                 bookings@luxurytransport.co.uk
               </li>
-              <li className="mt-4 pt-4 border-t border-cream-100/10 text-cream-100/60 text-[10px] uppercase tracking-[0.28em] leading-relaxed">
+              <li className="mt-4 pt-4 border-t border-white/15 text-white/70 text-[12px] uppercase tracking-[0.28em] leading-relaxed">
                 London · Manchester
                 <br />
                 Birmingham · Edinburgh
@@ -1620,12 +1622,12 @@ function Footer() {
           </div>
         </div>
 
-        <div className="mt-20 pt-8 border-t border-cream-100/10 flex flex-col sm:flex-row items-center justify-between gap-4 text-[10px] uppercase tracking-[0.28em] text-cream-100/50">
+        <div className="mt-20 pt-8 border-t border-white/15 flex flex-col sm:flex-row items-center justify-between gap-4 text-[12px] uppercase tracking-[0.28em] text-white/65">
           <p>
             © {new Date().getFullYear()} Luxury Transport Ltd · All rights
             reserved
           </p>
-          <p className="font-display italic font-light text-sm normal-case tracking-normal text-gold-300">
+          <p className="font-display italic font-light text-[15px] normal-case tracking-normal text-white">
             Move in silence. Discretion is our policy.
           </p>
         </div>
@@ -1640,7 +1642,7 @@ function Discover() {
   return (
     <section
       ref={ref}
-      className="relative overflow-hidden bg-ink-900 text-cream-50 font-cormorant"
+      className="relative overflow-hidden bg-ink-900 text-white font-cormorant"
     >
       <div className="grid grid-cols-1 lg:grid-cols-12 items-stretch min-h-[420px] lg:min-h-[640px]">
         <div className="relative lg:col-span-7 min-h-[360px]">
@@ -1653,18 +1655,18 @@ function Discover() {
         </div>
         <div className="lg:col-span-5 flex items-center px-8 lg:px-14 py-16 lg:py-24">
           <div className="reveal max-w-md">
-            <div className="eyebrow !text-gold-300 flex items-center gap-3">
-              <span className="h-px w-12 bg-gold-300" /> Discover
+            <div className="!text-white text-[13px] uppercase tracking-[0.34em] flex items-center gap-3">
+              <span className="h-px w-12 bg-white" /> Discover
             </div>
-            <h2 className="font-display !font-cormorant mt-6 text-4xl lg:text-5xl leading-[1.05]">
+            <h2 className="font-display !font-cormorant mt-6 text-4xl lg:text-5xl leading-[1.05] text-white">
               A house built on
-              <span className="italic font-light text-gold-300">
+              <span className="italic font-light text-white">
                 {" "}
                 quiet precision.
               </span>
             </h2>
-            <div className="mt-5 h-px w-12 bg-gold-400/70" />
-            <p className="mt-7 text-cream-100/80 leading-[1.85] font-light">
+            <div className="mt-5 h-px w-12 bg-white/70" />
+            <p className="mt-7 text-white/85 text-[17px] leading-[1.85] font-light">
               Discretion, punctuality and composure are not features of the
               journey; they are the journey. Every chauffeur, every vehicle and
               every minute in between is rehearsed so that the only thing left
@@ -1789,7 +1791,7 @@ export default function App() {
   }, [location.pathname]);
 
   return (
-    <div className="min-h-screen font-sans text-ink-900">
+    <div className="min-h-screen font-sans text-black">
       {loading && <Loader />}
       <Nav />
       <main>
