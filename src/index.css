@@ -115,6 +115,40 @@
     transform: none;
   }
 
+  /* Image-specific reveal: clip-path wipe + zoom-out, no transform conflict
+     with continuous animations on inner <img>. */
+  .reveal-img {
+    opacity: 0;
+    transform: scale(1.08);
+    clip-path: inset(0 0 100% 0);
+    -webkit-clip-path: inset(0 0 100% 0);
+    transition: opacity 1.6s cubic-bezier(0.22, 1, 0.36, 1),
+                transform 1.6s cubic-bezier(0.22, 1, 0.36, 1),
+                clip-path 1.6s cubic-bezier(0.22, 1, 0.36, 1),
+                -webkit-clip-path 1.6s cubic-bezier(0.22, 1, 0.36, 1);
+    will-change: opacity, transform, clip-path;
+  }
+  .reveal-img.from-bottom {
+    clip-path: inset(100% 0 0 0);
+    -webkit-clip-path: inset(100% 0 0 0);
+  }
+  .reveal-img.is-visible {
+    opacity: 1;
+    transform: none;
+    clip-path: inset(0 0 0 0);
+    -webkit-clip-path: inset(0 0 0 0);
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .reveal, .reveal-img {
+      opacity: 1 !important;
+      transform: none !important;
+      clip-path: none !important;
+      -webkit-clip-path: none !important;
+      transition: none !important;
+    }
+  }
+
   @keyframes kenBurns {
     0%   { transform: scale(1.05) translate3d(0, 0, 0); }
     50%  { transform: scale(1.12) translate3d(-1.2%, -0.8%, 0); }

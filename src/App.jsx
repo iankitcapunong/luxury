@@ -208,7 +208,7 @@ function useReveal() {
       },
       { threshold: 0.12, rootMargin: "0px 0px -40px 0px" },
     );
-    el.querySelectorAll(".reveal").forEach((n) => io.observe(n));
+    el.querySelectorAll(".reveal, .reveal-img").forEach((n) => io.observe(n));
     return () => io.disconnect();
   }, []);
   return ref;
@@ -1221,7 +1221,10 @@ function Services({ onSelect }) {
                   }`}
                 />
 
-                <div className="relative overflow-hidden rounded-[15px] shadow-[0_30px_70px_-22px_rgba(0,0,0,0.45)] min-h-[340px] lg:min-h-[520px]">
+                <div
+                  className={`reveal-img ${reverse ? "from-bottom" : ""} relative overflow-hidden rounded-[15px] shadow-[0_30px_70px_-22px_rgba(0,0,0,0.45)] min-h-[340px] lg:min-h-[520px]`}
+                  style={{ transitionDelay: "180ms" }}
+                >
                   <img
                     src={p.img}
                     alt={p.title}
@@ -1645,7 +1648,7 @@ function Discover() {
       className="relative overflow-hidden bg-ink-900 text-white font-cormorant"
     >
       <div className="grid grid-cols-1 lg:grid-cols-12 items-stretch min-h-[420px] lg:min-h-[640px]">
-        <div className="relative lg:col-span-7 min-h-[360px]">
+        <div className="reveal-img relative lg:col-span-7 min-h-[360px] overflow-hidden">
           <img
             src="/chauff.png"
             alt="Inside the cabin"
