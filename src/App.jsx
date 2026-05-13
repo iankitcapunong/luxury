@@ -321,7 +321,7 @@ function Nav() {
             </div>
           </a>
 
-          <ul className="hidden md:flex items-center gap-10 text-[11px] uppercase tracking-[0.34em] font-medium text-white/90">
+          <ul className="hidden md:flex items-center gap-10 text-[15px] font-cormorant uppercase tracking-[0.34em] font-medium text-white/90">
             {links.map(([label, id]) => (
               <li key={id}>
                 <a
@@ -394,7 +394,7 @@ function Nav() {
                 key={id}
                 href={`/#${id}`}
                 onClick={(e) => goToSection(e, id)}
-                className="py-2 text-sm"
+                className="py-2 text-[15px] font-cormorant"
               >
                 {l}
               </a>
