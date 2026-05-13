@@ -822,7 +822,7 @@ function HowItWorks({ selectedService, onSelectService }) {
     <section
       id="how"
       ref={ref}
-      className="relative pt-12 pb-28 lg:pt-16 lg:pb-40 bg-[#d2d2d2]"
+      className="relative pt-12 pb-28 lg:pt-16 lg:pb-40 bg-[#d2d2d2] font-futura text-black"
     >
       <div className="container-x">
         <div className="max-w-2xl mx-auto text-center">
@@ -1254,7 +1254,7 @@ function Services({ onSelect }) {
     },
   ];
   return (
-    <section id="services" ref={ref} className="pt-12 pb-28 lg:pt-16 lg:pb-40 bg-[#d2d2d2]">
+    <section id="services" ref={ref} className="pt-12 pb-28 lg:pt-16 lg:pb-40 bg-[#d2d2d2] font-futura text-black">
       <div className="container-x">
         <div className="reveal flex flex-col items-center text-center gap-7 max-w-2xl mx-auto">
           <div>
@@ -1463,7 +1463,7 @@ function Testimonials() {
     <section
       id="testimonials"
       ref={ref}
-      className="relative overflow-hidden text-cream-50"
+      className="relative overflow-hidden font-futura text-black"
     >
       {quotes.map((q, i) => (
         <div
@@ -1597,7 +1597,7 @@ function Footer() {
     },
   ];
   return (
-    <footer className="bg-ink-900 text-cream-100 border-t border-gold-500/20 relative overflow-hidden">
+    <footer className="bg-ink-900 text-black font-futura border-t border-gold-500/20 relative overflow-hidden">
       <div
         className="pointer-events-none absolute inset-0 opacity-[0.04]"
         style={{

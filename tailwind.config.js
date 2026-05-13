@@ -9,6 +9,7 @@ export default {
         sans: ['Poppins', 'system-ui', 'sans-serif'],
         playfair: ['"DM Serif Display"', 'Georgia', 'serif'],
         cormorant: ['"Cormorant Garamond"', 'Georgia', 'serif'],
+        futura: ['Futura', '"Futura PT"', '"Trebuchet MS"', 'Avenir', 'system-ui', 'sans-serif'],
       },
       colors: {
         cream: {
