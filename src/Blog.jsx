@@ -71,17 +71,17 @@ export default function Blog() {
 
   return (
     <main className="bg-beige-50/40">
-      <article className="container-x pt-32 pb-24 lg:pt-40 lg:pb-32">
-        <div className="mb-10 lg:mb-14">
+      <article className="container-x pt-24 pb-16 sm:pt-32 sm:pb-24 lg:pt-40 lg:pb-32">
+        <div className="mb-8 sm:mb-10 lg:mb-14">
           <Link
             to="/"
-            className="inline-flex items-center gap-2 text-[10px] uppercase tracking-[0.34em] text-gold-600 hover:text-gold-700 transition-colors"
+            className="inline-flex items-center gap-2 text-[10px] uppercase tracking-[0.28em] sm:tracking-[0.34em] text-gold-600 hover:text-gold-700 transition-colors"
           >
             <span aria-hidden="true">←</span> Back home
           </Link>
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-16 items-start">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 sm:gap-10 lg:gap-16 items-start">
           <div className="lg:col-span-6 lg:sticky lg:top-28">
             <div className="relative overflow-hidden rounded-[15px] border border-gold-500/30 shadow-[0_30px_70px_-20px_rgba(158,126,54,0.45)]">
               <img
@@ -98,11 +98,11 @@ export default function Blog() {
             <div className="eyebrow flex items-center gap-3">
               <span className="hairline" /> {post.eyebrow}
             </div>
-            <h1 className="h-display !font-cormorant mt-5 text-5xl sm:text-6xl text-mask-gold leading-[1.02]">
+            <h1 className="h-display !font-cormorant mt-5 text-4xl sm:text-5xl lg:text-6xl text-mask-gold leading-[1.02]">
               {post.title}
             </h1>
             <div className="mt-5 h-px w-14 bg-gold-500/60" />
-            <div className="mt-8 space-y-6 text-[17px] leading-[1.85] text-ink-700 font-light">
+            <div className="mt-6 sm:mt-8 space-y-5 sm:space-y-6 text-[15px] sm:text-[17px] leading-[1.85] text-ink-700 font-light">
               {post.body.map((p, idx) => (
                 <p key={idx}>{p}</p>
               ))}

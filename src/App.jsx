@@ -258,26 +258,26 @@ function Nav() {
     <header className="fixed top-0 left-0 right-0 z-50">
       {/* Main nav */}
       <nav
-        className={`w-full px-8 transition-all duration-300 ${
+        className={`w-full px-4 sm:px-6 md:px-8 transition-all duration-300 ${
           scrolled
-            ? "py-4 bg-[#19181c] border-b border-white/10"
-            : "py-5 bg-[#19181c]/85 backdrop-blur-md border-b border-white/5"
+            ? "py-3 sm:py-4 bg-[#19181c] border-b border-white/10"
+            : "py-4 sm:py-5 bg-[#19181c]/85 backdrop-blur-md border-b border-white/5"
         }`}
       >
-        <div className="flex items-center justify-between gap-8">
+        <div className="flex items-center justify-between gap-3 sm:gap-8">
           <a
             href="/"
             onClick={goHomeTop}
-            className="flex items-center gap-3 shrink-0"
+            className="flex items-center gap-2 sm:gap-3 shrink-0 min-w-0"
           >
-            <span className="grid h-11 w-11 place-items-center rounded-full border border-gold-400/70 text-gold-400 font-display italic text-[18px] font-bold">
+            <span className="grid h-9 w-9 sm:h-11 sm:w-11 place-items-center rounded-full border border-gold-400/70 text-gold-400 font-display italic text-[16px] sm:text-[18px] font-bold shrink-0">
               L
             </span>
-            <div className="leading-tight font-cormorant">
-              <div className="tracking-wide text-white text-[18px] font-bold">
+            <div className="leading-tight font-cormorant min-w-0">
+              <div className="tracking-wide text-white text-[15px] sm:text-[18px] font-bold truncate">
                 Luxury Transport
               </div>
-              <div className="uppercase tracking-[0.28em] text-white mt-1 text-[12px] font-bold">
+              <div className="uppercase tracking-[0.18em] sm:tracking-[0.28em] text-white mt-0.5 sm:mt-1 text-[10px] sm:text-[12px] font-bold truncate">
                 Private Chauffeur · UK
               </div>
             </div>
@@ -344,7 +344,7 @@ function Hero() {
     <section
       id="top"
       ref={ref}
-      className="group/hero relative overflow-hidden flex flex-col justify-end min-h-screen pt-36 pb-10 lg:pt-44 lg:pb-12"
+      className="group/hero relative overflow-hidden flex flex-col justify-end min-h-screen pt-28 pb-10 sm:pt-36 lg:pt-44 lg:pb-12"
     >
       {/* Background video — clear, with hover dim */}
       <div className="pointer-events-none absolute inset-0 z-0 bg-[#4a8fc8]">
@@ -373,10 +373,10 @@ function Hero() {
       <div className="pointer-events-none absolute -top-40 -right-40 h-[36rem] w-[36rem] rounded-full bg-gold-300/25 blur-[120px] z-0" />
       <div className="pointer-events-none absolute -bottom-48 -left-48 h-[36rem] w-[36rem] rounded-full bg-ink-900/10 blur-[120px] z-0" />
 
-      <div className="relative z-10 w-full pl-4 sm:pl-6 lg:pl-10 pr-6 grid grid-cols-1 lg:grid-cols-12 gap-16 items-end font-cormorant">
+      <div className="relative z-10 w-full pl-4 sm:pl-6 lg:pl-10 pr-4 sm:pr-6 grid grid-cols-1 lg:grid-cols-12 gap-16 items-end font-cormorant">
         <div className="lg:col-span-7">
           <h1
-            className="reveal h-display !font-cormorant text-[72px] lg:text-[88px] leading-[1.02] text-white drop-shadow-[0_4px_18px_rgba(0,0,0,0.75)]"
+            className="reveal h-display !font-cormorant text-[44px] sm:text-[64px] lg:text-[88px] leading-[1.02] text-white drop-shadow-[0_4px_18px_rgba(0,0,0,0.75)]"
             style={{ transitionDelay: "150ms" }}
           >
             <span
@@ -404,23 +404,23 @@ function Hero() {
             </span>
           </h1>
           <div
-            className="reveal mt-7 flex items-start gap-4 max-w-xl"
+            className="reveal mt-5 sm:mt-7 flex items-start gap-3 sm:gap-4 max-w-xl"
             style={{ transitionDelay: "350ms" }}
           >
-            <span className="mt-3 h-px w-10 bg-gold-400 shrink-0" />
-            <p className="text-[24px] text-white leading-relaxed font-light drop-shadow-[0_2px_6px_rgba(0,0,0,0.7)]">
+            <span className="mt-2 sm:mt-3 h-px w-6 sm:w-10 bg-gold-400 shrink-0" />
+            <p className="text-base sm:text-lg lg:text-[24px] text-white leading-relaxed font-light drop-shadow-[0_2px_6px_rgba(0,0,0,0.7)]">
               A private chauffeur house, fluent in the small things: the chilled
               water, the unspoken route, the door already open.
             </p>
           </div>
 
           <div
-            className="reveal mt-10 ml-14 inline-block animate-gentle-bounce"
+            className="reveal mt-8 sm:mt-10 sm:ml-14 inline-block animate-gentle-bounce"
             style={{ transitionDelay: "550ms" }}
           >
             <a
               href="#contact"
-              className="group flex gap-2 text-lg transition-all duration-500 hover:scale-[1.03] active:scale-[0.98] text-white font-semibold h-14 rounded-full pr-10 pl-10 relative gap-x-2 gap-y-2 items-center justify-center"
+              className="group flex gap-2 text-base sm:text-lg transition-all duration-500 hover:scale-[1.03] active:scale-[0.98] text-white font-semibold h-12 sm:h-14 rounded-full pr-7 pl-7 sm:pr-10 sm:pl-10 relative gap-x-2 gap-y-2 items-center justify-center"
               style={{
                 background:
                   "linear-gradient(#daba7f, #daba7f) padding-box, linear-gradient(90deg, #f97316 0%, #fbbf24 50%, #ffffff 100%) border-box",
@@ -753,7 +753,7 @@ function HowItWorks({ selectedService, onSelectService }) {
           <div className="reveal eyebrow !text-black !text-[12px] flex items-center gap-3 justify-center">
             <span className="hairline" /> The Process
           </div>
-          <h2 className="reveal h-display mt-7 text-5xl sm:text-6xl text-black">
+          <h2 className="reveal h-display mt-7 text-4xl sm:text-5xl lg:text-6xl text-black">
             Three steps.
           </h2>
           <p className="reveal mt-7 text-black/80 leading-relaxed italic font-light max-w-xl mx-auto">
@@ -876,7 +876,7 @@ function HowItWorks({ selectedService, onSelectService }) {
                   e.preventDefault();
                   alert("Thank you. The team will be in touch shortly.");
                 }}
-                className="relative bg-[#d2d2d2] text-black p-5 lg:p-6 border border-gold-500/40 rounded-[15px] shadow-[0_30px_70px_-15px_rgba(158,126,54,0.55),0_8px_24px_-10px_rgba(158,126,54,0.45)] transition-all duration-700 ease-[cubic-bezier(0.22,1,0.36,1)] hover:-translate-y-1.5 hover:shadow-[0_50px_100px_-20px_rgba(158,126,54,0.7),0_10px_30px_-10px_rgba(158,126,54,0.55)]"
+                className="relative bg-[#d2d2d2] text-black p-4 sm:p-5 lg:p-6 border border-gold-500/40 rounded-[15px] shadow-[0_30px_70px_-15px_rgba(158,126,54,0.55),0_8px_24px_-10px_rgba(158,126,54,0.45)] transition-all duration-700 ease-[cubic-bezier(0.22,1,0.36,1)] hover:-translate-y-1.5 hover:shadow-[0_50px_100px_-20px_rgba(158,126,54,0.7),0_10px_30px_-10px_rgba(158,126,54,0.55)]"
               >
                 <h3 className="font-display text-xl text-black">
                   Begin your{" "}
@@ -1185,7 +1185,7 @@ function Services({ onSelect }) {
             <div className="eyebrow !text-black !text-[12px] flex items-center gap-3 justify-center">
               <span className="hairline" /> The Offering
             </div>
-            <h2 className="h-display mt-7 text-5xl sm:text-6xl text-black">
+            <h2 className="h-display mt-7 text-4xl sm:text-5xl lg:text-6xl text-black">
               A fleet for
               <br />
               <span className="italic font-light">every occasion.</span>
@@ -1209,7 +1209,7 @@ function Services({ onSelect }) {
               <div
                 className={`reveal ${
                   reverse ? "from-right lg:order-2" : "from-left"
-                } relative px-6 sm:px-8 lg:px-12 py-10 lg:py-14`}
+                } relative px-4 sm:px-8 lg:px-12 py-8 sm:py-10 lg:py-14`}
               >
                 {/* Decorative offset gold frame */}
                 <span
@@ -1222,7 +1222,7 @@ function Services({ onSelect }) {
                 />
 
                 <div
-                  className={`reveal-img ${reverse ? "from-bottom" : ""} relative overflow-hidden rounded-[15px] shadow-[0_30px_70px_-22px_rgba(0,0,0,0.45)] min-h-[340px] lg:min-h-[520px]`}
+                  className={`reveal-img ${reverse ? "from-bottom" : ""} relative overflow-hidden rounded-[15px] shadow-[0_30px_70px_-22px_rgba(0,0,0,0.45)] min-h-[260px] sm:min-h-[340px] lg:min-h-[520px]`}
                   style={{ transitionDelay: "180ms" }}
                 >
                   <img
@@ -1254,13 +1254,13 @@ function Services({ onSelect }) {
               <div
                 className={`reveal ${
                   reverse ? "from-left lg:order-1" : "from-right"
-                } flex items-center px-8 lg:px-16 xl:px-24 py-12 lg:py-20`}
+                } flex items-center px-6 sm:px-8 lg:px-16 xl:px-24 py-8 sm:py-12 lg:py-20`}
               >
                 <div className="max-w-md">
                   <div className="eyebrow !text-black !text-[12px] flex items-center gap-3">
                     <span className="hairline" /> {p.eyebrow}
                   </div>
-                  <h3 className="h-display !font-cormorant mt-5 text-4xl lg:text-5xl text-black leading-[1.04]">
+                  <h3 className="h-display !font-cormorant mt-5 text-3xl sm:text-4xl lg:text-5xl text-black leading-[1.04]">
                     {p.title}
                   </h3>
                   <div className="mt-5 h-px w-12 bg-gold-500/60 transition-all duration-700 group-hover:w-24 group-hover:bg-gold-500" />
@@ -1304,13 +1304,13 @@ function Services({ onSelect }) {
         <div className="reveal mt-16 rounded-[15px] border border-white/30 bg-ink-900 text-white overflow-hidden shadow-[0_30px_70px_-15px_rgba(0,0,0,0.55),0_10px_30px_-12px_rgba(0,0,0,0.45)] transition-all duration-700 ease-[cubic-bezier(0.22,1,0.36,1)] hover:-translate-y-1.5 hover:shadow-[0_50px_100px_-20px_rgba(0,0,0,0.7),0_15px_40px_-12px_rgba(0,0,0,0.5)]">
           <div className="grid grid-cols-1 lg:grid-cols-2 items-stretch">
             {/* Left — features */}
-            <div className="p-8 lg:p-12 flex flex-col">
-              <div className="text-[12px] uppercase tracking-[0.34em] !text-white">Inside the Sprinter</div>
-              <h3 className="font-display italic font-light text-4xl lg:text-5xl mt-4 text-white">
+            <div className="p-6 sm:p-8 lg:p-12 flex flex-col">
+              <div className="text-[11px] sm:text-[12px] uppercase tracking-[0.28em] sm:tracking-[0.34em] !text-white">Inside the Sprinter</div>
+              <h3 className="font-display italic font-light text-3xl sm:text-4xl lg:text-5xl mt-4 text-white">
                 Quietly equipped.
               </h3>
               <div className="mt-5 h-px w-12 bg-white/60" />
-              <div className="mt-8 grid grid-cols-2 gap-x-6 gap-y-3 text-[15px] text-white/85">
+              <div className="mt-6 sm:mt-8 grid grid-cols-2 gap-x-4 sm:gap-x-6 gap-y-2.5 sm:gap-y-3 text-[13px] sm:text-[15px] text-white/85">
                 {[
                   "Leather seats",
                   "Climate control",
@@ -1409,11 +1409,11 @@ function Testimonials() {
         </div>
       ))}
 
-      <div className="relative container-x py-28 lg:py-44 max-w-4xl mx-auto text-center">
-        <div className="reveal !text-white text-[13px] uppercase tracking-[0.34em] flex items-center gap-3 justify-center">
-          <span className="h-px w-12 bg-white" /> In Their Words
+      <div className="relative container-x py-20 sm:py-28 lg:py-44 max-w-4xl mx-auto text-center">
+        <div className="reveal !text-white text-[11px] sm:text-[13px] uppercase tracking-[0.28em] sm:tracking-[0.34em] flex items-center gap-3 justify-center">
+          <span className="h-px w-8 sm:w-12 bg-white" /> In Their Words
         </div>
-        <h2 className="reveal mt-7 h-display !font-cormorant text-4xl sm:text-5xl lg:text-6xl text-white drop-shadow-[0_3px_10px_rgba(0,0,0,0.6)]">
+        <h2 className="reveal mt-6 sm:mt-7 h-display !font-cormorant text-3xl sm:text-5xl lg:text-6xl text-white drop-shadow-[0_3px_10px_rgba(0,0,0,0.6)]">
           Quietly
           <br />
           <span className="italic font-light text-white">recommended.</span>
@@ -1428,7 +1428,7 @@ function Testimonials() {
                 i === idx ? "opacity-100" : "opacity-0 pointer-events-none"
               }`}
             >
-              <p className="font-display !font-cormorant italic font-light text-2xl sm:text-3xl lg:text-[34px] leading-[1.5] text-white max-w-3xl mx-auto drop-shadow-[0_2px_8px_rgba(0,0,0,0.55)]">
+              <p className="font-display !font-cormorant italic font-light text-lg sm:text-2xl lg:text-[34px] leading-[1.5] text-white max-w-3xl mx-auto drop-shadow-[0_2px_8px_rgba(0,0,0,0.55)]">
                 {q.q.replace(/[“”]/g, "")}
               </p>
               <footer className="mt-10 text-[13px] uppercase tracking-[0.34em] text-white/90">
@@ -1466,7 +1466,7 @@ function CTA() {
   return (
     <section
       ref={ref}
-      className="relative py-28 lg:py-40 bg-ink-900 text-cream-50 overflow-hidden"
+      className="relative py-20 sm:py-28 lg:py-40 bg-ink-900 text-cream-50 overflow-hidden"
     >
       <div className="pointer-events-none absolute -top-40 left-1/2 -translate-x-1/2 h-[36rem] w-[36rem] rounded-full bg-gold-400/20 blur-[120px]" />
       <div
@@ -1478,10 +1478,10 @@ function CTA() {
         }}
       />
       <div className="container-x relative text-center max-w-3xl mx-auto">
-        <div className="reveal !text-white text-[13px] uppercase tracking-[0.34em] flex items-center gap-3 justify-center">
-          <span className="h-px w-12 bg-white" /> Request Your Booking <span className="h-px w-12 bg-white" />
+        <div className="reveal !text-white text-[11px] sm:text-[13px] uppercase tracking-[0.28em] sm:tracking-[0.34em] flex items-center gap-2 sm:gap-3 justify-center flex-wrap">
+          <span className="h-px w-8 sm:w-12 bg-white" /> Request Your Booking <span className="h-px w-8 sm:w-12 bg-white" />
         </div>
-        <h2 className="reveal h-display !font-cormorant mt-8 text-5xl sm:text-6xl lg:text-7xl text-white">
+        <h2 className="reveal h-display !font-cormorant mt-6 sm:mt-8 text-4xl sm:text-6xl lg:text-7xl text-white">
           One enquiry.
           <br />
           <span className="italic font-light text-white">Every detail attended.</span>
@@ -1534,12 +1534,12 @@ function Footer() {
           backgroundSize: "4px 4px",
         }}
       />
-      <div className="container-x py-20 lg:py-24 relative">
+      <div className="container-x py-14 sm:py-20 lg:py-24 relative">
         {/* Editorial signature line */}
-        <div className="flex items-center justify-center mx-auto max-w-md mb-16 text-[12px] uppercase tracking-[0.34em] text-white">
-          <span className="h-px flex-1 bg-white/30 mr-5" />
+        <div className="flex items-center justify-center mx-auto max-w-md mb-12 sm:mb-16 text-[10px] sm:text-[12px] uppercase tracking-[0.22em] sm:tracking-[0.34em] text-white whitespace-nowrap">
+          <span className="h-px flex-1 bg-white/30 mr-3 sm:mr-5" />
           Luxury Transport · Est. MMXXVI
-          <span className="h-px flex-1 bg-white/30 ml-5" />
+          <span className="h-px flex-1 bg-white/30 ml-3 sm:ml-5" />
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12">
@@ -1626,12 +1626,12 @@ function Footer() {
           </div>
         </div>
 
-        <div className="mt-20 pt-8 border-t border-white/15 flex flex-col sm:flex-row items-center justify-between gap-4 text-[12px] uppercase tracking-[0.28em] text-white/65">
+        <div className="mt-16 sm:mt-20 pt-8 border-t border-white/15 flex flex-col sm:flex-row items-center justify-between gap-4 text-[10px] sm:text-[12px] uppercase tracking-[0.18em] sm:tracking-[0.28em] text-white/65 text-center sm:text-left">
           <p>
             © {new Date().getFullYear()} Luxury Transport Ltd · All rights
             reserved
           </p>
-          <p className="font-display italic font-light text-[15px] normal-case tracking-normal text-white">
+          <p className="font-display italic font-light text-[14px] sm:text-[15px] normal-case tracking-normal text-white">
             Move in silence. Discretion is our policy.
           </p>
         </div>
