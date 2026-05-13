@@ -115,36 +115,25 @@
     transform: none;
   }
 
-  /* Image-specific reveal: clip-path wipe + zoom-out, no transform conflict
-     with continuous animations on inner <img>. */
+  /* Image-specific reveal: zoom-out + fade. Applied to the WRAPPER so the
+     inner <img>'s ken-burns transform is untouched. */
   .reveal-img {
     opacity: 0;
     transform: scale(1.08);
-    clip-path: inset(0 0 100% 0);
-    -webkit-clip-path: inset(0 0 100% 0);
-    transition: opacity 1.6s cubic-bezier(0.22, 1, 0.36, 1),
-                transform 1.6s cubic-bezier(0.22, 1, 0.36, 1),
-                clip-path 1.6s cubic-bezier(0.22, 1, 0.36, 1),
-                -webkit-clip-path 1.6s cubic-bezier(0.22, 1, 0.36, 1);
-    will-change: opacity, transform, clip-path;
+    transition: opacity 1.4s cubic-bezier(0.22, 1, 0.36, 1),
+                transform 1.6s cubic-bezier(0.22, 1, 0.36, 1);
+    will-change: opacity, transform;
   }
-  .reveal-img.from-bottom {
-    clip-path: inset(100% 0 0 0);
-    -webkit-clip-path: inset(100% 0 0 0);
-  }
+  .reveal-img.from-bottom { transform: scale(1.08) translateY(40px); }
   .reveal-img.is-visible {
     opacity: 1;
     transform: none;
-    clip-path: inset(0 0 0 0);
-    -webkit-clip-path: inset(0 0 0 0);
   }
 
   @media (prefers-reduced-motion: reduce) {
     .reveal, .reveal-img {
       opacity: 1 !important;
       transform: none !important;
-      clip-path: none !important;
-      -webkit-clip-path: none !important;
       transition: none !important;
     }
   }
