@@ -379,38 +379,20 @@ function Hero() {
             className="reveal h-display !font-cormorant text-[72px] lg:text-[88px] leading-[1.02] text-white drop-shadow-[0_4px_18px_rgba(0,0,0,0.75)]"
             style={{ transitionDelay: "150ms" }}
           >
-            <span
-              className="block bg-clip-text text-transparent"
-              style={{
-                backgroundImage:
-                  "linear-gradient(180deg, #ffffff 0%, #f8efd5 60%, #daba7f 100%)",
-                textShadow: "0 2px 12px rgba(0,0,0,0.55)",
-              }}
-            >
-              Arrive
-            </span>
-            <span
-              className="block italic font-light"
-              style={{
-                backgroundImage:
-                  "linear-gradient(90deg, #f97316 0%, #fbbf24 40%, #ffe9b0 70%, #ffffff 100%)",
-                WebkitBackgroundClip: "text",
-                backgroundClip: "text",
-                color: "transparent",
-                filter: "drop-shadow(0 4px 18px rgba(249,115,22,0.35))",
-              }}
-            >
-              Composed.
+            <span className="block text-white">Distinguished Travel.</span>
+            <span className="block italic font-light text-white">
+              Delivered with Precision.
             </span>
           </h1>
           <div
             className="reveal mt-7 flex items-start gap-4 max-w-xl"
             style={{ transitionDelay: "350ms" }}
           >
-            <span className="mt-3 h-px w-10 bg-gold-400 shrink-0" />
+            <span className="mt-3 h-px w-10 bg-white/80 shrink-0" />
             <p className="text-[24px] text-white leading-relaxed font-light drop-shadow-[0_2px_6px_rgba(0,0,0,0.7)]">
-              A private chauffeur house, fluent in the small things: the chilled
-              water, the unspoken route, the door already open.
+              A trusted private chauffeur service for executives, dignitaries,
+              and discerning clients — defined by punctuality, discretion, and
+              an uncompromising standard of care.
             </p>
           </div>
 
