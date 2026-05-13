@@ -4,9 +4,9 @@ export default {
   theme: {
     extend: {
       fontFamily: {
-        serif: ['Poppins', 'system-ui', 'sans-serif'],
-        display: ['Poppins', 'system-ui', 'sans-serif'],
-        sans: ['Poppins', 'system-ui', 'sans-serif'],
+        serif: ['"Cormorant Garamond"', 'Georgia', 'serif'],
+        display: ['"Cormorant Garamond"', 'Georgia', 'serif'],
+        sans: ['"Cormorant Garamond"', 'Georgia', 'serif'],
         playfair: ['"DM Serif Display"', 'Georgia', 'serif'],
         cormorant: ['"Cormorant Garamond"', 'Georgia', 'serif'],
         futura: ['Futura', '"Futura PT"', '"Trebuchet MS"', 'Avenir', 'system-ui', 'sans-serif'],
