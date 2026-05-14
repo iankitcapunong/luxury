@@ -1128,6 +1128,22 @@ function SocialProof() {
 // --- Features ---------------------------------------------------------------
 function Services({ onSelect }) {
   const ref = useReveal();
+  const [activeFeature, setActiveFeature] = useState(null);
+  const sprinterFeatures = [
+    { label: "Leather seats", x: 50, y: 70 },
+    { label: "Climate control", x: 50, y: 35 },
+    { label: "Phone chargers", x: 60, y: 55 },
+    { label: "Bottled water", x: 78, y: 60 },
+    { label: "Optional WiFi", x: 70, y: 15 },
+    { label: "Uniformed drivers", x: 20, y: 50 },
+    { label: "Umbrellas & tissues", x: 15, y: 70 },
+    { label: "Panoramic roof", x: 50, y: 10 },
+    { label: "Fireplace ambience", x: 35, y: 45 },
+    { label: "Refrigerator", x: 82, y: 72 },
+    { label: "Champagne bar", x: 85, y: 55 },
+    { label: "Massage seats", x: 45, y: 75 },
+    { label: "360° camera", x: 25, y: 30 },
+  ];
   const panels = [
     {
       eyebrow: "Service · One",
@@ -1303,42 +1319,66 @@ function Services({ onSelect }) {
                 Quietly equipped.
               </h3>
               <div className="mt-5 h-px w-12 bg-white/60" />
-              <div className="mt-6 sm:mt-8 grid grid-cols-2 gap-x-4 sm:gap-x-6 gap-y-2.5 sm:gap-y-3 text-[13px] sm:text-[15px] text-white/85">
-                {[
-                  "Leather seats",
-                  "Climate control",
-                  "Phone chargers",
-                  "Bottled water",
-                  "Optional WiFi",
-                  "Uniformed drivers",
-                  "Child seats",
-                  "Umbrellas & tissues",
-                  "Panoramic roof",
-                  "Fireplace ambience",
-                  "Refrigerator",
-                  "Champagne bar",
-                  "Massage seats",
-                  "360° camera",
-                ].map((f) => (
-                  <div key={f} className="flex items-center gap-2">
-                    <span className="h-1 w-1 rounded-full bg-white" />
-                    {f}
-                  </div>
-                ))}
+              <div className="mt-6 sm:mt-8 grid grid-cols-2 gap-x-4 sm:gap-x-6 gap-y-2.5 sm:gap-y-3 text-[13px] sm:text-[15px]">
+                {sprinterFeatures.map((f, i) => {
+                  const isActive = activeFeature === i;
+                  return (
+                    <button
+                      key={f.label}
+                      type="button"
+                      onClick={() => setActiveFeature(isActive ? null : i)}
+                      aria-pressed={isActive}
+                      className={`flex items-center gap-2 text-left transition-colors duration-300 ${
+                        isActive ? "text-gold-300" : "text-white/85 hover:text-white"
+                      }`}
+                    >
+                      <span
+                        className={`h-1 w-1 rounded-full transition-all duration-300 ${
+                          isActive ? "bg-gold-300 scale-[2]" : "bg-white"
+                        }`}
+                      />
+                      {f.label}
+                    </button>
+                  );
+                })}
               </div>
+              {activeFeature !== null && (
+                <button
+                  type="button"
+                  onClick={() => setActiveFeature(null)}
+                  className="mt-5 sm:mt-6 self-start text-[11px] uppercase tracking-[0.28em] text-white/60 hover:text-white transition-colors"
+                >
+                  Reset view
+                </button>
+              )}
             </div>
 
-            {/* Right — video */}
-            <div className="relative min-h-[280px] lg:min-h-[420px] bg-ink-800">
-              <video
-                src="/merc.mp4"
-                autoPlay
-                muted
-                loop
-                playsInline
-                className="absolute inset-0 h-full w-full object-cover"
+            {/* Right — interior image with click-to-zoom */}
+            <div className="relative min-h-[280px] lg:min-h-[420px] bg-ink-800 overflow-hidden">
+              <img
+                src="/mercedez_in.jpeg"
+                alt="Inside the Mercedes Sprinter"
+                className="absolute inset-0 h-full w-full object-cover transition-transform duration-[1200ms] ease-[cubic-bezier(0.22,1,0.36,1)]"
+                style={{
+                  transformOrigin:
+                    activeFeature !== null
+                      ? `${sprinterFeatures[activeFeature].x}% ${sprinterFeatures[activeFeature].y}%`
+                      : "50% 50%",
+                  transform: activeFeature !== null ? "scale(2.4)" : "scale(1)",
+                }}
               />
               <div className="pointer-events-none absolute inset-0 bg-gradient-to-r from-ink-900/40 via-transparent to-transparent lg:from-ink-900/60" />
+              {activeFeature !== null && (
+                <div
+                  className="pointer-events-none absolute z-10 -translate-x-1/2 -translate-y-1/2 rounded-full border border-gold-300/70 bg-gold-300/20 backdrop-blur-sm px-3 py-1 text-[10px] uppercase tracking-[0.28em] text-white whitespace-nowrap transition-opacity duration-500"
+                  style={{
+                    left: `${sprinterFeatures[activeFeature].x}%`,
+                    top: `${sprinterFeatures[activeFeature].y}%`,
+                  }}
+                >
+                  {sprinterFeatures[activeFeature].label}
+                </div>
+              )}
             </div>
           </div>
         </div>
