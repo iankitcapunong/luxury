@@ -1130,19 +1130,19 @@ function Services({ onSelect }) {
   const ref = useReveal();
   const [activeFeature, setActiveFeature] = useState(null);
   const sprinterFeatures = [
-    { label: "Leather seats", x: 50, y: 70 },
-    { label: "Climate control", x: 50, y: 35 },
-    { label: "Phone chargers", x: 60, y: 55 },
-    { label: "Bottled water", x: 78, y: 60 },
-    { label: "Optional WiFi", x: 70, y: 15 },
-    { label: "Uniformed drivers", x: 20, y: 50 },
-    { label: "Umbrellas & tissues", x: 15, y: 70 },
-    { label: "Panoramic roof", x: 50, y: 10 },
-    { label: "Fireplace ambience", x: 35, y: 45 },
-    { label: "Refrigerator", x: 82, y: 72 },
-    { label: "Champagne bar", x: 85, y: 55 },
-    { label: "Massage seats", x: 45, y: 75 },
-    { label: "360° camera", x: 25, y: 30 },
+    { label: "Leather seats", x: 28, y: 85 },
+    { label: "Climate control", x: 14, y: 10 },
+    { label: "Phone chargers", x: 30, y: 76 },
+    { label: "Bottled water", x: 82, y: 60 },
+    { label: "Optional WiFi", x: 86, y: 12 },
+    { label: "Uniformed drivers", x: 44, y: 30 },
+    { label: "Umbrellas & tissues", x: 8, y: 38 },
+    { label: "Panoramic roof", x: 50, y: 6 },
+    { label: "Fireplace ambience", x: 78, y: 32 },
+    { label: "Refrigerator", x: 50, y: 42 },
+    { label: "Champagne bar", x: 50, y: 52 },
+    { label: "Massage seats", x: 72, y: 85 },
+    { label: "360° camera", x: 50, y: 18 },
   ];
   const panels = [
     {
@@ -1315,7 +1315,7 @@ function Services({ onSelect }) {
             {/* Left — interior image with click-to-zoom */}
             <div className="relative min-h-[280px] lg:min-h-[420px] bg-ink-800 overflow-hidden lg:order-1">
               <img
-                src="https://images.unsplash.com/photo-1678707407526-06201ed279e9?w=2000&auto=format&fit=crop"
+                src="/inside-s.png"
                 alt="Inside the Mercedes Sprinter"
                 className="absolute inset-0 h-full w-full object-cover transition-transform duration-[1200ms] ease-[cubic-bezier(0.22,1,0.36,1)]"
                 style={{
