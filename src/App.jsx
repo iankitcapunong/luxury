@@ -342,7 +342,7 @@ function Hero() {
       {/* Background video — clear, with hover dim */}
       <div className="pointer-events-none absolute inset-0 z-0 bg-[#4a8fc8]">
         <video
-          src="/merc.mp4"
+          src="/0514.mp4"
           autoPlay
           muted
           loop
