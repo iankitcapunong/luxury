@@ -1312,8 +1312,36 @@ function Services({ onSelect }) {
         {/* In-vehicle card */}
         <div className="reveal mt-16 rounded-[15px] border border-white/30 bg-ink-900 text-white overflow-hidden shadow-[0_30px_70px_-15px_rgba(0,0,0,0.55),0_10px_30px_-12px_rgba(0,0,0,0.45)] transition-all duration-700 ease-[cubic-bezier(0.22,1,0.36,1)] hover:-translate-y-1.5 hover:shadow-[0_50px_100px_-20px_rgba(0,0,0,0.7),0_15px_40px_-12px_rgba(0,0,0,0.5)]">
           <div className="grid grid-cols-1 lg:grid-cols-2 items-stretch">
-            {/* Left — features */}
-            <div className="p-6 sm:p-8 lg:p-12 flex flex-col">
+            {/* Left — interior image with click-to-zoom */}
+            <div className="relative min-h-[280px] lg:min-h-[420px] bg-ink-800 overflow-hidden lg:order-1">
+              <img
+                src="/mercedez_in.jpeg"
+                alt="Inside the Mercedes Sprinter"
+                className="absolute inset-0 h-full w-full object-cover transition-transform duration-[1200ms] ease-[cubic-bezier(0.22,1,0.36,1)]"
+                style={{
+                  transformOrigin:
+                    activeFeature !== null
+                      ? `${sprinterFeatures[activeFeature].x}% ${sprinterFeatures[activeFeature].y}%`
+                      : "50% 50%",
+                  transform: activeFeature !== null ? "scale(2.4)" : "scale(1)",
+                }}
+              />
+              <div className="pointer-events-none absolute inset-0 bg-gradient-to-l from-ink-900/40 via-transparent to-transparent lg:from-ink-900/60" />
+              {activeFeature !== null && (
+                <div
+                  className="pointer-events-none absolute z-10 -translate-x-1/2 -translate-y-1/2 rounded-full border border-gold-300/70 bg-gold-300/20 backdrop-blur-sm px-3 py-1 text-[10px] uppercase tracking-[0.28em] text-white whitespace-nowrap transition-opacity duration-500"
+                  style={{
+                    left: `${sprinterFeatures[activeFeature].x}%`,
+                    top: `${sprinterFeatures[activeFeature].y}%`,
+                  }}
+                >
+                  {sprinterFeatures[activeFeature].label}
+                </div>
+              )}
+            </div>
+
+            {/* Right — features list */}
+            <div className="p-6 sm:p-8 lg:p-12 flex flex-col lg:order-2">
               <div className="text-[11px] sm:text-[12px] uppercase tracking-[0.28em] sm:tracking-[0.34em] !text-white">Inside the Sprinter</div>
               <h3 className="font-display italic font-light text-3xl sm:text-4xl lg:text-5xl mt-4 text-white">
                 Quietly equipped.
@@ -1350,34 +1378,6 @@ function Services({ onSelect }) {
                 >
                   Reset view
                 </button>
-              )}
-            </div>
-
-            {/* Right — interior image with click-to-zoom */}
-            <div className="relative min-h-[280px] lg:min-h-[420px] bg-ink-800 overflow-hidden">
-              <img
-                src="/mercedez_in.jpeg"
-                alt="Inside the Mercedes Sprinter"
-                className="absolute inset-0 h-full w-full object-cover transition-transform duration-[1200ms] ease-[cubic-bezier(0.22,1,0.36,1)]"
-                style={{
-                  transformOrigin:
-                    activeFeature !== null
-                      ? `${sprinterFeatures[activeFeature].x}% ${sprinterFeatures[activeFeature].y}%`
-                      : "50% 50%",
-                  transform: activeFeature !== null ? "scale(2.4)" : "scale(1)",
-                }}
-              />
-              <div className="pointer-events-none absolute inset-0 bg-gradient-to-r from-ink-900/40 via-transparent to-transparent lg:from-ink-900/60" />
-              {activeFeature !== null && (
-                <div
-                  className="pointer-events-none absolute z-10 -translate-x-1/2 -translate-y-1/2 rounded-full border border-gold-300/70 bg-gold-300/20 backdrop-blur-sm px-3 py-1 text-[10px] uppercase tracking-[0.28em] text-white whitespace-nowrap transition-opacity duration-500"
-                  style={{
-                    left: `${sprinterFeatures[activeFeature].x}%`,
-                    top: `${sprinterFeatures[activeFeature].y}%`,
-                  }}
-                >
-                  {sprinterFeatures[activeFeature].label}
-                </div>
               )}
             </div>
           </div>
