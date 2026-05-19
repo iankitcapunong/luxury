@@ -4,36 +4,19 @@ export default {
   theme: {
     extend: {
       fontFamily: {
-        serif: ['Futura', '"Futura PT"', '"Trebuchet MS"', 'Avenir', 'system-ui', 'sans-serif'],
-        display: ['Futura', '"Futura PT"', '"Trebuchet MS"', 'Avenir', 'system-ui', 'sans-serif'],
-        sans: ['Futura', '"Futura PT"', '"Trebuchet MS"', 'Avenir', 'system-ui', 'sans-serif'],
-        playfair: ['Futura', '"Futura PT"', '"Trebuchet MS"', 'Avenir', 'system-ui', 'sans-serif'],
-        cormorant: ['Futura', '"Futura PT"', '"Trebuchet MS"', 'Avenir', 'system-ui', 'sans-serif'],
-        futura: ['Futura', '"Futura PT"', '"Trebuchet MS"', 'Avenir', 'system-ui', 'sans-serif'],
+        serif: ['Bentley', 'Arial', 'Helvetica', 'sans-serif'],
+        display: ['Bentley', 'Arial', 'Helvetica', 'sans-serif'],
+        sans: ['Bentley', 'Arial', 'Helvetica', 'sans-serif'],
+        playfair: ['Bentley', 'Arial', 'Helvetica', 'sans-serif'],
+        cormorant: ['Bentley', 'Arial', 'Helvetica', 'sans-serif'],
+        futura: ['Bentley', 'Arial', 'Helvetica', 'sans-serif'],
       },
       colors: {
-        cream: {
-          50: '#F5ECD6',
-          100: '#EADBB8',
-          200: '#D9C496',
-        },
-        beige: {
-          50: '#EADBB8',
-          100: '#DEC9A0',
-          200: '#CBB180',
-        },
         gold: {
           300: '#D9BD86',
           400: '#BF9C53',
           500: '#9E7E36',
           600: '#7A5E20',
-        },
-        ink: {
-          900: '#231811',
-          800: '#33251A',
-          700: '#4A382A',
-          500: '#735F4B',
-          300: '#A48E76',
         },
       },
       letterSpacing: {

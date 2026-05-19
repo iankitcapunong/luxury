@@ -8,7 +8,7 @@
     scroll-padding-top: 96px;
   }
   body {
-    font-family: 'Futura', 'Futura PT', 'Trebuchet MS', Avenir, system-ui, sans-serif;
+    font-family: Bentley, Arial, Helvetica, sans-serif;
     font-feature-settings: 'ss01', 'ss02';
     background-color: #ffffff;
     color: #000000;
@@ -68,25 +68,13 @@
   }
 
   .text-mask-gold {
-    background-image: linear-gradient(135deg, #E2C189 0%, #BF9C53 40%, #8B6420 100%);
-    -webkit-background-clip: text;
-    background-clip: text;
-    color: transparent;
-    -webkit-text-fill-color: transparent;
+    color: #000000;
   }
   .text-mask-gold-bright {
-    background-image: linear-gradient(135deg, #F5ECD6 0%, #E2C189 35%, #BF9C53 100%);
-    -webkit-background-clip: text;
-    background-clip: text;
-    color: transparent;
-    -webkit-text-fill-color: transparent;
+    color: #ffffff;
   }
   .text-mask-ink {
-    background-image: linear-gradient(135deg, #231811 0%, #4A382A 60%, #735F4B 100%);
-    -webkit-background-clip: text;
-    background-clip: text;
-    color: transparent;
-    -webkit-text-fill-color: transparent;
+    color: #000000;
   }
   .editorial-rule::before,
   .editorial-rule::after {
