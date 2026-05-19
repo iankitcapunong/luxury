@@ -19,7 +19,8 @@ export default function ExpressReserve() {
 
       <form
         onSubmit={handleSubmit}
-        className="flex flex-col sm:flex-row items-stretch gap-2 rounded-2xl border border-white/20 bg-black/55 backdrop-blur-md p-2 shadow-[0_30px_70px_-20px_rgba(0,0,0,0.6)]"
+        style={{ colorScheme: "dark" }}
+        className="flex flex-col sm:flex-row items-stretch gap-2 rounded-2xl border border-white/30 bg-black/70 backdrop-blur-md p-2 shadow-[0_30px_70px_-20px_rgba(0,0,0,0.6)]"
       >
         <input
           type="text"
@@ -27,7 +28,7 @@ export default function ExpressReserve() {
           placeholder="Destination address"
           value={destination}
           onChange={(e) => setDestination(e.target.value)}
-          className="flex-1 rounded-xl bg-transparent px-4 py-3 text-sm text-white placeholder:text-white/55 focus:outline-none"
+          className="flex-1 rounded-xl bg-white/5 border border-white/15 px-4 py-3 text-base text-white placeholder:text-white/85 focus:outline-none focus:border-white/50 focus:bg-white/10 transition-colors"
         />
         <input
           type="datetime-local"
@@ -35,7 +36,8 @@ export default function ExpressReserve() {
           aria-label="When"
           value={when}
           onChange={(e) => setWhen(e.target.value)}
-          className="rounded-xl bg-transparent px-4 py-3 text-sm text-white placeholder:text-white/55 focus:outline-none"
+          style={{ colorScheme: "dark" }}
+          className="rounded-xl bg-white/5 border border-white/15 px-4 py-3 text-base text-white focus:outline-none focus:border-white/50 focus:bg-white/10 transition-colors [&::-webkit-calendar-picker-indicator]:invert [&::-webkit-calendar-picker-indicator]:opacity-90 [&::-webkit-calendar-picker-indicator]:cursor-pointer"
         />
         <button
           type="submit"
