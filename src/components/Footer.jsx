@@ -27,7 +27,7 @@ export default function Footer() {
         {/* Editorial signature line */}
         <div className="flex items-center justify-center mx-auto max-w-md mb-12 sm:mb-16 text-[10px] sm:text-[12px] uppercase tracking-[0.22em] sm:tracking-[0.34em] text-white whitespace-nowrap">
           <span className="h-px flex-1 bg-white/30 mr-3 sm:mr-5" />
-          Luxury Transport · London. Private chauffeur.
+          Luxury Transport, London. Private chauffeur.
           <span className="h-px flex-1 bg-white/30 ml-3 sm:ml-5" />
         </div>
 
@@ -42,7 +42,7 @@ export default function Footer() {
                   Luxury Transport
                 </div>
                 <div className="mt-1 text-[12px] uppercase tracking-[0.34em] text-white/70">
-                  Private Chauffeur · United Kingdom
+                  Private Chauffeur, United Kingdom
                 </div>
               </div>
             </a>
@@ -95,9 +95,9 @@ export default function Footer() {
                 bookings@luxurytransport.co.uk
               </li>
               <li className="mt-4 pt-4 border-t border-white/15 text-white/70 text-[12px] uppercase tracking-[0.28em] leading-relaxed">
-                London · Manchester
+                London, Manchester
                 <br />
-                Birmingham · Edinburgh
+                Birmingham, Edinburgh
               </li>
               <li className="mt-5">
                 <a
@@ -113,7 +113,7 @@ export default function Footer() {
 
         <div className="mt-16 sm:mt-20 pt-8 border-t border-white/15 flex flex-col sm:flex-row items-center justify-between gap-4 text-[10px] sm:text-[12px] uppercase tracking-[0.18em] sm:tracking-[0.28em] text-white/65 text-center sm:text-left">
           <p>
-            © {new Date().getFullYear()} Luxury Transport Ltd · All rights
+            © {new Date().getFullYear()} Luxury Transport Ltd. All rights
             reserved
           </p>
           <p className="font-display italic font-light text-[14px] sm:text-[15px] normal-case tracking-normal text-white">

@@ -60,7 +60,7 @@ export default function Nav() {
                 Luxury Transport
               </div>
               <div className="uppercase tracking-[0.18em] sm:tracking-[0.28em] text-white mt-0.5 sm:mt-1 text-[10px] sm:text-[12px] font-bold truncate">
-                Private Chauffeur · UK
+                Private Chauffeur, UK
               </div>
             </div>
           </a>

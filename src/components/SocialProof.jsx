@@ -27,7 +27,7 @@ export default function SocialProof() {
           </h3>
           <p className="mt-10 text-white/70 text-[15px] leading-[1.85] font-light max-w-xl mx-auto">
             Hotels, concierges, labels and quietly discerning private clients.
-            Names are kept where they should be — out of the conversation.
+            Names are kept where they should be, out of the conversation.
           </p>
         </div>
       </div>

@@ -9,7 +9,7 @@ export default function Hero() {
       ref={ref}
       className="group/hero relative overflow-hidden flex flex-col justify-end min-h-screen pt-28 pb-10 sm:pt-36 lg:pt-44 lg:pb-12"
     >
-      {/* Background video — clear, with hover dim */}
+      {/* Background video: clear, with hover dim */}
       <div className="pointer-events-none absolute inset-0 z-0 bg-black">
         <video
           src="/0514.mp4"
@@ -21,7 +21,7 @@ export default function Hero() {
           aria-hidden="true"
           className="absolute inset-0 h-full w-full object-cover"
         />
-        {/* Cinematic vignette — always on, heavier at edges and bottom */}
+        {/* Cinematic vignette: always on, heavier at edges and bottom */}
         <div
           className="pointer-events-none absolute inset-0"
           style={{

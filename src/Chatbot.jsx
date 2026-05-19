@@ -192,9 +192,9 @@ export default function Chatbot() {
             L
           </div>
           <div className="leading-tight">
-            <div className="font-serif text-sm">Luxury Transport · Concierge</div>
+            <div className="font-serif text-sm">Luxury Transport Concierge</div>
             <div className="text-[10px] uppercase tracking-widest-x text-white/60 flex items-center gap-1.5">
-              <span className="h-1.5 w-1.5 rounded-full bg-emerald-400" /> Online · Replies instantly
+              <span className="h-1.5 w-1.5 rounded-full bg-emerald-400" /> Online. Replies instantly
             </div>
           </div>
         </div>
@@ -252,7 +252,7 @@ export default function Chatbot() {
           </button>
         </form>
         <p className="px-4 pb-3 text-center text-[10px] uppercase tracking-widest-x text-black/60">
-          Discretion · Punctuality · Composure
+          Discretion. Punctuality. Composure.
         </p>
       </div>
     </>

@@ -7,7 +7,7 @@ export default function ExpressReserve() {
   const handleSubmit = (e) => {
     e.preventDefault();
     alert(
-      "Thank you. A driver is being assigned to your journey — you'll see confirmation shortly.",
+      "Thank you. A driver is being assigned to your journey. You'll see confirmation shortly.",
     );
   };
 

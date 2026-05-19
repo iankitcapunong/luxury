@@ -55,25 +55,25 @@ export default function HowItWorks({ selectedService, onSelectService }) {
       {
         label: "Mayfair Airports",
         options: [
-          "Heathrow (LHR) · Mayfair",
-          "London City (LCY) · Mayfair",
-          "Gatwick (LGW) · Mayfair",
+          "Heathrow (LHR), Mayfair",
+          "London City (LCY), Mayfair",
+          "Gatwick (LGW), Mayfair",
         ],
       },
       {
         label: "Knightsbridge Airports",
         options: [
-          "Heathrow (LHR) · Knightsbridge",
-          "London City (LCY) · Knightsbridge",
-          "Gatwick (LGW) · Knightsbridge",
+          "Heathrow (LHR), Knightsbridge",
+          "London City (LCY), Knightsbridge",
+          "Gatwick (LGW), Knightsbridge",
         ],
       },
       {
         label: "Belgravia Airports",
         options: [
-          "Heathrow (LHR) · Belgravia",
-          "London City (LCY) · Belgravia",
-          "Gatwick (LGW) · Belgravia",
+          "Heathrow (LHR), Belgravia",
+          "London City (LCY), Belgravia",
+          "Gatwick (LGW), Belgravia",
         ],
       },
       {
@@ -151,25 +151,25 @@ export default function HowItWorks({ selectedService, onSelectService }) {
     {
       label: "Mayfair Airports",
       options: [
-        "Heathrow (LHR) · Mayfair",
-        "London City (LCY) · Mayfair",
-        "Gatwick (LGW) · Mayfair",
+        "Heathrow (LHR), Mayfair",
+        "London City (LCY), Mayfair",
+        "Gatwick (LGW), Mayfair",
       ],
     },
     {
       label: "Knightsbridge Airports",
       options: [
-        "Heathrow (LHR) · Knightsbridge",
-        "London City (LCY) · Knightsbridge",
-        "Gatwick (LGW) · Knightsbridge",
+        "Heathrow (LHR), Knightsbridge",
+        "London City (LCY), Knightsbridge",
+        "Gatwick (LGW), Knightsbridge",
       ],
     },
     {
       label: "Belgravia Airports",
       options: [
-        "Heathrow (LHR) · Belgravia",
-        "London City (LCY) · Belgravia",
-        "Gatwick (LGW) · Belgravia",
+        "Heathrow (LHR), Belgravia",
+        "London City (LCY), Belgravia",
+        "Gatwick (LGW), Belgravia",
       ],
     },
     {
@@ -238,7 +238,7 @@ export default function HowItWorks({ selectedService, onSelectService }) {
           </p>
         </div>
 
-        {/* Quick inquiry form — fixed in the right column, description animates in/out on the left */}
+        {/* Quick inquiry form: fixed in the right column, description animates in/out on the left */}
         <div className="mt-16 grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-14 items-start">
           <div className="lg:pt-6 min-h-[1px]">
             {displayService ? (
@@ -534,7 +534,7 @@ export default function HowItWorks({ selectedService, onSelectService }) {
           </div>
         </div>
 
-        {/* Three steps — three columns below the form */}
+        {/* Three steps: three columns below the form */}
         <div className="mt-24 grid grid-cols-1 md:grid-cols-3 gap-10 lg:gap-12">
           {steps.map((s, i) => (
             <div

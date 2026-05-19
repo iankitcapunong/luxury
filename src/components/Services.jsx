@@ -24,7 +24,7 @@ export default function Services({ onSelect }) {
   ];
   const panels = [
     {
-      eyebrow: "Service · One",
+      eyebrow: "Service One",
       title: "Airport Transfers",
       body: "Met airside with a name card, a hot towel and a bottle of chilled water. Flights tracked from gate to kerbside, luggage attended before you can ask.",
       img: "/airport.png",
@@ -32,7 +32,7 @@ export default function Services({ onSelect }) {
       tag: "Airport Transfers",
     },
     {
-      eyebrow: "Service · Two",
+      eyebrow: "Service Two",
       title: "Corporate Chauffeur",
       body: "Day rates, board pickups, multi-stop schedules. Uniformed, DBS-checked and NDA-bound. Tinted glass standard. Silence, when you want it, standard too.",
       img: "/chauff.png",
@@ -40,7 +40,7 @@ export default function Services({ onSelect }) {
       tag: "Corporate Chauffeur",
     },
     {
-      eyebrow: "Service · Three",
+      eyebrow: "Service Three",
       title: "VIP & Celebrity",
       body: "Paparazzi-aware route planning, side entrances and private terminals. Drivers chosen for composure as much as for skill, and trained to forget what they have seen.",
       img: "/vip_celeb.png",
@@ -48,7 +48,7 @@ export default function Services({ onSelect }) {
       tag: "VIP & Celebrity",
     },
     {
-      eyebrow: "Service · Four",
+      eyebrow: "Service Four",
       title: "Weddings & Events",
       body: "Bride, groom and party coordinated to the minute. Ribbons optional, immaculate interiors essential. Mercedes V Class for up to eight passengers, panoramic roof above them.",
       img: "/wedding.png",
@@ -56,7 +56,7 @@ export default function Services({ onSelect }) {
       tag: "Weddings & Events",
     },
     {
-      eyebrow: "Service · Five",
+      eyebrow: "Service Five",
       title: "Long Distance Hire",
       body: "City to country, county to coast. Champagne bar, refrigerator and reclining leather for the miles ahead. Your driver knows the better coffee and the discreet stop.",
       img: "/longride.png",
@@ -84,7 +84,7 @@ export default function Services({ onSelect }) {
         </div>
       </div>
 
-      {/* Editorial panels — alternating image/text rows, full bleed */}
+      {/* Editorial panels: alternating image/text rows, full bleed */}
       <div id="features" ref={slideRef} className="mt-16 lg:mt-20">
         {panels.map((p, i) => {
           const reverse = i % 2 === 1;
@@ -178,7 +178,7 @@ export default function Services({ onSelect }) {
         {/* In-vehicle card */}
         <div className="reveal mt-16 rounded-[15px] border border-white/30 bg-black text-white overflow-hidden shadow-[0_30px_70px_-15px_rgba(0,0,0,0.55),0_10px_30px_-12px_rgba(0,0,0,0.45)] transition-all duration-700 ease-[cubic-bezier(0.22,1,0.36,1)] hover:-translate-y-1.5 hover:shadow-[0_50px_100px_-20px_rgba(0,0,0,0.7),0_15px_40px_-12px_rgba(0,0,0,0.5)]">
           <div className="grid grid-cols-1 lg:grid-cols-2 items-stretch">
-            {/* Left — interior image with click-to-zoom */}
+            {/* Left: interior image with click-to-zoom */}
             <div className="relative min-h-[280px] lg:min-h-[420px] bg-black overflow-hidden lg:order-1">
               <img
                 src="/inside-s.png"
@@ -206,7 +206,7 @@ export default function Services({ onSelect }) {
               )}
             </div>
 
-            {/* Right — features list */}
+            {/* Right: features list */}
             <div className="p-6 sm:p-8 lg:p-12 flex flex-col lg:order-2">
               <div className="text-[11px] sm:text-[12px] uppercase tracking-[0.28em] sm:tracking-[0.34em] !text-white">Inside the Sprinter</div>
               <h3 className="font-display italic font-light text-3xl sm:text-4xl lg:text-5xl mt-4 text-white">
