@@ -110,8 +110,22 @@
     transform: none;
   }
 
+  /* Bidirectional slide — slides in when entering viewport, out when leaving. */
+  .slide-card {
+    opacity: 0;
+    transition: opacity 0.9s cubic-bezier(0.22, 1, 0.36, 1),
+                transform 1.1s cubic-bezier(0.22, 1, 0.36, 1);
+    will-change: opacity, transform;
+  }
+  .slide-card.from-left  { transform: translate3d(-72px, 0, 0); }
+  .slide-card.from-right { transform: translate3d( 72px, 0, 0); }
+  .slide-card.is-in {
+    opacity: 1;
+    transform: none;
+  }
+
   @media (prefers-reduced-motion: reduce) {
-    .reveal, .reveal-img {
+    .reveal, .reveal-img, .slide-card {
       opacity: 1 !important;
       transform: none !important;
       transition: none !important;

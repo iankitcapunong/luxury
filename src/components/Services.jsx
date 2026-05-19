@@ -1,9 +1,11 @@
 import { useState } from "react";
 import Icon from "./Icon";
 import useReveal from "../hooks/useReveal";
+import useScrollSlide from "../hooks/useScrollSlide";
 
 export default function Services({ onSelect }) {
   const ref = useReveal();
+  const slideRef = useScrollSlide();
   const [activeFeature, setActiveFeature] = useState(null);
   const sprinterFeatures = [
     { label: "Leather seats", x: 28, y: 85 },
@@ -83,7 +85,7 @@ export default function Services({ onSelect }) {
       </div>
 
       {/* Editorial panels — alternating image/text rows, full bleed */}
-      <div id="features" className="mt-16 lg:mt-20">
+      <div id="features" ref={slideRef} className="mt-16 lg:mt-20">
         {panels.map((p, i) => {
           const reverse = i % 2 === 1;
           return (
@@ -92,7 +94,7 @@ export default function Services({ onSelect }) {
               className="group grid grid-cols-1 lg:grid-cols-2 items-stretch border-t border-black/10 last:border-b last:border-black/10"
             >
               <div
-                className={`reveal ${
+                className={`slide-card ${
                   reverse ? "from-right lg:order-2" : "from-left"
                 } relative px-4 sm:px-8 lg:px-12 py-8 sm:py-10 lg:py-14`}
               >
@@ -137,7 +139,7 @@ export default function Services({ onSelect }) {
               </div>
 
               <div
-                className={`reveal ${
+                className={`slide-card ${
                   reverse ? "from-left lg:order-1" : "from-right"
                 } flex items-center px-6 sm:px-8 lg:px-16 xl:px-24 py-8 sm:py-12 lg:py-20`}
               >
