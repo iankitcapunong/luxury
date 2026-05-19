@@ -8,7 +8,7 @@ export default function VisionPage() {
   }, []);
 
   return (
-    <div className="pt-24 sm:pt-28">
+    <div className="bg-black pt-24 sm:pt-28">
       <Manifesto />
       <CTA />
     </div>
