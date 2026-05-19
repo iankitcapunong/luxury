@@ -1,9 +1,11 @@
 import { useState } from "react";
 import Icon from "./Icon";
 import useReveal from "../hooks/useReveal";
+import useScrollSlide from "../hooks/useScrollSlide";
 
 export default function Services({ onSelect }) {
   const ref = useReveal();
+  const slideRef = useScrollSlide();
   const [activeFeature, setActiveFeature] = useState(null);
   const sprinterFeatures = [
     { label: "Leather seats", x: 28, y: 85 },
@@ -82,74 +84,53 @@ export default function Services({ onSelect }) {
         </div>
       </div>
 
-      {/* Editorial panels — alternating image/text rows, full bleed */}
-      <div id="features" className="mt-16 lg:mt-20">
+      {/* Editorial panels — alternating image/text rows, animated slide in/out */}
+      <div id="features" ref={slideRef} className="container-x mt-16 lg:mt-20 space-y-12 lg:space-y-16">
         {panels.map((p, i) => {
           const reverse = i % 2 === 1;
           return (
-            <div
+            <article
               key={p.slug}
-              className="group grid grid-cols-1 lg:grid-cols-2 items-stretch border-t border-black/10 last:border-b last:border-black/10"
+              className={`slide-card ${reverse ? "from-right" : "from-left"} group grid grid-cols-1 lg:grid-cols-2 items-stretch overflow-hidden rounded-[20px] border border-white/10 bg-black text-white shadow-[0_30px_70px_-15px_rgba(0,0,0,0.55),0_10px_30px_-12px_rgba(0,0,0,0.45)] transition-all duration-700 ease-[cubic-bezier(0.22,1,0.36,1)] hover:-translate-y-1.5 hover:shadow-[0_50px_100px_-20px_rgba(0,0,0,0.7),0_15px_40px_-12px_rgba(0,0,0,0.5)]`}
             >
               <div
-                className={`reveal ${
-                  reverse ? "from-right lg:order-2" : "from-left"
-                } relative px-4 sm:px-8 lg:px-12 py-8 sm:py-10 lg:py-14`}
+                className={`grayscale-img relative min-h-[260px] sm:min-h-[340px] lg:min-h-[520px] overflow-hidden ${reverse ? "lg:order-2" : ""}`}
               >
-                {/* Decorative offset frame */}
+                <img
+                  src={p.img}
+                  alt={p.title}
+                  className="ken-burns absolute inset-0 h-full w-full object-cover transition-transform duration-[1800ms] ease-out group-hover:scale-[1.15]"
+                />
+                <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent" />
+
+                {/* Corner brackets */}
+                <span aria-hidden="true" className="pointer-events-none absolute top-3 left-3 h-7 w-7 border-l border-t border-white/40 transition-all duration-700 ease-out group-hover:h-12 group-hover:w-12 group-hover:top-2 group-hover:left-2 group-hover:border-white" />
+                <span aria-hidden="true" className="pointer-events-none absolute top-3 right-3 h-7 w-7 border-r border-t border-white/40 transition-all duration-700 ease-out group-hover:h-12 group-hover:w-12 group-hover:top-2 group-hover:right-2 group-hover:border-white" />
+                <span aria-hidden="true" className="pointer-events-none absolute bottom-3 left-3 h-7 w-7 border-l border-b border-white/40 transition-all duration-700 ease-out group-hover:h-12 group-hover:w-12 group-hover:bottom-2 group-hover:left-2 group-hover:border-white" />
+                <span aria-hidden="true" className="pointer-events-none absolute bottom-3 right-3 h-7 w-7 border-r border-b border-white/40 transition-all duration-700 ease-out group-hover:h-12 group-hover:w-12 group-hover:bottom-2 group-hover:right-2 group-hover:border-white" />
+
                 <span
                   aria-hidden="true"
-                  className={`pointer-events-none absolute hidden lg:block w-[88%] h-[78%] border border-black/15 rounded-[18px] transition-all duration-700 ease-[cubic-bezier(0.22,1,0.36,1)] group-hover:border-black/30 ${
-                    reverse
-                      ? "bottom-6 right-6 lg:bottom-8 lg:right-8 group-hover:bottom-5 group-hover:right-5"
-                      : "top-6 left-6 lg:top-8 lg:left-8 group-hover:top-5 group-hover:left-5"
-                  }`}
+                  className="pointer-events-none absolute -top-1/2 -left-1/3 h-[200%] w-[55%] rotate-[20deg] bg-gradient-to-r from-transparent via-white/15 to-transparent opacity-0 group-hover:opacity-100 group-hover:translate-x-[280%] transition-all duration-[1600ms] ease-out"
                 />
 
-                <div
-                  className={`reveal-img ${reverse ? "from-bottom" : ""} relative overflow-hidden rounded-[15px] shadow-[0_30px_70px_-22px_rgba(0,0,0,0.45)] min-h-[260px] sm:min-h-[340px] lg:min-h-[520px]`}
-                  style={{ transitionDelay: "180ms" }}
-                >
-                  <img
-                    src={p.img}
-                    alt={p.title}
-                    className="ken-burns absolute inset-0 h-full w-full object-cover transition-transform duration-[1800ms] ease-out group-hover:scale-[1.15]"
-                  />
-                  <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-black/35 via-black/5 to-transparent" />
-
-                  {/* Corner brackets */}
-                  <span aria-hidden="true" className="pointer-events-none absolute top-3 left-3 h-7 w-7 border-l border-t border-white/40 transition-all duration-700 ease-out group-hover:h-12 group-hover:w-12 group-hover:top-2 group-hover:left-2 group-hover:border-white" />
-                  <span aria-hidden="true" className="pointer-events-none absolute top-3 right-3 h-7 w-7 border-r border-t border-white/40 transition-all duration-700 ease-out group-hover:h-12 group-hover:w-12 group-hover:top-2 group-hover:right-2 group-hover:border-white" />
-                  <span aria-hidden="true" className="pointer-events-none absolute bottom-3 left-3 h-7 w-7 border-l border-b border-white/40 transition-all duration-700 ease-out group-hover:h-12 group-hover:w-12 group-hover:bottom-2 group-hover:left-2 group-hover:border-white" />
-                  <span aria-hidden="true" className="pointer-events-none absolute bottom-3 right-3 h-7 w-7 border-r border-b border-white/40 transition-all duration-700 ease-out group-hover:h-12 group-hover:w-12 group-hover:bottom-2 group-hover:right-2 group-hover:border-white" />
-
-                  {/* Slow highlight sweep on hover */}
-                  <span
-                    aria-hidden="true"
-                    className="pointer-events-none absolute -top-1/2 -left-1/3 h-[200%] w-[55%] rotate-[20deg] bg-gradient-to-r from-transparent via-white/15 to-transparent opacity-0 group-hover:opacity-100 group-hover:translate-x-[280%] transition-all duration-[1600ms] ease-out"
-                  />
-
-                  {/* Numeral */}
-                  <span className="pointer-events-none absolute bottom-5 right-6 font-display italic font-light text-5xl lg:text-6xl leading-none text-white drop-shadow-[0_2px_8px_rgba(0,0,0,0.65)]">
-                    {String(i + 1).padStart(2, "0")}
-                  </span>
-                </div>
+                <span className="pointer-events-none absolute bottom-5 right-6 font-display italic font-light text-5xl lg:text-6xl leading-none text-white drop-shadow-[0_2px_8px_rgba(0,0,0,0.65)]">
+                  {String(i + 1).padStart(2, "0")}
+                </span>
               </div>
 
               <div
-                className={`reveal ${
-                  reverse ? "from-left lg:order-1" : "from-right"
-                } flex items-center px-6 sm:px-8 lg:px-16 xl:px-24 py-8 sm:py-12 lg:py-20`}
+                className={`flex items-center px-6 sm:px-8 lg:px-14 xl:px-16 py-10 sm:py-12 lg:py-16 ${reverse ? "lg:order-1" : ""}`}
               >
                 <div className="max-w-md">
-                  <div className="eyebrow !text-black !text-[12px] flex items-center gap-3">
-                    <span className="hairline" /> {p.eyebrow}
+                  <div className="eyebrow !text-white/60 !text-[12px] flex items-center gap-3">
+                    <span className="h-px w-14 bg-white/40" /> {p.eyebrow}
                   </div>
-                  <h3 className="h-display !font-cormorant mt-5 text-3xl sm:text-4xl lg:text-5xl text-black leading-[1.04]">
+                  <h3 className="h-display !font-cormorant mt-5 text-3xl sm:text-4xl lg:text-5xl text-white leading-[1.04]">
                     {p.title}
                   </h3>
-                  <div className="mt-5 h-px w-12 bg-black/20 transition-all duration-700 group-hover:w-24 group-hover:bg-black" />
-                  <p className="mt-7 text-black/80 leading-[1.85] font-light">
+                  <div className="mt-5 h-px w-12 bg-white/40 transition-all duration-700 group-hover:w-24 group-hover:bg-white" />
+                  <p className="mt-7 text-white/80 leading-[1.85] font-light">
                     {p.body}
                   </p>
                   <div className="mt-9 flex items-center gap-5">
@@ -159,7 +140,7 @@ export default function Services({ onSelect }) {
                         e.preventDefault();
                         onSelect && onSelect(p.tag);
                       }}
-                      className="inline-flex items-center gap-2 text-[12px] uppercase tracking-[0.34em] text-black hover:text-black/70 transition-colors border-b border-black/40 hover:border-black pb-1"
+                      className="inline-flex items-center gap-2 text-[12px] uppercase tracking-[0.34em] text-white hover:text-white/80 transition-colors border-b border-white/40 hover:border-white pb-1"
                     >
                       Enquire
                       <Icon.ArrowRight className="h-3.5 w-3.5 transition-transform duration-500 group-hover:translate-x-1" />
@@ -167,7 +148,7 @@ export default function Services({ onSelect }) {
                   </div>
                 </div>
               </div>
-            </div>
+            </article>
           );
         })}
       </div>
@@ -188,6 +169,7 @@ export default function Services({ onSelect }) {
                       ? `${sprinterFeatures[activeFeature].x}% ${sprinterFeatures[activeFeature].y}%`
                       : "50% 50%",
                   transform: activeFeature !== null ? "scale(2.4)" : "scale(1)",
+                  filter: "grayscale(1) contrast(1.05)",
                 }}
               />
               <div className="pointer-events-none absolute inset-0 bg-gradient-to-l from-black/40 via-transparent to-transparent lg:from-black/60" />
