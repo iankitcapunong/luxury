@@ -8,6 +8,7 @@ export default function Nav() {
   const navigate = useNavigate();
   const isHome = location.pathname === "/";
   const links = [
+    ["The Vision", "/vision"],
     ["How it works", "/how-it-works"],
     ["Services", "/services"],
     ["Clients", "/clients"],
