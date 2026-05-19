@@ -4,12 +4,12 @@ export default {
   theme: {
     extend: {
       fontFamily: {
-        serif: ['Bentley', 'Arial', 'Helvetica', 'sans-serif'],
-        display: ['Bentley', 'Arial', 'Helvetica', 'sans-serif'],
-        sans: ['Bentley', 'Arial', 'Helvetica', 'sans-serif'],
-        playfair: ['Bentley', 'Arial', 'Helvetica', 'sans-serif'],
-        cormorant: ['Bentley', 'Arial', 'Helvetica', 'sans-serif'],
-        futura: ['Bentley', 'Arial', 'Helvetica', 'sans-serif'],
+        serif: ['Bentley', '"Playfair Display"', 'Georgia', 'serif'],
+        display: ['Bentley', '"Playfair Display"', 'Georgia', 'serif'],
+        sans: ['Bentley', '"Playfair Display"', 'Georgia', 'serif'],
+        playfair: ['Bentley', '"Playfair Display"', 'Georgia', 'serif'],
+        cormorant: ['Bentley', '"Playfair Display"', 'Georgia', 'serif'],
+        futura: ['Bentley', '"Playfair Display"', 'Georgia', 'serif'],
       },
       colors: {
         gold: {
