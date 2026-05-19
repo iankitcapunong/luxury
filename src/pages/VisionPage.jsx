@@ -1,7 +1,6 @@
 import { useEffect } from "react";
 import Manifesto from "../components/Manifesto";
 import CTA from "../components/CTA";
-import Monogram from "../components/Monogram";
 
 export default function VisionPage() {
   useEffect(() => {
@@ -11,7 +10,6 @@ export default function VisionPage() {
   return (
     <div className="bg-black pt-24 sm:pt-28">
       <Manifesto />
-      <Monogram letters="LT" onDark />
       <CTA />
     </div>
   );

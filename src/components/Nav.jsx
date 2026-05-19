@@ -46,27 +46,10 @@ export default function Nav() {
             : "py-4 sm:py-5 bg-black/85 backdrop-blur-md border-b border-white/5"
         }`}
       >
-        <div className="flex items-center justify-between gap-3 sm:gap-8">
-          <a
-            href="/"
-            onClick={goHomeTop}
-            className="flex items-center gap-2 sm:gap-3 shrink-0 min-w-0"
-          >
-            <span className="grid h-9 w-9 sm:h-11 sm:w-11 place-items-center rounded-full border border-white/70 text-white font-display italic text-[16px] sm:text-[18px] font-bold shrink-0">
-              L
-            </span>
-            <div className="leading-tight font-cormorant min-w-0">
-              <div className="tracking-wide text-white text-[15px] sm:text-[18px] font-bold truncate">
-                Luxury Transport
-              </div>
-              <div className="uppercase tracking-[0.18em] sm:tracking-[0.28em] text-white mt-0.5 sm:mt-1 text-[10px] sm:text-[12px] font-bold truncate">
-                Private Chauffeur, UK
-              </div>
-            </div>
-          </a>
-
-          <ul className="hidden md:flex items-center gap-10 text-[15px] font-cormorant uppercase tracking-[0.34em] font-medium text-white/90">
-            {links.map(([label, path]) => (
+        <div className="hidden md:grid grid-cols-[1fr_auto_1fr] items-center gap-8">
+          {/* Left links */}
+          <ul className="flex items-center justify-end gap-10 text-[14px] font-cormorant uppercase tracking-[0.34em] font-medium text-white/90">
+            {links.slice(0, 2).map(([label, path]) => (
               <li key={path}>
                 <a
                   href={path}
@@ -79,10 +62,57 @@ export default function Nav() {
             ))}
           </ul>
 
+          {/* Centered monogram brand mark */}
+          <a
+            href="/"
+            onClick={goHomeTop}
+            aria-label="Luxury Transport home"
+            className="flex flex-col items-center gap-1 shrink-0"
+          >
+            <span className="grid h-11 w-11 lg:h-12 lg:w-12 place-items-center rounded-full border border-white/70 text-white font-display italic text-[18px] lg:text-[20px] font-bold">
+              L
+            </span>
+            <span className="font-cormorant uppercase tracking-[0.32em] text-white text-[10px] lg:text-[11px] font-medium">
+              Luxury Transport
+            </span>
+          </a>
+
+          {/* Right links */}
+          <ul className="flex items-center justify-start gap-10 text-[14px] font-cormorant uppercase tracking-[0.34em] font-medium text-white/90">
+            {links.slice(2).map(([label, path]) => (
+              <li key={path}>
+                <a
+                  href={path}
+                  onClick={(e) => goToPage(e, path)}
+                  className="relative inline-block py-1 hover:text-white transition-colors duration-300 after:absolute after:left-0 after:bottom-0 after:h-px after:w-0 after:bg-white after:transition-all after:duration-300 hover:after:w-full"
+                >
+                  {label}
+                </a>
+              </li>
+            ))}
+          </ul>
+        </div>
+
+        {/* Mobile: centered brand mark + hamburger */}
+        <div className="md:hidden grid grid-cols-[auto_1fr_auto] items-center gap-3">
+          <span aria-hidden="true" className="h-9 w-9" />
+          <a
+            href="/"
+            onClick={goHomeTop}
+            aria-label="Luxury Transport home"
+            className="flex flex-col items-center gap-1 justify-self-center"
+          >
+            <span className="grid h-9 w-9 place-items-center rounded-full border border-white/70 text-white font-display italic text-[16px] font-bold">
+              L
+            </span>
+            <span className="font-cormorant uppercase tracking-[0.28em] text-white text-[9px] font-medium">
+              Luxury Transport
+            </span>
+          </a>
           <button
             onClick={() => setOpen(!open)}
             aria-label="Menu"
-            className="md:hidden grid h-9 w-9 place-items-center rounded-full border border-white/30"
+            className="grid h-9 w-9 place-items-center rounded-full border border-white/30 justify-self-end"
           >
             <div className="space-y-1.5">
               <span className="block h-px w-4 bg-white" />

@@ -2,7 +2,6 @@ import { useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import Services from "../components/Services";
 import CTA from "../components/CTA";
-import Monogram from "../components/Monogram";
 
 export default function ServicesPage() {
   const navigate = useNavigate();
@@ -18,7 +17,6 @@ export default function ServicesPage() {
           navigate("/how-it-works", { state: { service: s } })
         }
       />
-      <Monogram letters="LT" />
       <CTA />
     </div>
   );

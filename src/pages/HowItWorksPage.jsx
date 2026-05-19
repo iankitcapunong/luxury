@@ -3,7 +3,6 @@ import { useLocation } from "react-router-dom";
 import HowItWorks from "../components/HowItWorks";
 import SocialProof from "../components/SocialProof";
 import CTA from "../components/CTA";
-import Monogram from "../components/Monogram";
 
 export default function HowItWorksPage() {
   const location = useLocation();
@@ -21,9 +20,7 @@ export default function HowItWorksPage() {
         selectedService={selectedService}
         onSelectService={setSelectedService}
       />
-      <Monogram letters="LT" />
       <SocialProof />
-      <Monogram letters="LT" onDark />
       <CTA />
     </div>
   );
