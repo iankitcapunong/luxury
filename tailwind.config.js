@@ -4,12 +4,12 @@ export default {
   theme: {
     extend: {
       fontFamily: {
-        serif: ['Bentley', '"Playfair Display"', 'Georgia', 'serif'],
-        display: ['Bentley', '"Playfair Display"', 'Georgia', 'serif'],
-        sans: ['Bentley', '"Playfair Display"', 'Georgia', 'serif'],
-        playfair: ['Bentley', '"Playfair Display"', 'Georgia', 'serif'],
-        cormorant: ['Bentley', '"Playfair Display"', 'Georgia', 'serif'],
-        futura: ['Bentley', '"Playfair Display"', 'Georgia', 'serif'],
+        serif: ['"Cormorant Garamond"', 'Georgia', 'serif'],
+        display: ['"Cormorant Garamond"', 'Georgia', 'serif'],
+        sans: ['"Cormorant Garamond"', 'Georgia', 'serif'],
+        playfair: ['"Cormorant Garamond"', 'Georgia', 'serif'],
+        cormorant: ['"Cormorant Garamond"', 'Georgia', 'serif'],
+        futura: ['"Cormorant Garamond"', 'Georgia', 'serif'],
       },
       letterSpacing: {
         'widest-x': '0.28em',
