@@ -2,15 +2,6 @@ import { useEffect, useRef, useState } from "react";
 import { Link, Route, Routes, useLocation, useNavigate } from "react-router-dom";
 import Chatbot from "./Chatbot";
 import Loader from "./Loader";
-import Blog from "./Blog";
-
-const SERVICE_BLOG_SLUGS = {
-  "Airport Transfers": "airport-transfers",
-  "Corporate Chauffeur": "corporate-chauffeur",
-  "VIP & Celebrity": "vip-celebrity",
-  "Weddings & Events": "weddings-events",
-  "Long Distance Hire": "long-distance-hire",
-};
 
 // --- Tiny inline SVG icon set (no external lib) ----------------------------
 const Icon = {
@@ -222,9 +213,9 @@ function Nav() {
   const navigate = useNavigate();
   const isHome = location.pathname === "/";
   const links = [
-    ["How it works", "how"],
-    ["Services", "services"],
-    ["Clients", "testimonials"],
+    ["How it works", "/how-it-works"],
+    ["Services", "/services"],
+    ["Clients", "/clients"],
   ];
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 24);
@@ -233,15 +224,10 @@ function Nav() {
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
-  const goToSection = (e, id) => {
+  const goToPage = (e, path) => {
     e.preventDefault();
     setOpen(false);
-    if (isHome) {
-      const el = document.getElementById(id);
-      if (el) el.scrollIntoView({ behavior: "smooth", block: "start" });
-    } else {
-      navigate(`/#${id}`);
-    }
+    navigate(path);
   };
 
   const goHomeTop = (e) => {
@@ -284,11 +270,11 @@ function Nav() {
           </a>
 
           <ul className="hidden md:flex items-center gap-10 text-[15px] font-cormorant uppercase tracking-[0.34em] font-medium text-white/90">
-            {links.map(([label, id]) => (
-              <li key={id}>
+            {links.map(([label, path]) => (
+              <li key={path}>
                 <a
-                  href={`/#${id}`}
-                  onClick={(e) => goToSection(e, id)}
+                  href={path}
+                  onClick={(e) => goToPage(e, path)}
                   className="relative inline-block py-1 hover:text-gold-300 transition-colors duration-300 after:absolute after:left-0 after:bottom-0 after:h-px after:w-0 after:bg-gold-400 after:transition-all after:duration-300 hover:after:w-full"
                 >
                   {label}
@@ -313,11 +299,11 @@ function Nav() {
       {open && (
         <div className="md:hidden mt-2 mx-4 border border-white/10 rounded-2xl bg-slate-900/85 backdrop-blur-2xl text-white">
           <div className="py-4 px-6 flex flex-col gap-3">
-            {links.map(([l, id]) => (
+            {links.map(([l, path]) => (
               <a
-                key={id}
-                href={`/#${id}`}
-                onClick={(e) => goToSection(e, id)}
+                key={path}
+                href={path}
+                onClick={(e) => goToPage(e, path)}
                 className="py-2 text-[15px] font-cormorant"
               >
                 {l}
@@ -411,8 +397,8 @@ function Hero() {
             className="reveal mt-8 sm:mt-10 sm:ml-14 inline-block animate-gentle-bounce"
             style={{ transitionDelay: "550ms" }}
           >
-            <a
-              href="#contact"
+            <Link
+              to="/how-it-works"
               className="group flex gap-2 text-base sm:text-lg transition-all duration-500 hover:scale-[1.03] active:scale-[0.98] text-white font-semibold h-12 sm:h-14 rounded-full pr-7 pl-7 sm:pr-10 sm:pl-10 relative gap-x-2 gap-y-2 items-center justify-center"
               style={{
                 background:
@@ -425,7 +411,7 @@ function Hero() {
               <span className="flex items-center gap-2 leading-none z-10 relative drop-shadow-md">
                 Send Inquiry
               </span>
-            </a>
+            </Link>
           </div>
 
         </div>
@@ -1277,28 +1263,16 @@ function Services({ onSelect }) {
                     {p.body}
                   </p>
                   <div className="mt-9 flex items-center gap-5">
-                    <Link
-                      to={`/blog/${p.slug}`}
-                      className="inline-flex items-center gap-2 text-[12px] uppercase tracking-[0.34em] text-black hover:text-black/70 transition-colors border-b border-black/40 hover:border-black pb-1"
-                    >
-                      Read more
-                      <Icon.ArrowRight className="h-3.5 w-3.5 transition-transform duration-500 group-hover:translate-x-1" />
-                    </Link>
                     <a
                       href="#contact"
                       onClick={(e) => {
                         e.preventDefault();
                         onSelect && onSelect(p.tag);
-                        const el = document.getElementById("contact");
-                        if (el)
-                          el.scrollIntoView({
-                            behavior: "smooth",
-                            block: "start",
-                          });
                       }}
-                      className="inline-flex items-center gap-2 text-[12px] uppercase tracking-[0.34em] text-black hover:text-black/70 transition-colors"
+                      className="inline-flex items-center gap-2 text-[12px] uppercase tracking-[0.34em] text-black hover:text-black/70 transition-colors border-b border-black/40 hover:border-black pb-1"
                     >
                       Enquire
+                      <Icon.ArrowRight className="h-3.5 w-3.5 transition-transform duration-500 group-hover:translate-x-1" />
                     </a>
                   </div>
                 </div>
@@ -1613,28 +1587,16 @@ function Footer() {
             <div key={c.h} className="lg:col-span-3">
               <div className="text-[12px] uppercase tracking-[0.34em] text-white font-medium">{c.h}</div>
               <ul className="mt-5 space-y-3 text-[15px] text-white/85 font-light">
-                {c.l.map((x) => {
-                  const slug = SERVICE_BLOG_SLUGS[x];
-                  return (
-                    <li key={x}>
-                      {slug ? (
-                        <Link
-                          to={`/blog/${slug}`}
-                          className="hover:text-white transition-colors duration-500"
-                        >
-                          {x}
-                        </Link>
-                      ) : (
-                        <a
-                          href="#"
-                          className="hover:text-white transition-colors duration-500"
-                        >
-                          {x}
-                        </a>
-                      )}
-                    </li>
-                  );
-                })}
+                {c.l.map((x) => (
+                  <li key={x}>
+                    <a
+                      href="#"
+                      className="hover:text-white transition-colors duration-500"
+                    >
+                      {x}
+                    </a>
+                  </li>
+                ))}
               </ul>
             </div>
           ))}
@@ -1778,36 +1740,71 @@ function Newsletter() {
 
 // --- Home page --------------------------------------------------------------
 function Home() {
-  const [selectedService, setSelectedService] = useState(null);
-  const location = useLocation();
-
   useEffect(() => {
-    if (location.hash) {
-      const id = location.hash.slice(1);
-      // Wait a tick for sections to render before scrolling.
-      const tid = setTimeout(() => {
-        const el = document.getElementById(id);
-        if (el) el.scrollIntoView({ behavior: "smooth", block: "start" });
-      }, 80);
-      return () => clearTimeout(tid);
-    }
     window.scrollTo({ top: 0, behavior: "instant" });
-  }, [location.pathname, location.hash]);
+  }, []);
 
   return (
     <>
       <Hero />
       <Discover />
+    </>
+  );
+}
+
+// --- Dedicated routes -------------------------------------------------------
+function HowItWorksPage() {
+  const location = useLocation();
+  const [selectedService, setSelectedService] = useState(
+    location.state?.service ?? null,
+  );
+
+  useEffect(() => {
+    window.scrollTo({ top: 0, behavior: "instant" });
+  }, []);
+
+  return (
+    <div className="pt-24 sm:pt-28">
       <HowItWorks
         selectedService={selectedService}
         onSelectService={setSelectedService}
       />
       <SocialProof />
-      <Services onSelect={setSelectedService} />
+      <CTA />
+    </div>
+  );
+}
+
+function ServicesPage() {
+  const navigate = useNavigate();
+
+  useEffect(() => {
+    window.scrollTo({ top: 0, behavior: "instant" });
+  }, []);
+
+  return (
+    <div className="pt-24 sm:pt-28">
+      <Services
+        onSelect={(s) =>
+          navigate("/how-it-works", { state: { service: s } })
+        }
+      />
+      <CTA />
+    </div>
+  );
+}
+
+function ClientsPage() {
+  useEffect(() => {
+    window.scrollTo({ top: 0, behavior: "instant" });
+  }, []);
+
+  return (
+    <div className="pt-24 sm:pt-28">
       <Testimonials />
       <Newsletter />
       <CTA />
-    </>
+    </div>
   );
 }
 
@@ -1834,7 +1831,9 @@ export default function App() {
       <main>
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/blog/:slug" element={<Blog />} />
+          <Route path="/how-it-works" element={<HowItWorksPage />} />
+          <Route path="/services" element={<ServicesPage />} />
+          <Route path="/clients" element={<ClientsPage />} />
         </Routes>
       </main>
       <Footer />
