@@ -246,8 +246,8 @@ function Nav() {
       <nav
         className={`w-full px-4 sm:px-6 md:px-8 transition-all duration-300 ${
           scrolled
-            ? "py-3 sm:py-4 bg-[#19181c] border-b border-white/10"
-            : "py-4 sm:py-5 bg-[#19181c]/85 backdrop-blur-md border-b border-white/5"
+            ? "py-3 sm:py-4 bg-black border-b border-white/10"
+            : "py-4 sm:py-5 bg-black/85 backdrop-blur-md border-b border-white/5"
         }`}
       >
         <div className="flex items-center justify-between gap-3 sm:gap-8">
@@ -297,7 +297,7 @@ function Nav() {
       </nav>
 
       {open && (
-        <div className="md:hidden mt-2 mx-4 border border-white/10 rounded-2xl bg-slate-900/85 backdrop-blur-2xl text-white">
+        <div className="md:hidden mt-2 mx-4 border border-white/10 rounded-2xl bg-black/90 backdrop-blur-2xl text-white">
           <div className="py-4 px-6 flex flex-col gap-3">
             {links.map(([l, path]) => (
               <a
@@ -326,7 +326,7 @@ function Hero() {
       className="group/hero relative overflow-hidden flex flex-col justify-end min-h-screen pt-28 pb-10 sm:pt-36 lg:pt-44 lg:pb-12"
     >
       {/* Background video — clear, with hover dim */}
-      <div className="pointer-events-none absolute inset-0 z-0 bg-[#4a8fc8]">
+      <div className="pointer-events-none absolute inset-0 z-0 bg-black">
         <video
           src="/0514.mp4"
           autoPlay
@@ -350,7 +350,7 @@ function Hero() {
 
       {/* atmospheric light wash */}
       <div className="pointer-events-none absolute -top-40 -right-40 h-[36rem] w-[36rem] rounded-full bg-gold-300/25 blur-[120px] z-0" />
-      <div className="pointer-events-none absolute -bottom-48 -left-48 h-[36rem] w-[36rem] rounded-full bg-ink-900/10 blur-[120px] z-0" />
+      <div className="pointer-events-none absolute -bottom-48 -left-48 h-[36rem] w-[36rem] rounded-full bg-black/10 blur-[120px] z-0" />
 
       <div className="relative z-10 w-full pl-4 sm:pl-6 lg:pl-10 pr-4 sm:pr-6 grid grid-cols-1 lg:grid-cols-12 gap-16 items-end font-cormorant">
         <div className="lg:col-span-7">
@@ -725,7 +725,7 @@ function HowItWorks({ selectedService, onSelectService }) {
     <section
       id="how"
       ref={ref}
-      className="relative pt-12 pb-28 lg:pt-16 lg:pb-40 bg-[#d2d2d2] font-cormorant text-black"
+      className="relative pt-12 pb-28 lg:pt-16 lg:pb-40 bg-white font-cormorant text-black"
     >
       <div className="container-x">
         <div className="max-w-2xl mx-auto text-center">
@@ -855,7 +855,7 @@ function HowItWorks({ selectedService, onSelectService }) {
                   e.preventDefault();
                   alert("Thank you. The team will be in touch shortly.");
                 }}
-                className="relative bg-[#d2d2d2] text-black p-4 sm:p-5 lg:p-6 border border-gold-500/40 rounded-[15px] shadow-[0_30px_70px_-15px_rgba(158,126,54,0.55),0_8px_24px_-10px_rgba(158,126,54,0.45)] transition-all duration-700 ease-[cubic-bezier(0.22,1,0.36,1)] hover:-translate-y-1.5 hover:shadow-[0_50px_100px_-20px_rgba(158,126,54,0.7),0_10px_30px_-10px_rgba(158,126,54,0.55)]"
+                className="relative bg-white text-black p-4 sm:p-5 lg:p-6 border border-gold-500/40 rounded-[15px] shadow-[0_30px_70px_-15px_rgba(158,126,54,0.55),0_8px_24px_-10px_rgba(158,126,54,0.45)] transition-all duration-700 ease-[cubic-bezier(0.22,1,0.36,1)] hover:-translate-y-1.5 hover:shadow-[0_50px_100px_-20px_rgba(158,126,54,0.7),0_10px_30px_-10px_rgba(158,126,54,0.55)]"
               >
                 <h3 className="font-display text-xl text-black">
                   Begin your{" "}
@@ -873,7 +873,7 @@ function HowItWorks({ selectedService, onSelectService }) {
                       onSelectService &&
                       onSelectService(e.target.value || null)
                     }
-                    className="w-full rounded-lg border border-ink-900/15 bg-[#d2d2d2] px-3 py-2 text-xs text-black focus:outline-none focus:border-gold-500 transition appearance-none bg-no-repeat bg-right pr-8"
+                    className="w-full rounded-lg border border-black/15 bg-white px-3 py-2 text-xs text-black focus:outline-none focus:border-gold-500 transition appearance-none bg-no-repeat bg-right pr-8"
                     style={{
                       backgroundImage:
                         "url(\"data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20' fill='%239E7E36'><path d='M5.5 7.5l4.5 5 4.5-5z'/></svg>\")",
@@ -895,7 +895,7 @@ function HowItWorks({ selectedService, onSelectService }) {
                     required
                     type="email"
                     placeholder="Email address"
-                    className="w-full rounded-lg border border-ink-900/15 bg-[#d2d2d2] px-3 py-2 text-xs placeholder:text-beige-200 focus:outline-none focus:border-gold-500 transition"
+                    className="w-full rounded-lg border border-black/15 bg-white px-3 py-2 text-xs placeholder:text-black/40 focus:outline-none focus:border-gold-500 transition"
                   />
                   <div className="grid grid-cols-2 gap-2.5">
                     <input
@@ -903,20 +903,20 @@ function HowItWorks({ selectedService, onSelectService }) {
                       type="tel"
                       placeholder="Phone number"
                       pattern="[0-9+\s()-]{7,}"
-                      className="rounded-lg border border-ink-900/15 bg-[#d2d2d2] px-3 py-2 text-xs placeholder:text-beige-200 focus:outline-none focus:border-gold-500 transition"
+                      className="rounded-lg border border-black/15 bg-white px-3 py-2 text-xs placeholder:text-black/40 focus:outline-none focus:border-gold-500 transition"
                     />
                     <input
                       required
                       type="date"
                       aria-label="Journey date"
-                      className="rounded-lg border border-ink-900/15 bg-[#d2d2d2] px-3 py-2 text-xs text-black focus:outline-none focus:border-gold-500 transition"
+                      className="rounded-lg border border-black/15 bg-white px-3 py-2 text-xs text-black focus:outline-none focus:border-gold-500 transition"
                     />
                   </div>
                   <div className="grid grid-cols-2 gap-2.5">
                     <select
                       value={pickup}
                       onChange={(e) => setPickup(e.target.value)}
-                      className="rounded-lg border border-ink-900/15 bg-[#d2d2d2] px-3 py-2 text-xs text-black focus:outline-none focus:border-gold-500 transition appearance-none bg-no-repeat bg-right pr-8"
+                      className="rounded-lg border border-black/15 bg-white px-3 py-2 text-xs text-black focus:outline-none focus:border-gold-500 transition appearance-none bg-no-repeat bg-right pr-8"
                       style={{
                         backgroundImage:
                           "url(\"data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20' fill='%239E7E36'><path d='M5.5 7.5l4.5 5 4.5-5z'/></svg>\")",
@@ -941,7 +941,7 @@ function HowItWorks({ selectedService, onSelectService }) {
                     <select
                       value={destination}
                       onChange={(e) => setDestination(e.target.value)}
-                      className="rounded-lg border border-ink-900/15 bg-[#d2d2d2] px-3 py-2 text-xs text-black focus:outline-none focus:border-gold-500 transition appearance-none bg-no-repeat bg-right pr-8"
+                      className="rounded-lg border border-black/15 bg-white px-3 py-2 text-xs text-black focus:outline-none focus:border-gold-500 transition appearance-none bg-no-repeat bg-right pr-8"
                       style={{
                         backgroundImage:
                           "url(\"data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20' fill='%239E7E36'><path d='M5.5 7.5l4.5 5 4.5-5z'/></svg>\")",
@@ -966,55 +966,55 @@ function HowItWorks({ selectedService, onSelectService }) {
                   </div>
 
                   {pickup === "Custom address" && (
-                    <div className="animate-fade-up rounded-lg border border-gold-500/40 bg-cream-100/60 p-4 space-y-3">
+                    <div className="animate-fade-up rounded-lg border border-gold-500/40 bg-white p-4 space-y-3">
                       <div className="text-[13px] uppercase tracking-[0.28em] text-black">
                         Pickup address
                       </div>
                       <input
                         required
                         placeholder="Street address"
-                        className="w-full rounded-md border border-ink-900/15 bg-[#d2d2d2] px-3 py-2 text-sm placeholder:text-beige-200 focus:outline-none focus:border-gold-500 transition"
+                        className="w-full rounded-md border border-black/15 bg-white px-3 py-2 text-sm placeholder:text-black/40 focus:outline-none focus:border-gold-500 transition"
                       />
                       <div className="grid grid-cols-2 gap-3">
                         <input
                           placeholder="City / Town"
-                          className="rounded-md border border-ink-900/15 bg-[#d2d2d2] px-3 py-2 text-sm placeholder:text-beige-200 focus:outline-none focus:border-gold-500 transition"
+                          className="rounded-md border border-black/15 bg-white px-3 py-2 text-sm placeholder:text-black/40 focus:outline-none focus:border-gold-500 transition"
                         />
                         <input
                           placeholder="Postcode"
-                          className="rounded-md border border-ink-900/15 bg-[#d2d2d2] px-3 py-2 text-sm placeholder:text-beige-200 focus:outline-none focus:border-gold-500 transition"
+                          className="rounded-md border border-black/15 bg-white px-3 py-2 text-sm placeholder:text-black/40 focus:outline-none focus:border-gold-500 transition"
                         />
                       </div>
                       <input
                         placeholder="Notes for the driver (gate code, floor…)"
-                        className="w-full rounded-md border border-ink-900/15 bg-[#d2d2d2] px-3 py-2 text-sm placeholder:text-beige-200 focus:outline-none focus:border-gold-500 transition"
+                        className="w-full rounded-md border border-black/15 bg-white px-3 py-2 text-sm placeholder:text-black/40 focus:outline-none focus:border-gold-500 transition"
                       />
                     </div>
                   )}
 
                   {destination === "Custom address" && (
-                    <div className="animate-fade-up rounded-lg border border-gold-500/40 bg-cream-100/60 p-4 space-y-3">
+                    <div className="animate-fade-up rounded-lg border border-gold-500/40 bg-white p-4 space-y-3">
                       <div className="text-[13px] uppercase tracking-[0.28em] text-black">
                         Destination address
                       </div>
                       <input
                         required
                         placeholder="Street address"
-                        className="w-full rounded-md border border-ink-900/15 bg-[#d2d2d2] px-3 py-2 text-sm placeholder:text-beige-200 focus:outline-none focus:border-gold-500 transition"
+                        className="w-full rounded-md border border-black/15 bg-white px-3 py-2 text-sm placeholder:text-black/40 focus:outline-none focus:border-gold-500 transition"
                       />
                       <div className="grid grid-cols-2 gap-3">
                         <input
                           placeholder="City / Town"
-                          className="rounded-md border border-ink-900/15 bg-[#d2d2d2] px-3 py-2 text-sm placeholder:text-beige-200 focus:outline-none focus:border-gold-500 transition"
+                          className="rounded-md border border-black/15 bg-white px-3 py-2 text-sm placeholder:text-black/40 focus:outline-none focus:border-gold-500 transition"
                         />
                         <input
                           placeholder="Postcode"
-                          className="rounded-md border border-ink-900/15 bg-[#d2d2d2] px-3 py-2 text-sm placeholder:text-beige-200 focus:outline-none focus:border-gold-500 transition"
+                          className="rounded-md border border-black/15 bg-white px-3 py-2 text-sm placeholder:text-black/40 focus:outline-none focus:border-gold-500 transition"
                         />
                       </div>
                       <input
                         placeholder="Arrival notes (entrance, contact name…)"
-                        className="w-full rounded-md border border-ink-900/15 bg-[#d2d2d2] px-3 py-2 text-sm placeholder:text-beige-200 focus:outline-none focus:border-gold-500 transition"
+                        className="w-full rounded-md border border-black/15 bg-white px-3 py-2 text-sm placeholder:text-black/40 focus:outline-none focus:border-gold-500 transition"
                       />
                     </div>
                   )}
@@ -1022,7 +1022,7 @@ function HowItWorks({ selectedService, onSelectService }) {
                   <textarea
                     rows="2"
                     placeholder="A line about your journey"
-                    className="w-full rounded-lg border border-ink-900/15 bg-[#d2d2d2] px-3 py-2 text-xs placeholder:text-beige-200 focus:outline-none focus:border-gold-500 transition resize-none"
+                    className="w-full rounded-lg border border-black/15 bg-white px-3 py-2 text-xs placeholder:text-black/40 focus:outline-none focus:border-gold-500 transition resize-none"
                   />
 
                   <button
@@ -1077,7 +1077,7 @@ function SocialProof() {
   return (
     <section
       ref={ref}
-      className="bg-ink-900 text-cream-50 py-24 relative overflow-hidden font-cormorant"
+      className="bg-black text-white py-24 relative overflow-hidden font-cormorant"
     >
       <div
         className="pointer-events-none absolute inset-0 opacity-[0.05]"
@@ -1100,7 +1100,7 @@ function SocialProof() {
           {logos.map((l) => (
             <div
               key={l}
-              className="text-center font-display tracking-[0.28em] text-[11px] text-cream-100/55 hover:text-gold-300 transition-all duration-700"
+              className="text-center font-display tracking-[0.28em] text-[11px] text-white/55 hover:text-white transition-all duration-700"
             >
               {l}
             </div>
@@ -1173,7 +1173,7 @@ function Services({ onSelect }) {
     },
   ];
   return (
-    <section id="services" ref={ref} className="pt-12 pb-28 lg:pt-16 lg:pb-40 bg-[#d2d2d2] font-cormorant text-black">
+    <section id="services" ref={ref} className="pt-12 pb-28 lg:pt-16 lg:pb-40 bg-white font-cormorant text-black">
       <div className="container-x">
         <div className="reveal flex flex-col items-center text-center gap-7 max-w-2xl mx-auto">
           <div>
@@ -1284,10 +1284,10 @@ function Services({ onSelect }) {
 
       <div className="container-x">
         {/* In-vehicle card */}
-        <div className="reveal mt-16 rounded-[15px] border border-white/30 bg-ink-900 text-white overflow-hidden shadow-[0_30px_70px_-15px_rgba(0,0,0,0.55),0_10px_30px_-12px_rgba(0,0,0,0.45)] transition-all duration-700 ease-[cubic-bezier(0.22,1,0.36,1)] hover:-translate-y-1.5 hover:shadow-[0_50px_100px_-20px_rgba(0,0,0,0.7),0_15px_40px_-12px_rgba(0,0,0,0.5)]">
+        <div className="reveal mt-16 rounded-[15px] border border-white/30 bg-black text-white overflow-hidden shadow-[0_30px_70px_-15px_rgba(0,0,0,0.55),0_10px_30px_-12px_rgba(0,0,0,0.45)] transition-all duration-700 ease-[cubic-bezier(0.22,1,0.36,1)] hover:-translate-y-1.5 hover:shadow-[0_50px_100px_-20px_rgba(0,0,0,0.7),0_15px_40px_-12px_rgba(0,0,0,0.5)]">
           <div className="grid grid-cols-1 lg:grid-cols-2 items-stretch">
             {/* Left — interior image with click-to-zoom */}
-            <div className="relative min-h-[280px] lg:min-h-[420px] bg-ink-800 overflow-hidden lg:order-1">
+            <div className="relative min-h-[280px] lg:min-h-[420px] bg-black overflow-hidden lg:order-1">
               <img
                 src="/inside-s.png"
                 alt="Inside the Mercedes Sprinter"
@@ -1300,7 +1300,7 @@ function Services({ onSelect }) {
                   transform: activeFeature !== null ? "scale(2.4)" : "scale(1)",
                 }}
               />
-              <div className="pointer-events-none absolute inset-0 bg-gradient-to-l from-ink-900/40 via-transparent to-transparent lg:from-ink-900/60" />
+              <div className="pointer-events-none absolute inset-0 bg-gradient-to-l from-black/40 via-transparent to-transparent lg:from-black/60" />
               {activeFeature !== null && (
                 <div
                   className="pointer-events-none absolute z-10 -translate-x-1/2 -translate-y-1/2 rounded-full border border-gold-300/70 bg-gold-300/20 backdrop-blur-sm px-3 py-1 text-[10px] uppercase tracking-[0.28em] text-white whitespace-nowrap transition-opacity duration-500"
@@ -1412,7 +1412,7 @@ function Testimonials() {
             alt=""
             className="absolute inset-0 h-full w-full object-cover"
           />
-          <div className="absolute inset-0 bg-gradient-to-b from-ink-900/70 via-ink-900/65 to-ink-900/85" />
+          <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/65 to-black/85" />
         </div>
       ))}
 
@@ -1473,7 +1473,7 @@ function CTA() {
   return (
     <section
       ref={ref}
-      className="relative py-20 sm:py-28 lg:py-40 bg-ink-900 text-cream-50 overflow-hidden"
+      className="relative py-20 sm:py-28 lg:py-40 bg-black text-white overflow-hidden"
     >
       <div className="pointer-events-none absolute -top-40 left-1/2 -translate-x-1/2 h-[36rem] w-[36rem] rounded-full bg-gold-400/20 blur-[120px]" />
       <div
@@ -1532,7 +1532,7 @@ function Footer() {
     },
   ];
   return (
-    <footer className="bg-ink-900 text-white font-cormorant border-t border-white/15 relative overflow-hidden">
+    <footer className="bg-black text-white font-cormorant border-t border-white/15 relative overflow-hidden">
       <div
         className="pointer-events-none absolute inset-0 opacity-[0.04]"
         style={{
@@ -1641,7 +1641,7 @@ function Discover() {
   return (
     <section
       ref={ref}
-      className="relative overflow-hidden bg-ink-900 text-white font-cormorant"
+      className="relative overflow-hidden bg-black text-white font-cormorant"
     >
       <div className="grid grid-cols-1 lg:grid-cols-12 items-stretch min-h-[420px] lg:min-h-[640px]">
         <div className="reveal-img relative lg:col-span-7 min-h-[360px] overflow-hidden">
@@ -1650,7 +1650,7 @@ function Discover() {
             alt="Inside the cabin"
             className="absolute inset-0 h-full w-full object-cover"
           />
-          <div className="pointer-events-none absolute inset-0 bg-gradient-to-r from-ink-900/65 via-ink-900/15 to-transparent" />
+          <div className="pointer-events-none absolute inset-0 bg-gradient-to-r from-black/65 via-black/15 to-transparent" />
         </div>
         <div className="lg:col-span-5 flex items-center px-8 lg:px-14 py-16 lg:py-24">
           <div className="reveal max-w-md">
@@ -1684,7 +1684,7 @@ function Newsletter() {
   return (
     <section
       ref={ref}
-      className="relative bg-[#d2d3d3] text-black py-20 lg:py-28 border-t border-black/10"
+      className="relative bg-white text-black py-20 lg:py-28 border-t border-black/10"
     >
       <div
         className="pointer-events-none absolute inset-0 opacity-[0.06]"

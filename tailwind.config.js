@@ -4,11 +4,11 @@ export default {
   theme: {
     extend: {
       fontFamily: {
-        serif: ['"Cormorant Garamond"', 'Georgia', 'serif'],
-        display: ['"Cormorant Garamond"', 'Georgia', 'serif'],
-        sans: ['"Cormorant Garamond"', 'Georgia', 'serif'],
-        playfair: ['"DM Serif Display"', 'Georgia', 'serif'],
-        cormorant: ['"Cormorant Garamond"', 'Georgia', 'serif'],
+        serif: ['Futura', '"Futura PT"', '"Trebuchet MS"', 'Avenir', 'system-ui', 'sans-serif'],
+        display: ['Futura', '"Futura PT"', '"Trebuchet MS"', 'Avenir', 'system-ui', 'sans-serif'],
+        sans: ['Futura', '"Futura PT"', '"Trebuchet MS"', 'Avenir', 'system-ui', 'sans-serif'],
+        playfair: ['Futura', '"Futura PT"', '"Trebuchet MS"', 'Avenir', 'system-ui', 'sans-serif'],
+        cormorant: ['Futura', '"Futura PT"', '"Trebuchet MS"', 'Avenir', 'system-ui', 'sans-serif'],
         futura: ['Futura', '"Futura PT"', '"Trebuchet MS"', 'Avenir', 'system-ui', 'sans-serif'],
       },
       colors: {

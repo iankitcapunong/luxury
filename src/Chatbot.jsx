@@ -160,9 +160,9 @@ export default function Chatbot() {
         onClick={() => setOpen((o) => !o)}
         aria-label={open ? "Close chat" : "Open chat"}
         className={`fixed bottom-6 right-6 z-[60] grid h-14 w-14 place-items-center rounded-full
-                    bg-ink-900 text-cream-50 shadow-[0_15px_35px_-8px_rgba(0,0,0,0.45)]
-                    transition-all duration-300 hover:bg-gold-500 hover:text-ink-900
-                    hover:-translate-y-0.5 focus:outline-none focus:ring-2 focus:ring-gold-400/50`}
+                    bg-black text-white shadow-[0_15px_35px_-8px_rgba(0,0,0,0.45)]
+                    transition-all duration-300 hover:bg-white hover:text-black
+                    hover:-translate-y-0.5 focus:outline-none focus:ring-2 focus:ring-white/50`}
       >
         {open ? (
           <svg viewBox="0 0 24 24" className="h-5 w-5" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round">
@@ -174,26 +174,26 @@ export default function Chatbot() {
           </svg>
         )}
         {!open && (
-          <span className="absolute -top-1 -right-1 h-3 w-3 rounded-full bg-gold-400 ring-2 ring-cream-50 animate-pulse" />
+          <span className="absolute -top-1 -right-1 h-3 w-3 rounded-full bg-white ring-2 ring-black animate-pulse" />
         )}
       </button>
 
       {/* Panel */}
       <div
         className={`fixed bottom-24 right-6 z-[60] w-[min(360px,calc(100vw-3rem))]
-                    origin-bottom-right rounded-2xl border border-ink-900/10
-                    bg-cream-50 shadow-[0_30px_80px_-20px_rgba(0,0,0,0.45)]
+                    origin-bottom-right rounded-2xl border border-black/10
+                    bg-white shadow-[0_30px_80px_-20px_rgba(0,0,0,0.45)]
                     transition-all duration-300
                     ${open ? "opacity-100 translate-y-0 pointer-events-auto" : "opacity-0 translate-y-3 pointer-events-none"}`}
       >
         {/* Header */}
-        <div className="flex items-center gap-3 rounded-t-2xl bg-ink-900 px-5 py-4 text-cream-50">
-          <div className="grid h-9 w-9 place-items-center rounded-full border border-gold-400/60 text-gold-400 font-serif">
+        <div className="flex items-center gap-3 rounded-t-2xl bg-black px-5 py-4 text-white">
+          <div className="grid h-9 w-9 place-items-center rounded-full border border-white/60 text-white font-serif">
             L
           </div>
           <div className="leading-tight">
             <div className="font-serif text-sm">Luxury Transport · Concierge</div>
-            <div className="text-[10px] uppercase tracking-widest-x text-cream-50/60 flex items-center gap-1.5">
+            <div className="text-[10px] uppercase tracking-widest-x text-white/60 flex items-center gap-1.5">
               <span className="h-1.5 w-1.5 rounded-full bg-emerald-400" /> Online · Replies instantly
             </div>
           </div>
@@ -214,8 +214,8 @@ export default function Chatbot() {
               <button
                 key={q}
                 onClick={() => send(q)}
-                className="rounded-full border border-ink-900/15 px-3 py-1 text-[11px] text-ink-700
-                           transition hover:border-gold-500 hover:text-gold-600 hover:bg-cream-100"
+                className="rounded-full border border-black/15 px-3 py-1 text-[11px] text-black/80
+                           transition hover:border-black hover:text-black hover:bg-black/5"
               >
                 {q}
               </button>
@@ -229,20 +229,20 @@ export default function Chatbot() {
             e.preventDefault();
             send();
           }}
-          className="flex items-center gap-2 border-t border-ink-900/10 p-3"
+          className="flex items-center gap-2 border-t border-black/10 p-3"
         >
           <input
             value={input}
             onChange={(e) => setInput(e.target.value)}
             placeholder="Ask anything: bookings, pricing, vehicles…"
-            className="flex-1 rounded-full border border-ink-900/15 bg-cream-50 px-4 py-2.5 text-sm
-                       focus:outline-none focus:border-gold-500 transition"
+            className="flex-1 rounded-full border border-black/15 bg-white px-4 py-2.5 text-sm
+                       focus:outline-none focus:border-black transition"
           />
           <button
             type="submit"
             aria-label="Send"
-            className="grid h-10 w-10 place-items-center rounded-full bg-ink-900 text-cream-50
-                       transition hover:bg-gold-500 hover:text-ink-900 disabled:opacity-40"
+            className="grid h-10 w-10 place-items-center rounded-full bg-black text-white
+                       transition hover:bg-white hover:text-black disabled:opacity-40"
             disabled={!input.trim() || typing}
           >
             <svg viewBox="0 0 24 24" className="h-4 w-4" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round">
@@ -251,7 +251,7 @@ export default function Chatbot() {
             </svg>
           </button>
         </form>
-        <p className="px-4 pb-3 text-center text-[10px] uppercase tracking-widest-x text-ink-500">
+        <p className="px-4 pb-3 text-center text-[10px] uppercase tracking-widest-x text-black/60">
           Discretion · Punctuality · Composure
         </p>
       </div>
@@ -266,8 +266,8 @@ function Bubble({ from, text }) {
       <div
         className={`max-w-[82%] rounded-2xl px-4 py-2.5 leading-relaxed
                     ${isUser
-                      ? "bg-ink-900 text-cream-50 rounded-br-md"
-                      : "bg-cream-100 text-ink-900 rounded-bl-md"}`}
+                      ? "bg-black text-white rounded-br-md"
+                      : "bg-white text-black border border-black/10 rounded-bl-md"}`}
       >
         {text}
       </div>
@@ -278,10 +278,10 @@ function Bubble({ from, text }) {
 function Typing() {
   return (
     <div className="flex justify-start">
-      <div className="bg-cream-100 text-ink-900 rounded-2xl rounded-bl-md px-4 py-3 flex items-center gap-1.5">
-        <span className="h-1.5 w-1.5 rounded-full bg-ink-500 animate-bounce" style={{ animationDelay: "0ms" }} />
-        <span className="h-1.5 w-1.5 rounded-full bg-ink-500 animate-bounce" style={{ animationDelay: "120ms" }} />
-        <span className="h-1.5 w-1.5 rounded-full bg-ink-500 animate-bounce" style={{ animationDelay: "240ms" }} />
+      <div className="bg-white text-black border border-black/10 rounded-2xl rounded-bl-md px-4 py-3 flex items-center gap-1.5">
+        <span className="h-1.5 w-1.5 rounded-full bg-black animate-bounce" style={{ animationDelay: "0ms" }} />
+        <span className="h-1.5 w-1.5 rounded-full bg-black animate-bounce" style={{ animationDelay: "120ms" }} />
+        <span className="h-1.5 w-1.5 rounded-full bg-black animate-bounce" style={{ animationDelay: "240ms" }} />
       </div>
     </div>
   );

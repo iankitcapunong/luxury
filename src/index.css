@@ -8,20 +8,10 @@
     scroll-padding-top: 96px;
   }
   body {
+    font-family: 'Futura', 'Futura PT', 'Trebuchet MS', Avenir, system-ui, sans-serif;
     font-feature-settings: 'ss01', 'ss02';
-    background-color: #E5EEE4;
-    background-image:
-      linear-gradient(180deg, #F0F6EF 0%, #E5EEE4 40%, #D8E5D7 100%),
-      radial-gradient(at 20% 10%, rgba(255, 245, 220, 0.55) 0px, transparent 55%),
-      radial-gradient(at 85% 90%, rgba(159, 122, 60, 0.10) 0px, transparent 55%),
-      url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='160' height='160'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2' stitchTiles='stitch'/><feColorMatrix values='0 0 0 0 0.13  0 0 0 0 0.09  0 0 0 0 0.06  0 0 0 0.06 0'/></filter><rect width='100%' height='100%' filter='url(%23n)'/></svg>");
-    background-blend-mode: normal, screen, multiply, multiply;
-    background-attachment: fixed;
-  }
-  @media (max-width: 768px) {
-    body {
-      background-attachment: scroll;
-    }
+    background-color: #ffffff;
+    color: #000000;
   }
   html, body {
     overflow-x: hidden;
@@ -30,8 +20,8 @@
     font-feature-settings: 'liga', 'kern', 'onum';
   }
   ::selection {
-    background: #BF9C53;
-    color: #231811;
+    background: #000000;
+    color: #ffffff;
   }
 }
 
@@ -41,7 +31,7 @@
   }
 
   .eyebrow {
-    @apply text-[10px] uppercase tracking-[0.34em] text-gold-500 font-normal;
+    @apply text-[10px] uppercase tracking-[0.34em] text-black font-normal;
   }
 
   .h-display {
@@ -50,31 +40,31 @@
 
   .h-display em,
   .h-display i {
-    @apply italic font-light text-gold-500;
+    @apply italic font-light text-black;
   }
 
   .btn-primary {
     @apply relative inline-flex items-center justify-center gap-3 overflow-hidden
-           bg-ink-900 px-10 py-4 text-[11px] uppercase tracking-[0.28em] text-cream-50
+           bg-black px-10 py-4 text-[11px] uppercase tracking-[0.28em] text-white
            transition-all duration-700 ease-[cubic-bezier(0.22,1,0.36,1)]
-           hover:bg-gold-500 hover:text-ink-900 hover:tracking-[0.34em]
-           hover:shadow-[0_28px_60px_-20px_rgba(122,94,32,0.55)]
-           focus:outline-none focus:ring-1 focus:ring-gold-400/40 focus:ring-offset-2 focus:ring-offset-cream-50;
+           hover:bg-white hover:text-black hover:tracking-[0.34em]
+           hover:shadow-[0_28px_60px_-20px_rgba(0,0,0,0.45)]
+           focus:outline-none focus:ring-1 focus:ring-black/40 focus:ring-offset-2 focus:ring-offset-white;
   }
 
   .btn-ghost {
     @apply inline-flex items-center justify-center gap-3
-           border border-ink-900/25 px-9 py-4 text-[11px] uppercase tracking-[0.28em] text-ink-900
+           border border-black/25 px-9 py-4 text-[11px] uppercase tracking-[0.28em] text-black
            transition-all duration-700 ease-[cubic-bezier(0.22,1,0.36,1)]
-           hover:border-gold-500 hover:text-gold-600 hover:tracking-[0.34em];
+           hover:border-black hover:text-black hover:bg-black/5 hover:tracking-[0.34em];
   }
 
   .hairline {
-    @apply h-px w-14 bg-gold-500/70;
+    @apply h-px w-14 bg-black/70;
   }
 
   .editorial-rule {
-    @apply relative flex items-center text-[10px] uppercase tracking-[0.34em] text-gold-500;
+    @apply relative flex items-center text-[10px] uppercase tracking-[0.34em] text-black;
   }
 
   .text-mask-gold {
@@ -101,7 +91,7 @@
   .editorial-rule::before,
   .editorial-rule::after {
     content: '';
-    @apply h-px flex-1 bg-gold-500/30;
+    @apply h-px flex-1 bg-black/30;
   }
   .editorial-rule::before { @apply mr-5; }
   .editorial-rule::after { @apply ml-5; }

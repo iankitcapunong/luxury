@@ -4,7 +4,7 @@ export default function Loader() {
       role="status"
       aria-live="polite"
       aria-label="Loading"
-      className="fixed inset-0 z-[200] flex items-center justify-center bg-ink-900"
+      className="fixed inset-0 z-[200] flex items-center justify-center bg-black"
     >
       <div className="flex items-end gap-3">
         {[0, 1, 2, 3, 4].map((i) => (
