@@ -11,14 +11,6 @@ export default {
         cormorant: ['Bentley', '"Playfair Display"', 'Georgia', 'serif'],
         futura: ['Bentley', '"Playfair Display"', 'Georgia', 'serif'],
       },
-      colors: {
-        gold: {
-          300: '#D9BD86',
-          400: '#BF9C53',
-          500: '#9E7E36',
-          600: '#7A5E20',
-        },
-      },
       letterSpacing: {
         'widest-x': '0.28em',
       },

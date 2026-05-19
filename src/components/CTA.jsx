@@ -8,7 +8,7 @@ export default function CTA() {
       ref={ref}
       className="relative py-20 sm:py-28 lg:py-40 bg-black text-white overflow-hidden"
     >
-      <div className="pointer-events-none absolute -top-40 left-1/2 -translate-x-1/2 h-[36rem] w-[36rem] rounded-full bg-gold-400/20 blur-[120px]" />
+      <div className="pointer-events-none absolute -top-40 left-1/2 -translate-x-1/2 h-[36rem] w-[36rem] rounded-full bg-white/10 blur-[120px]" />
       <div
         className="pointer-events-none absolute inset-0 opacity-[0.04]"
         style={{

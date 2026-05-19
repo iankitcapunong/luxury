@@ -25,10 +25,10 @@ export default function SocialProof() {
       />
       <div className="container-x relative">
         <div className="reveal text-center">
-          <div className="editorial-rule justify-center mx-auto max-w-md !text-gold-300">
+          <div className="editorial-rule justify-center mx-auto max-w-md !text-white/60">
             In the company of
           </div>
-          <h3 className="font-display italic font-light text-3xl sm:text-4xl mt-7 max-w-2xl mx-auto leading-snug text-mask-gold-bright">
+          <h3 className="font-display italic font-light text-3xl sm:text-4xl mt-7 max-w-2xl mx-auto leading-snug text-white">
             Hotels, concierges, labels and quietly discerning private clients
           </h3>
         </div>

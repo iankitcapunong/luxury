@@ -13,7 +13,7 @@ export default function VClassSVG() {
           <stop offset="0%" stopColor="#2A2A2A" />
           <stop offset="100%" stopColor="#0B0B0B" />
         </linearGradient>
-        <linearGradient id="goldStripe" x1="0" y1="0" x2="1" y2="0">
+        <linearGradient id="pinStripe" x1="0" y1="0" x2="1" y2="0">
           <stop offset="0%" stopColor="#D9B97A" stopOpacity="0" />
           <stop offset="50%" stopColor="#D9B97A" />
           <stop offset="100%" stopColor="#D9B97A" stopOpacity="0" />
@@ -48,13 +48,13 @@ export default function VClassSVG() {
         stroke="#D9B97A"
         strokeOpacity="0.25"
       />
-      {/* gold pinstripe */}
+      {/* pinstripe */}
       <line
         x1="60"
         y1="195"
         x2="450"
         y2="195"
-        stroke="url(#goldStripe)"
+        stroke="url(#pinStripe)"
         strokeWidth="1"
       />
       {/* wheels */}

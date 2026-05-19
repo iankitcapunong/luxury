@@ -67,12 +67,6 @@
     @apply relative flex items-center text-[10px] uppercase tracking-[0.34em] text-black;
   }
 
-  .text-mask-gold {
-    color: #000000;
-  }
-  .text-mask-gold-bright {
-    color: #ffffff;
-  }
   .text-mask-ink {
     color: #000000;
   }
@@ -130,12 +124,6 @@
     100% { transform: scale(1.05) translate3d(0, 0, 0); }
   }
   .ken-burns { animation: kenBurns 22s ease-in-out infinite; }
-
-  @keyframes goldShimmer {
-    0%, 100% { opacity: 0.35; }
-    50%      { opacity: 0.7; }
-  }
-  .gold-shimmer { animation: goldShimmer 4.5s ease-in-out infinite; }
 
   .grain::before {
     content: '';

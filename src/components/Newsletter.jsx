@@ -19,12 +19,12 @@ export default function Newsletter() {
       <div className="container-x relative">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 items-center">
           <div className="lg:col-span-6 reveal">
-            <div className="eyebrow !text-gold-600 flex items-center gap-3">
-              <span className="h-px w-12 bg-gold-600" /> Stay Informed
+            <div className="eyebrow !text-black flex items-center gap-3">
+              <span className="h-px w-12 bg-black" /> Stay Informed
             </div>
             <h3 className="font-display !font-cormorant mt-5 text-3xl lg:text-4xl leading-[1.1] text-black">
               Editions, journeys and quiet
-              <span className="italic font-light text-gold-600">
+              <span className="italic font-light text-black">
                 {" "}
                 announcements.
               </span>
@@ -45,11 +45,11 @@ export default function Newsletter() {
               required
               type="email"
               placeholder="Email address"
-              className="flex-1 rounded-lg border border-black/15 bg-white px-4 py-3 text-sm text-black placeholder:text-black/40 focus:outline-none focus:border-gold-500 transition"
+              className="flex-1 rounded-lg border border-black/15 bg-white px-4 py-3 text-sm text-black placeholder:text-black/40 focus:outline-none focus:border-black transition"
             />
             <button
               type="submit"
-              className="btn-primary !rounded-[15px] !px-7 !py-3 !text-[11px] !tracking-[0.28em] !bg-gold-500 !text-white hover:!bg-gold-600"
+              className="btn-primary !rounded-[15px] !px-7 !py-3 !text-[11px] !tracking-[0.28em] !bg-black !text-white hover:!bg-black/80"
             >
               Subscribe <Icon.ArrowRight className="h-3.5 w-3.5" />
             </button>

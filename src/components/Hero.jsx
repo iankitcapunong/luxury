@@ -33,7 +33,7 @@ export default function Hero() {
       </div>
 
       {/* atmospheric light wash */}
-      <div className="pointer-events-none absolute -top-40 -right-40 h-[36rem] w-[36rem] rounded-full bg-gold-300/25 blur-[120px] z-0" />
+      <div className="pointer-events-none absolute -top-40 -right-40 h-[36rem] w-[36rem] rounded-full bg-white/10 blur-[120px] z-0" />
       <div className="pointer-events-none absolute -bottom-48 -left-48 h-[36rem] w-[36rem] rounded-full bg-black/10 blur-[120px] z-0" />
 
       <div className="relative z-10 w-full pl-4 sm:pl-6 lg:pl-10 pr-4 sm:pr-6 grid grid-cols-1 lg:grid-cols-12 gap-16 items-end font-cormorant">
@@ -70,7 +70,7 @@ export default function Hero() {
             className="reveal mt-5 sm:mt-7 flex items-start gap-3 sm:gap-4 max-w-xl"
             style={{ transitionDelay: "350ms" }}
           >
-            <span className="mt-2 sm:mt-3 h-px w-6 sm:w-10 bg-gold-400 shrink-0" />
+            <span className="mt-2 sm:mt-3 h-px w-6 sm:w-10 bg-white shrink-0" />
             <p className="text-base sm:text-lg lg:text-[24px] text-white leading-relaxed font-light drop-shadow-[0_2px_6px_rgba(0,0,0,0.7)]">
               A private chauffeur house, fluent in the small things: the chilled
               water, the unspoken route, the door already open.

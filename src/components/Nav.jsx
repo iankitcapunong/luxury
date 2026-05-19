@@ -51,7 +51,7 @@ export default function Nav() {
             onClick={goHomeTop}
             className="flex items-center gap-2 sm:gap-3 shrink-0 min-w-0"
           >
-            <span className="grid h-9 w-9 sm:h-11 sm:w-11 place-items-center rounded-full border border-gold-400/70 text-gold-400 font-display italic text-[16px] sm:text-[18px] font-bold shrink-0">
+            <span className="grid h-9 w-9 sm:h-11 sm:w-11 place-items-center rounded-full border border-white/70 text-white font-display italic text-[16px] sm:text-[18px] font-bold shrink-0">
               L
             </span>
             <div className="leading-tight font-cormorant min-w-0">
@@ -70,7 +70,7 @@ export default function Nav() {
                 <a
                   href={path}
                   onClick={(e) => goToPage(e, path)}
-                  className="relative inline-block py-1 hover:text-gold-300 transition-colors duration-300 after:absolute after:left-0 after:bottom-0 after:h-px after:w-0 after:bg-gold-400 after:transition-all after:duration-300 hover:after:w-full"
+                  className="relative inline-block py-1 hover:text-white transition-colors duration-300 after:absolute after:left-0 after:bottom-0 after:h-px after:w-0 after:bg-white after:transition-all after:duration-300 hover:after:w-full"
                 >
                   {label}
                 </a>

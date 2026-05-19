@@ -89,17 +89,17 @@ export default function Services({ onSelect }) {
           return (
             <div
               key={p.slug}
-              className="group grid grid-cols-1 lg:grid-cols-2 items-stretch border-t border-gold-500/15 last:border-b last:border-gold-500/15"
+              className="group grid grid-cols-1 lg:grid-cols-2 items-stretch border-t border-black/10 last:border-b last:border-black/10"
             >
               <div
                 className={`reveal ${
                   reverse ? "from-right lg:order-2" : "from-left"
                 } relative px-4 sm:px-8 lg:px-12 py-8 sm:py-10 lg:py-14`}
               >
-                {/* Decorative offset gold frame */}
+                {/* Decorative offset frame */}
                 <span
                   aria-hidden="true"
-                  className={`pointer-events-none absolute hidden lg:block w-[88%] h-[78%] border border-gold-400/35 rounded-[18px] gold-shimmer transition-all duration-700 ease-[cubic-bezier(0.22,1,0.36,1)] group-hover:border-gold-400/70 ${
+                  className={`pointer-events-none absolute hidden lg:block w-[88%] h-[78%] border border-black/15 rounded-[18px] transition-all duration-700 ease-[cubic-bezier(0.22,1,0.36,1)] group-hover:border-black/30 ${
                     reverse
                       ? "bottom-6 right-6 lg:bottom-8 lg:right-8 group-hover:bottom-5 group-hover:right-5"
                       : "top-6 left-6 lg:top-8 lg:left-8 group-hover:top-5 group-hover:left-5"
@@ -118,15 +118,15 @@ export default function Services({ onSelect }) {
                   <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-black/35 via-black/5 to-transparent" />
 
                   {/* Corner brackets */}
-                  <span aria-hidden="true" className="pointer-events-none absolute top-3 left-3 h-7 w-7 border-l border-t border-gold-300/80 transition-all duration-700 ease-out group-hover:h-12 group-hover:w-12 group-hover:top-2 group-hover:left-2 group-hover:border-gold-300" />
-                  <span aria-hidden="true" className="pointer-events-none absolute top-3 right-3 h-7 w-7 border-r border-t border-gold-300/80 transition-all duration-700 ease-out group-hover:h-12 group-hover:w-12 group-hover:top-2 group-hover:right-2 group-hover:border-gold-300" />
-                  <span aria-hidden="true" className="pointer-events-none absolute bottom-3 left-3 h-7 w-7 border-l border-b border-gold-300/80 transition-all duration-700 ease-out group-hover:h-12 group-hover:w-12 group-hover:bottom-2 group-hover:left-2 group-hover:border-gold-300" />
-                  <span aria-hidden="true" className="pointer-events-none absolute bottom-3 right-3 h-7 w-7 border-r border-b border-gold-300/80 transition-all duration-700 ease-out group-hover:h-12 group-hover:w-12 group-hover:bottom-2 group-hover:right-2 group-hover:border-gold-300" />
+                  <span aria-hidden="true" className="pointer-events-none absolute top-3 left-3 h-7 w-7 border-l border-t border-white/40 transition-all duration-700 ease-out group-hover:h-12 group-hover:w-12 group-hover:top-2 group-hover:left-2 group-hover:border-white" />
+                  <span aria-hidden="true" className="pointer-events-none absolute top-3 right-3 h-7 w-7 border-r border-t border-white/40 transition-all duration-700 ease-out group-hover:h-12 group-hover:w-12 group-hover:top-2 group-hover:right-2 group-hover:border-white" />
+                  <span aria-hidden="true" className="pointer-events-none absolute bottom-3 left-3 h-7 w-7 border-l border-b border-white/40 transition-all duration-700 ease-out group-hover:h-12 group-hover:w-12 group-hover:bottom-2 group-hover:left-2 group-hover:border-white" />
+                  <span aria-hidden="true" className="pointer-events-none absolute bottom-3 right-3 h-7 w-7 border-r border-b border-white/40 transition-all duration-700 ease-out group-hover:h-12 group-hover:w-12 group-hover:bottom-2 group-hover:right-2 group-hover:border-white" />
 
-                  {/* Slow gold sweep on hover */}
+                  {/* Slow highlight sweep on hover */}
                   <span
                     aria-hidden="true"
-                    className="pointer-events-none absolute -top-1/2 -left-1/3 h-[200%] w-[55%] rotate-[20deg] bg-gradient-to-r from-transparent via-gold-200/30 to-transparent opacity-0 group-hover:opacity-100 group-hover:translate-x-[280%] transition-all duration-[1600ms] ease-out"
+                    className="pointer-events-none absolute -top-1/2 -left-1/3 h-[200%] w-[55%] rotate-[20deg] bg-gradient-to-r from-transparent via-white/15 to-transparent opacity-0 group-hover:opacity-100 group-hover:translate-x-[280%] transition-all duration-[1600ms] ease-out"
                   />
 
                   {/* Numeral */}
@@ -148,7 +148,7 @@ export default function Services({ onSelect }) {
                   <h3 className="h-display !font-cormorant mt-5 text-3xl sm:text-4xl lg:text-5xl text-black leading-[1.04]">
                     {p.title}
                   </h3>
-                  <div className="mt-5 h-px w-12 bg-gold-500/60 transition-all duration-700 group-hover:w-24 group-hover:bg-gold-500" />
+                  <div className="mt-5 h-px w-12 bg-black/20 transition-all duration-700 group-hover:w-24 group-hover:bg-black" />
                   <p className="mt-7 text-black/80 leading-[1.85] font-light">
                     {p.body}
                   </p>
@@ -193,7 +193,7 @@ export default function Services({ onSelect }) {
               <div className="pointer-events-none absolute inset-0 bg-gradient-to-l from-black/40 via-transparent to-transparent lg:from-black/60" />
               {activeFeature !== null && (
                 <div
-                  className="pointer-events-none absolute z-10 -translate-x-1/2 -translate-y-1/2 rounded-full border border-gold-300/70 bg-gold-300/20 backdrop-blur-sm px-3 py-1 text-[10px] uppercase tracking-[0.28em] text-white whitespace-nowrap transition-opacity duration-500"
+                  className="pointer-events-none absolute z-10 -translate-x-1/2 -translate-y-1/2 rounded-full border border-white/40 bg-white/10 backdrop-blur-sm px-3 py-1 text-[10px] uppercase tracking-[0.28em] text-white whitespace-nowrap transition-opacity duration-500"
                   style={{
                     left: `${sprinterFeatures[activeFeature].x}%`,
                     top: `${sprinterFeatures[activeFeature].y}%`,
@@ -221,12 +221,12 @@ export default function Services({ onSelect }) {
                       onClick={() => setActiveFeature(isActive ? null : i)}
                       aria-pressed={isActive}
                       className={`flex items-center gap-2 text-left transition-colors duration-300 ${
-                        isActive ? "text-gold-300" : "text-white/85 hover:text-white"
+                        isActive ? "text-white" : "text-white/85 hover:text-white"
                       }`}
                     >
                       <span
                         className={`h-1 w-1 rounded-full transition-all duration-300 ${
-                          isActive ? "bg-gold-300 scale-[2]" : "bg-white"
+                          isActive ? "bg-white scale-[2]" : "bg-white/50"
                         }`}
                       />
                       {f.label}
