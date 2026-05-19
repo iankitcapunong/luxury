@@ -23,15 +23,30 @@ export default function Manifesto() {
       ref={ref}
       className="relative bg-black text-white py-24 lg:py-36 overflow-hidden font-cormorant"
     >
-      <div
-        className="pointer-events-none absolute inset-0 opacity-[0.05]"
-        style={{
-          backgroundImage:
-            "radial-gradient(rgba(255,255,255,0.5) 1px, transparent 1px)",
-          backgroundSize: "4px 4px",
-        }}
-      />
-      <div className="container-x relative">
+      {/* Background video with cinematic vignette */}
+      <div className="pointer-events-none absolute inset-0 z-0 bg-black">
+        <video
+          src="/herosection.mp4"
+          autoPlay
+          muted
+          loop
+          playsInline
+          preload="auto"
+          aria-hidden="true"
+          className="absolute inset-0 h-full w-full object-cover opacity-60"
+        />
+        <div
+          className="absolute inset-0"
+          style={{
+            background:
+              "radial-gradient(ellipse at 50% 45%, rgba(0,0,0,0.35) 30%, rgba(0,0,0,0.7) 75%, rgba(0,0,0,0.9) 100%)",
+          }}
+        />
+        <div className="absolute inset-x-0 top-0 h-32 bg-gradient-to-b from-black to-transparent" />
+        <div className="absolute inset-x-0 bottom-0 h-40 bg-gradient-to-t from-black to-transparent" />
+      </div>
+
+      <div className="container-x relative z-10">
         <div className="reveal max-w-3xl mx-auto text-center">
           <div className="editorial-rule justify-center mx-auto max-w-md !text-white/60">
             The Vision
