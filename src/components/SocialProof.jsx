@@ -2,18 +2,10 @@ import useReveal from "../hooks/useReveal";
 
 export default function SocialProof() {
   const ref = useReveal();
-  const logos = [
-    "MAYFAIR HOTEL CO.",
-    "CLARIDGE CONCIERGE",
-    "NORTHWOOD CAPITAL",
-    "ASCOT EVENTS",
-    "KENSINGTON & CO.",
-    "HARLEY MEDICAL",
-  ];
   return (
     <section
       ref={ref}
-      className="bg-black text-white py-24 relative overflow-hidden font-cormorant"
+      className="bg-black text-white py-28 sm:py-32 lg:py-40 relative overflow-hidden font-cormorant"
     >
       <div
         className="pointer-events-none absolute inset-0 opacity-[0.05]"
@@ -24,23 +16,19 @@ export default function SocialProof() {
         }}
       />
       <div className="container-x relative">
-        <div className="reveal text-center">
+        <div className="reveal text-center max-w-3xl mx-auto">
           <div className="editorial-rule justify-center mx-auto max-w-md !text-white/60">
-            In the company of
+            Who we've worked with
           </div>
-          <h3 className="font-display italic font-light text-3xl sm:text-4xl mt-7 max-w-2xl mx-auto leading-snug text-white">
-            Hotels, concierges, labels and quietly discerning private clients
+          <h3 className="font-display italic font-light text-3xl sm:text-4xl lg:text-5xl mt-8 max-w-2xl mx-auto leading-[1.2] text-white">
+            References available on request.
+            <br />
+            <span className="text-white/70">We do not name our clients.</span>
           </h3>
-        </div>
-        <div className="reveal mt-16 grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-x-10 gap-y-8 items-center">
-          {logos.map((l) => (
-            <div
-              key={l}
-              className="text-center font-display tracking-[0.28em] text-[11px] text-white/55 hover:text-white transition-all duration-700"
-            >
-              {l}
-            </div>
-          ))}
+          <p className="mt-10 text-white/70 text-[15px] leading-[1.85] font-light max-w-xl mx-auto">
+            Hotels, concierges, labels and quietly discerning private clients.
+            Names are kept where they should be — out of the conversation.
+          </p>
         </div>
       </div>
     </section>

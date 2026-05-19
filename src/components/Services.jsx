@@ -248,6 +248,23 @@ export default function Services({ onSelect }) {
             </div>
           </div>
         </div>
+
+        {/* Chilled cabinet tile */}
+        <div className="reveal mt-12 mx-auto max-w-2xl text-center px-6 sm:px-8">
+          <div className="eyebrow !text-black !text-[12px] flex items-center gap-3 justify-center">
+            <span className="hairline" /> The Chilled Cabinet
+          </div>
+          <h3 className="!font-cormorant mt-7 text-3xl sm:text-4xl lg:text-5xl text-black leading-[1.05]">
+            On ice,
+            <span className="italic font-light"> by default.</span>
+          </h3>
+          <div className="mt-6 mx-auto h-px w-12 bg-black/30" />
+          <p className="mt-7 text-[15px] sm:text-[17px] text-black/80 leading-[1.85] font-light">
+            Champagne on ice. Single-estate tequila. Curated spirits and
+            zero-proof options. Restocked before each journey to your stated
+            preference.
+          </p>
+        </div>
       </div>
     </section>
   );

@@ -1,5 +1,5 @@
-import { Link } from "react-router-dom";
 import useReveal from "../hooks/useReveal";
+import ExpressReserve from "./ExpressReserve";
 
 export default function Hero() {
   const ref = useReveal();
@@ -78,24 +78,10 @@ export default function Hero() {
           </div>
 
           <div
-            className="reveal mt-8 sm:mt-10 sm:ml-14 inline-block animate-gentle-bounce"
+            className="reveal mt-10 sm:mt-12"
             style={{ transitionDelay: "550ms" }}
           >
-            <Link
-              to="/how-it-works"
-              className="group flex gap-2 text-base sm:text-lg transition-all duration-500 hover:scale-[1.03] active:scale-[0.98] text-white font-semibold h-12 sm:h-14 rounded-full pr-7 pl-7 sm:pr-10 sm:pl-10 relative gap-x-2 gap-y-2 items-center justify-center"
-              style={{
-                background:
-                  "linear-gradient(#daba7f, #daba7f) padding-box, linear-gradient(90deg, #f97316 0%, #fbbf24 50%, #ffffff 100%) border-box",
-                border: "1.5px solid transparent",
-                boxShadow:
-                  "-15px 0 40px -5px rgba(249, 115, 22, 0.6), 15px 0 40px -5px rgba(255, 255, 255, 0.4)",
-              }}
-            >
-              <span className="flex items-center gap-2 leading-none z-10 relative drop-shadow-md">
-                Send Inquiry
-              </span>
-            </Link>
+            <ExpressReserve />
           </div>
 
         </div>

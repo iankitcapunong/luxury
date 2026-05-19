@@ -1,17 +1,15 @@
 import { useEffect } from "react";
-import Manifesto from "../components/Manifesto";
+import Future from "../components/Future";
 import CTA from "../components/CTA";
-import Monogram from "../components/Monogram";
 
-export default function VisionPage() {
+export default function FuturePage() {
   useEffect(() => {
     window.scrollTo({ top: 0, behavior: "instant" });
   }, []);
 
   return (
     <div className="bg-black pt-24 sm:pt-28">
-      <Manifesto />
-      <Monogram letters="LT" onDark />
+      <Future />
       <CTA />
     </div>
   );

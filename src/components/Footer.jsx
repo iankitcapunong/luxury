@@ -27,7 +27,7 @@ export default function Footer() {
         {/* Editorial signature line */}
         <div className="flex items-center justify-center mx-auto max-w-md mb-12 sm:mb-16 text-[10px] sm:text-[12px] uppercase tracking-[0.22em] sm:tracking-[0.34em] text-white whitespace-nowrap">
           <span className="h-px flex-1 bg-white/30 mr-3 sm:mr-5" />
-          Luxury Transport · Est. MMXXVI
+          Luxury Transport · London. Private chauffeur.
           <span className="h-px flex-1 bg-white/30 ml-3 sm:ml-5" />
         </div>
 
@@ -98,6 +98,14 @@ export default function Footer() {
                 London · Manchester
                 <br />
                 Birmingham · Edinburgh
+              </li>
+              <li className="mt-5">
+                <a
+                  href="/how-it-works"
+                  className="inline-block text-[12px] uppercase tracking-[0.28em] text-white border-b border-white/40 pb-1 hover:border-white transition-colors duration-500"
+                >
+                  Apply for membership
+                </a>
               </li>
             </ul>
           </div>
