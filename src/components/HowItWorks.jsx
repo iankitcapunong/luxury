@@ -33,7 +33,7 @@ export default function HowItWorks({ selectedService, onSelectService }) {
     "Weddings & Group Travel",
   ];
 
-  const defaultServiceTitle = "A Private Chauffeur House";
+  const defaultServiceTitle = "A Private Chauffeur Service";
   const defaultServiceCopy =
     "Every journey begins with a luxury chauffeur, uniformed, DBS checked, NDA bound, and trained for the quiet things: the chilled water, the door already open, the unspoken route. Choose a service above and the inquiry adjusts itself to suit the journey.";
 
@@ -223,7 +223,7 @@ export default function HowItWorks({ selectedService, onSelectService }) {
     <section
       id="how"
       ref={ref}
-      className="relative pt-12 pb-28 lg:pt-16 lg:pb-40 bg-white font-cormorant text-black"
+      className="relative pt-12 pb-28 lg:pt-16 lg:pb-40 bg-[#F5F0E6] font-cormorant text-black"
     >
       <div className="container-x">
         <div className="max-w-2xl mx-auto text-center">

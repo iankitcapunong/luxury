@@ -12,8 +12,8 @@ export default function Manifesto() {
       body: "Every journey is choreographed before it begins. Route, hour, refreshment, silence. The minute before pickup matters as much as the destination.",
     },
     {
-      title: "Tomorrow",
-      body: "We are building the chauffeur house of the next decade. Electric and hybrid Mercedes fleets, end-to-end concierge, paparazzi-aware routing, single-keystroke booking. The future of arrival, quietly.",
+      title: "The Future and Beyond",
+      body: "We are committed to providing luxury travel that is also environmentally friendly, as we intend to be here for many years to come — it is imperative that we have an electric option on the horizon. End-to-end concierge, paparazzi-aware routing, single-keystroke booking. The future of arrival, quietly.",
     },
   ];
 
@@ -56,10 +56,26 @@ export default function Manifesto() {
             <br />
             <span className="italic font-light">A movement.</span>
           </h2>
+          <p className="mt-4 text-[11px] sm:text-[12px] uppercase tracking-[0.34em] text-white/55">
+            Mercedes V-Class · Mercedes Sprinter · Mercedes Vito
+          </p>
           <p className="mt-8 text-white/80 leading-[1.85] text-[17px] font-light max-w-2xl mx-auto">
             Luxury transport is not just travelling in luxury. It is a lifestyle.
-            A continuity of standard from the door of the house to the door of
-            the next. We are a house of chauffeurs, and the journey is our craft.
+            Destination to destination — an effortless showcase of luxury, and
+            a continuity of standard from one door to the next. We are a
+            collective of chauffeurs, and the journey is our craft.
+          </p>
+        </div>
+
+        <div className="reveal mt-16 max-w-2xl mx-auto text-center">
+          <div className="editorial-rule justify-center mx-auto max-w-xs !text-white/60">
+            Origin
+          </div>
+          <p className="mt-6 font-display italic font-light text-xl sm:text-2xl leading-[1.6] text-white/90">
+            Several years ago, two great minds came together and began a
+            journey in search of luxury transport. To their astonishment,
+            there was a gap in the market crying for luxury travel. From
+            there, Luxury Transport was born.
           </p>
         </div>
 

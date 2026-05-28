@@ -63,9 +63,25 @@ export default function Services({ onSelect }) {
       slug: "long-distance-hire",
       tag: "Long Distance Hire",
     },
+    {
+      eyebrow: "Service Six",
+      title: "Personal Protection",
+      body: "SIA-trained close protection officers, paired with the vehicle and route. Discreet, vetted and rehearsed — from kerbside to door, an additional layer of composure for clients who require it.",
+      img: "/vip_celeb.png",
+      slug: "personal-protection",
+      tag: "Personal Protection",
+    },
+    {
+      eyebrow: "Service Seven",
+      title: "Private Airfield Transfers",
+      body: "Driven onto the apron, met at the steps. Coordinated with handlers and crew, our chauffeurs work the private terminals at Farnborough, Biggin Hill, Luton and beyond — quietly, and to the minute.",
+      img: "/airport.png",
+      slug: "private-airfield",
+      tag: "Private Airfield Transfers",
+    },
   ];
   return (
-    <section id="services" ref={ref} className="pt-12 pb-28 lg:pt-16 lg:pb-40 bg-white font-cormorant text-black">
+    <section id="services" ref={ref} className="pt-12 pb-28 lg:pt-16 lg:pb-40 bg-[#F5F0E6] font-cormorant text-black">
       <div className="container-x">
         <div className="reveal flex flex-col items-center text-center gap-7 max-w-2xl mx-auto">
           <div>
@@ -73,7 +89,7 @@ export default function Services({ onSelect }) {
               <span className="hairline" /> The Offering
             </div>
             <h2 className="h-display mt-7 text-4xl sm:text-5xl lg:text-6xl text-black">
-              A fleet for
+              A vehicle for
               <br />
               <span className="italic font-light">every occasion.</span>
             </h2>
@@ -260,9 +276,9 @@ export default function Services({ onSelect }) {
           </h3>
           <div className="mt-6 mx-auto h-px w-12 bg-black/30" />
           <p className="mt-7 text-[15px] sm:text-[17px] text-black/80 leading-[1.85] font-light">
-            Champagne on ice. Single-estate tequila. Curated spirits and
-            zero-proof options. Restocked before each journey to your stated
-            preference.
+            A fully stocked bar — fine spirits, champagne and zero-proof
+            options, restocked before each journey.{" "}
+            <span className="italic">Specifics on request.</span>
           </p>
         </div>
       </div>

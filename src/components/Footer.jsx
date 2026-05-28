@@ -10,6 +10,8 @@ export default function Footer() {
         "VIP & Celebrity",
         "Weddings & Events",
         "Long Distance Hire",
+        "Personal Protection",
+        "Private Airfield Transfers",
       ],
     },
   ];
@@ -48,8 +50,8 @@ export default function Footer() {
             </a>
             <p className="mt-7 max-w-sm text-[15px] text-white/80 leading-[1.85] italic font-light">
               Safe, stylish and quietly professional passenger transport. A
-              Mercedes house, available across the United Kingdom, every hour of
-              every day.
+              Mercedes collective, available across the United Kingdom, every
+              hour of every day.
             </p>
             <div className="mt-8 flex items-center gap-3">
               {[Icon.Instagram, Icon.Linkedin, Icon.X].map((I, i) => (

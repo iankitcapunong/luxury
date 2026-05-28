@@ -6,7 +6,7 @@ export default function Newsletter() {
   return (
     <section
       ref={ref}
-      className="relative bg-white text-black py-20 lg:py-28 border-t border-black/10"
+      className="relative bg-[#F5F0E6] text-black py-20 lg:py-28 border-t border-black/10"
     >
       <div
         className="pointer-events-none absolute inset-0 opacity-[0.06]"

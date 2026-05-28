@@ -3,6 +3,13 @@
 @tailwind utilities;
 
 @layer base {
+  :root {
+    /* Draft 1 palette: off-white + gold + black */
+    --off-white: #F5F0E6;
+    --gold: #C9A227;
+    --gold-light: #DAB85A;
+  }
+
   html {
     scroll-behavior: smooth;
     scroll-padding-top: 96px;
@@ -10,7 +17,7 @@
   body {
     font-family: 'Cormorant Garamond', Georgia, serif;
     font-feature-settings: 'ss01', 'ss02';
-    background-color: #ffffff;
+    background-color: var(--off-white);
     color: #000000;
   }
   html, body {
@@ -21,7 +28,7 @@
   }
   ::selection {
     background: #000000;
-    color: #ffffff;
+    color: var(--off-white);
   }
 }
 

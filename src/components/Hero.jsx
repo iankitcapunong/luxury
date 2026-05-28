@@ -39,14 +39,14 @@ export default function Hero() {
       <div className="relative z-10 w-full pl-4 sm:pl-6 lg:pl-10 pr-4 sm:pr-6 grid grid-cols-1 lg:grid-cols-12 gap-16 items-end font-cormorant">
         <div className="lg:col-span-7">
           <h1
-            className="reveal h-display !font-cormorant text-[44px] sm:text-[64px] lg:text-[88px] leading-[1.02] text-white drop-shadow-[0_4px_18px_rgba(0,0,0,0.75)]"
+            className="reveal h-display !font-cormorant text-[64px] sm:text-[96px] lg:text-[136px] leading-[1.0] text-white drop-shadow-[0_4px_18px_rgba(0,0,0,0.75)]"
             style={{ transitionDelay: "150ms" }}
           >
             <span
               className="block bg-clip-text text-transparent"
               style={{
                 backgroundImage:
-                  "linear-gradient(180deg, #ffffff 0%, #f8efd5 60%, #daba7f 100%)",
+                  "linear-gradient(180deg, #F5F0E6 0%, #F3E6BE 55%, #DAB85A 100%)",
                 textShadow: "0 2px 12px rgba(0,0,0,0.55)",
               }}
             >
@@ -56,11 +56,11 @@ export default function Hero() {
               className="block italic font-light"
               style={{
                 backgroundImage:
-                  "linear-gradient(90deg, #f97316 0%, #fbbf24 40%, #ffe9b0 70%, #ffffff 100%)",
+                  "linear-gradient(90deg, #C9A227 0%, #DAB85A 40%, #F3E6BE 70%, #F5F0E6 100%)",
                 WebkitBackgroundClip: "text",
                 backgroundClip: "text",
                 color: "transparent",
-                filter: "drop-shadow(0 4px 18px rgba(249,115,22,0.35))",
+                filter: "drop-shadow(0 4px 18px rgba(201,162,39,0.35))",
               }}
             >
               Composed.
@@ -72,7 +72,7 @@ export default function Hero() {
           >
             <span className="mt-2 sm:mt-3 h-px w-6 sm:w-10 bg-white shrink-0" />
             <p className="text-base sm:text-lg lg:text-[24px] text-white leading-relaxed font-light drop-shadow-[0_2px_6px_rgba(0,0,0,0.7)]">
-              A private chauffeur house, fluent in the small things: the chilled
+              Your wish, our command. Fluent in the small things: the chilled
               water, the unspoken route, the door already open.
             </p>
           </div>

@@ -22,10 +22,10 @@ export default function Discover() {
               <span className="h-px w-12 bg-white" /> Discover
             </div>
             <h2 className="font-display !font-cormorant mt-6 text-4xl lg:text-5xl leading-[1.05] text-white">
-              A house built on
+              Your wish,
               <span className="italic font-light text-white">
                 {" "}
-                quiet precision.
+                our command.
               </span>
             </h2>
             <div className="mt-5 h-px w-12 bg-white/70" />
