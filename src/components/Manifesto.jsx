@@ -60,9 +60,9 @@ export default function Manifesto() {
             Mercedes V-Class · Mercedes Sprinter · Mercedes Vito
           </p>
           <p className="mt-8 text-white/80 leading-[1.85] text-[17px] font-light max-w-2xl mx-auto">
-            Luxury transport is not just travelling in luxury. It is a lifestyle.
-            Destination to destination — an effortless showcase of luxury, and
-            a continuity of standard from one door to the next. We are a
+            It is a lifestyle — one to be maintained from the start of the
+            destination to its end. An effortless showcase of luxury travel,
+            with endless options between one door and the next. We are a
             collective of chauffeurs, and the journey is our craft.
           </p>
         </div>

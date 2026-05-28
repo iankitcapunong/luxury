@@ -72,7 +72,7 @@ export default function Hero() {
           >
             <span className="mt-2 sm:mt-3 h-px w-6 sm:w-10 bg-white shrink-0" />
             <p className="text-base sm:text-lg lg:text-[24px] text-white leading-relaxed font-light drop-shadow-[0_2px_6px_rgba(0,0,0,0.7)]">
-              Your wish, our command. Fluent in the small things: the chilled
+              Your wish is our command. Fluent in the small things: the chilled
               water, the unspoken route, the door already open.
             </p>
           </div>

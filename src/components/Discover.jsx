@@ -22,18 +22,18 @@ export default function Discover() {
               <span className="h-px w-12 bg-white" /> Discover
             </div>
             <h2 className="font-display !font-cormorant mt-6 text-4xl lg:text-5xl leading-[1.05] text-white">
-              Your wish,
+              Your wish
               <span className="italic font-light text-white">
                 {" "}
-                our command.
+                is our command.
               </span>
             </h2>
             <div className="mt-5 h-px w-12 bg-white/70" />
             <p className="mt-7 text-white/85 text-[17px] leading-[1.85] font-light">
               Discretion, punctuality and composure are not features of the
-              journey; they are the journey. Every chauffeur, every vehicle and
-              every minute in between is rehearsed so that the only thing left
-              for you to consider is what comes next.
+              journey; they are the journey. Every element of the service is
+              <span className="italic"> non-negotiable</span> — when our cars
+              are called, nothing is left up to chance.
             </p>
           </div>
         </div>

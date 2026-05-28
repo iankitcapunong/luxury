@@ -276,10 +276,75 @@ export default function Services({ onSelect }) {
           </h3>
           <div className="mt-6 mx-auto h-px w-12 bg-black/30" />
           <p className="mt-7 text-[15px] sm:text-[17px] text-black/80 leading-[1.85] font-light">
-            A fully stocked bar — fine spirits, champagne and zero-proof
-            options, restocked before each journey.{" "}
-            <span className="italic">Specifics on request.</span>
+            A fully stocked bar — the finest spirits and champagnes, restocked
+            before each journey.{" "}
+            <span className="italic">Specifics can be ordered on request.</span>
           </p>
+        </div>
+
+        {/* Concierge extras */}
+        <div className="reveal mt-20 mx-auto max-w-5xl px-2 sm:px-4">
+          <div className="text-center">
+            <div className="eyebrow !text-black !text-[12px] flex items-center gap-3 justify-center">
+              <span className="hairline" /> Concierge Extras
+            </div>
+            <h3 className="!font-cormorant mt-7 text-3xl sm:text-4xl lg:text-5xl text-black leading-[1.05]">
+              Beyond the car,
+              <span className="italic font-light"> still attended.</span>
+            </h3>
+            <div className="mt-6 mx-auto h-px w-12 bg-black/30" />
+            <p className="mt-7 text-[15px] sm:text-[17px] text-black/80 leading-[1.85] font-light max-w-xl mx-auto">
+              The journey is rarely only the journey. A short list of the
+              quieter things our desk arranges in parallel.
+            </p>
+          </div>
+
+          <ul className="mt-12 grid grid-cols-1 sm:grid-cols-2 gap-x-10 gap-y-8">
+            {[
+              {
+                n: "01",
+                title: "Fully stocked bar",
+                body: "The finest spirits and champagnes on board. Specifics can be ordered on request.",
+              },
+              {
+                n: "02",
+                title: "Restaurant reservations",
+                body: "Tables held at the hotels and rooms our clients prefer, coordinated to the hour of arrival.",
+              },
+              {
+                n: "03",
+                title: "Security options",
+                body: "All officers SIA-qualified; close-protection-level security available on request.",
+              },
+              {
+                n: "04",
+                title: "Table bookings for clubs",
+                body: "Door-to-door arrangements with members' rooms and private clubs across the city.",
+              },
+              {
+                n: "05",
+                title: "Massage seating",
+                body: "Reclining leather with on-seat massage — for the long miles and the late return.",
+              },
+            ].map((item) => (
+              <li
+                key={item.n}
+                className="group flex items-start gap-5 border-t border-black/15 pt-6"
+              >
+                <span className="font-display italic font-light text-3xl sm:text-4xl leading-none text-black/70 shrink-0 transition-colors duration-500 group-hover:text-black">
+                  {item.n}
+                </span>
+                <div>
+                  <h4 className="font-display text-xl sm:text-2xl text-black leading-tight">
+                    {item.title}
+                  </h4>
+                  <p className="mt-3 text-[15px] leading-[1.85] text-black/75 font-light">
+                    {item.body}
+                  </p>
+                </div>
+              </li>
+            ))}
+          </ul>
         </div>
       </div>
     </section>
