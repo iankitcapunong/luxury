@@ -34,12 +34,12 @@ export default function Future() {
       <div className="container-x relative z-10">
         <div className="reveal max-w-prose mx-auto text-center" style={{ maxWidth: "62ch" }}>
           <div className="editorial-rule justify-center mx-auto max-w-md !text-white/60 text-[10px] tracking-[0.34em]">
-            The Future and Beyond
+            Tomorrow, Attended To
           </div>
           <h2 className="!font-cormorant mt-8 text-[44px] sm:text-[56px] lg:text-[64px] leading-[1.05] text-white font-normal">
-            The future
+            Tomorrow,
             <br />
-            <span className="italic font-light">&amp; beyond.</span>
+            <span className="italic font-light">attended to.</span>
           </h2>
 
           <p className="mt-10 text-[17px] sm:text-[19px] text-white/85 leading-[1.85] font-light">

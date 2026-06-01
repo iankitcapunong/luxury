@@ -12,7 +12,7 @@ export default function Manifesto() {
       body: "Every journey is choreographed before it begins. Route, hour, refreshment, silence. The minute before pickup matters as much as the destination.",
     },
     {
-      title: "The Future and Beyond",
+      title: "Tomorrow, Attended To",
       body: "We are committed to providing luxury travel that is also environmentally friendly, as we intend to be here for many years to come — it is imperative that we have an electric option on the horizon. End-to-end concierge, paparazzi-aware routing, single-keystroke booking. The future of arrival, quietly.",
     },
   ];
