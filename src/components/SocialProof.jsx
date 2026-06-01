@@ -20,7 +20,7 @@ export default function SocialProof() {
           <div className="editorial-rule justify-center mx-auto max-w-md !text-white/60">
             Who we've worked with
           </div>
-          <h3 className="font-display italic font-light text-3xl sm:text-4xl lg:text-5xl mt-8 max-w-2xl mx-auto leading-[1.2] text-white">
+          <h3 className="font-display italic font-light text-4xl sm:text-5xl lg:text-6xl mt-8 max-w-2xl mx-auto leading-[1.15] text-white">
             References available on request.
             <br />
             <span className="text-white/70">We do not name our clients.</span>
