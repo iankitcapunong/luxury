@@ -13,7 +13,7 @@ export default function Manifesto() {
     },
     {
       title: "Tomorrow, Attended To",
-      body: "We are committed to providing luxury travel that is also environmentally friendly, as we intend to be here for many years to come — it is imperative that we have an electric option on the horizon. End-to-end concierge, paparazzi-aware routing, single-keystroke booking. The future of arrival, quietly.",
+      body: "We are committed to providing luxury travel that is also environmentally friendly, as we intend to be here for many years to come. It is imperative that we have an electric option on the horizon. End-to-end concierge, paparazzi-aware routing, single-keystroke booking. The future of arrival, quietly.",
     },
   ];
 
@@ -60,7 +60,7 @@ export default function Manifesto() {
             Mercedes V-Class · Mercedes Sprinter · Mercedes Vito
           </p>
           <p className="mt-8 text-white/80 leading-[1.85] text-[17px] font-light max-w-2xl mx-auto">
-            It is a lifestyle — one to be maintained from the start of the
+            It is a lifestyle, one to be maintained from the start of the
             destination to its end. An effortless showcase of luxury travel,
             with endless options between one door and the next. We are a
             collective of chauffeurs, and the journey is our craft.

@@ -32,7 +32,7 @@ export default function CTA() {
           assignment, and a confirmed quotation.
         </p>
         <p className="reveal mt-10 font-display italic font-light text-xl sm:text-2xl text-white/90 max-w-xl mx-auto">
-          The only way to travel — one level of service:
+          The only way to travel, one level of service:
           <span className="not-italic font-normal tracking-[0.18em]"> LUXURY.</span>
         </p>
         <div className="reveal mt-12 flex flex-wrap items-center justify-center gap-4">

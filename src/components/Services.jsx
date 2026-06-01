@@ -66,7 +66,7 @@ export default function Services({ onSelect }) {
     {
       eyebrow: "Service Six",
       title: "Personal Protection",
-      body: "SIA-trained close protection officers, paired with the vehicle and route. Discreet, vetted and rehearsed — from kerbside to door, an additional layer of composure for clients who require it.",
+      body: "SIA-trained close protection officers, paired with the vehicle and route. Discreet, vetted and rehearsed. From kerbside to door, an additional layer of composure for clients who require it.",
       img: "/vip_celeb.png",
       slug: "personal-protection",
       tag: "Personal Protection",
@@ -74,7 +74,7 @@ export default function Services({ onSelect }) {
     {
       eyebrow: "Service Seven",
       title: "Private Airfield Transfers",
-      body: "Driven onto the apron, met at the steps. Coordinated with handlers and crew, our chauffeurs work the private terminals at Farnborough, Biggin Hill, Luton and beyond — quietly, and to the minute.",
+      body: "Driven onto the apron, met at the steps. Coordinated with handlers and crew, our chauffeurs work the private terminals at Farnborough, Biggin Hill, Luton and beyond, quietly, and to the minute.",
       img: "/airport.png",
       slug: "private-airfield",
       tag: "Private Airfield Transfers",
@@ -276,7 +276,7 @@ export default function Services({ onSelect }) {
           </h3>
           <div className="mt-6 mx-auto h-px w-12 bg-black/30" />
           <p className="mt-7 text-[15px] sm:text-[17px] text-black/80 leading-[1.85] font-light">
-            A fully stocked bar — the finest spirits and champagnes, restocked
+            A fully stocked bar. The finest spirits and champagnes, restocked
             before each journey.{" "}
             <span className="italic">Specifics can be ordered on request.</span>
           </p>
@@ -324,7 +324,7 @@ export default function Services({ onSelect }) {
               {
                 n: "05",
                 title: "Massage seating",
-                body: "Reclining leather with on-seat massage — for the long miles and the late return.",
+                body: "Reclining leather with on-seat massage, for the long miles and the late return.",
               },
             ].map((item) => (
               <li

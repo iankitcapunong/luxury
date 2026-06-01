@@ -52,7 +52,7 @@ export default function Future() {
           <p className="mt-12 text-[17px] sm:text-[19px] text-white/85 leading-[1.85] font-light">
             We are committed to providing luxury travel that is also
             environmentally friendly, as we intend to be here for many years to
-            come — it is imperative that we have an electric option on the
+            come. It is imperative that we have an electric option on the
             horizon.
           </p>
         </div>
