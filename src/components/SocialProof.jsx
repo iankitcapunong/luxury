@@ -27,8 +27,8 @@ export default function SocialProof() {
           </h3>
           <p className="mt-10 text-white/80 text-[17px] leading-[1.85] font-light max-w-2xl mx-auto">
             Discretion and privacy are fundamental — yet we have quietly carried
-            household names, label rosters, visiting heads of state and the
-            kind of clientele whose schedules never leave the room.
+            names you would recognise, label rosters, visiting heads of state
+            and the kind of clientele whose schedules never leave the room.
           </p>
           <p className="mt-6 text-white/70 text-[15px] leading-[1.85] font-light max-w-xl mx-auto">
             Hotels, concierges, labels and quietly discerning private clients.
