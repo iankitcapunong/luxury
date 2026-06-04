@@ -54,7 +54,12 @@ export default function Nav() {
                 <a
                   href={path}
                   onClick={(e) => goToPage(e, path)}
-                  className="relative inline-block py-1 hover:text-white transition-colors duration-300 after:absolute after:left-0 after:bottom-0 after:h-px after:w-0 after:bg-white after:transition-all after:duration-300 hover:after:w-full"
+                  aria-current={location.pathname === path ? "page" : undefined}
+                  className={`relative inline-block py-1 transition-colors duration-300 after:absolute after:left-0 after:bottom-0 after:h-px after:bg-white after:transition-all after:duration-300 hover:text-white hover:after:w-full ${
+                    location.pathname === path
+                      ? "text-white after:w-full"
+                      : "text-white/80 after:w-0"
+                  }`}
                 >
                   {label}
                 </a>
@@ -84,7 +89,12 @@ export default function Nav() {
                 <a
                   href={path}
                   onClick={(e) => goToPage(e, path)}
-                  className="relative inline-block py-1 hover:text-white transition-colors duration-300 after:absolute after:left-0 after:bottom-0 after:h-px after:w-0 after:bg-white after:transition-all after:duration-300 hover:after:w-full"
+                  aria-current={location.pathname === path ? "page" : undefined}
+                  className={`relative inline-block py-1 transition-colors duration-300 after:absolute after:left-0 after:bottom-0 after:h-px after:bg-white after:transition-all after:duration-300 hover:text-white hover:after:w-full ${
+                    location.pathname === path
+                      ? "text-white after:w-full"
+                      : "text-white/80 after:w-0"
+                  }`}
                 >
                   {label}
                 </a>
@@ -130,7 +140,12 @@ export default function Nav() {
                 key={path}
                 href={path}
                 onClick={(e) => goToPage(e, path)}
-                className="py-2 text-[15px] font-cormorant"
+                aria-current={location.pathname === path ? "page" : undefined}
+                className={`py-2 text-[15px] font-cormorant border-l-2 pl-3 transition-colors ${
+                  location.pathname === path
+                    ? "border-white text-white"
+                    : "border-transparent text-white/70"
+                }`}
               >
                 {l}
               </a>

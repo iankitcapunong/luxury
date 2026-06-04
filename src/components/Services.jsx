@@ -41,11 +41,11 @@ export default function Services({ onSelect }) {
     },
     {
       eyebrow: "Service Three",
-      title: "VIP & Celebrity",
-      body: "Paparazzi-aware route planning, side entrances and private terminals. Drivers chosen for composure as much as for skill, and trained to forget what they have seen.",
+      title: "Personal Protection",
+      body: "SIA-trained close protection officers, paired with the vehicle and route. Discreet, vetted and rehearsed. From kerbside to door, an additional layer of composure for clients who require it.",
       img: "/vip_celeb.png",
-      slug: "vip-celebrity",
-      tag: "VIP & Celebrity",
+      slug: "personal-protection",
+      tag: "Personal Protection",
     },
     {
       eyebrow: "Service Four",
@@ -65,11 +65,11 @@ export default function Services({ onSelect }) {
     },
     {
       eyebrow: "Service Six",
-      title: "Personal Protection",
-      body: "SIA-trained close protection officers, paired with the vehicle and route. Discreet, vetted and rehearsed. From kerbside to door, an additional layer of composure for clients who require it.",
+      title: "VIP & Celebrity",
+      body: "Discreet route planning, side entrances and private terminals, with trained close protection on board when required. Not every client faces paparazzi, but every client is met by a driver chosen for composure, vetted, and trained to forget what they have seen.",
       img: "/vip_celeb.png",
-      slug: "personal-protection",
-      tag: "Personal Protection",
+      slug: "vip-celebrity",
+      tag: "VIP & Celebrity",
     },
     {
       eyebrow: "Service Seven",
@@ -276,8 +276,8 @@ export default function Services({ onSelect }) {
           </h3>
           <div className="mt-6 mx-auto h-px w-12 bg-black/30" />
           <p className="mt-7 text-[15px] sm:text-[17px] text-black/80 leading-[1.85] font-light">
-            A fully stocked bar. The finest spirits and champagnes, restocked
-            before each journey.{" "}
+            A fully stocked bar, the finest spirits and champagnes, stocked to
+            your specific tastes and restocked before each journey.{" "}
             <span className="italic">Specifics can be ordered on request.</span>
           </p>
         </div>
@@ -289,7 +289,7 @@ export default function Services({ onSelect }) {
               <span className="hairline" /> Concierge Extras
             </div>
             <h3 className="!font-cormorant mt-7 text-3xl sm:text-4xl lg:text-5xl text-black leading-[1.05]">
-              Beyond the car,
+              Beyond the vehicle,
               <span className="italic font-light"> still attended.</span>
             </h3>
             <div className="mt-6 mx-auto h-px w-12 bg-black/30" />

@@ -64,7 +64,7 @@ const intents = [
   {
     keys: ["how long", "duration", "wait", "waiting"],
     reply:
-      "Drivers arrive 10 to 15 minutes ahead of pickup and wait at no extra charge for up to 30 minutes (longer at airports). Hourly day hire is also available if you'd prefer the car on standby throughout the day.",
+      "Drivers arrive 10 to 15 minutes ahead of pickup and wait at no extra charge for up to 30 minutes (longer at airports). Hourly day hire is also available if you'd prefer the vehicle on standby throughout the day.",
   },
   {
     keys: ["area", "where", "city", "london", "manchester", "birmingham", "edinburgh", "uk", "travel", "long distance", "long-distance"],
@@ -159,22 +159,27 @@ export default function Chatbot() {
       <button
         onClick={() => setOpen((o) => !o)}
         aria-label={open ? "Close chat" : "Open chat"}
-        className={`fixed bottom-6 right-6 z-[60] grid h-14 w-14 place-items-center rounded-full
-                    bg-black text-white shadow-[0_15px_35px_-8px_rgba(0,0,0,0.45)]
-                    transition-all duration-300 hover:bg-white hover:text-black
-                    hover:-translate-y-0.5 focus:outline-none focus:ring-2 focus:ring-white/50`}
+        className={`fixed bottom-6 right-6 z-[60] grid h-16 w-16 place-items-center rounded-full
+                    bg-black text-white ring-1 ring-[#C9A227]/70 shadow-[0_18px_45px_-8px_rgba(0,0,0,0.6)]
+                    transition-all duration-300 hover:bg-[#C9A227] hover:text-black
+                    hover:-translate-y-0.5 focus:outline-none focus:ring-2 focus:ring-[#C9A227]`}
       >
         {open ? (
           <svg viewBox="0 0 24 24" className="h-5 w-5" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round">
             <path d="M5 5l14 14M19 5L5 19" />
           </svg>
         ) : (
-          <svg viewBox="0 0 24 24" className="h-6 w-6" fill="none" stroke="currentColor" strokeWidth="1.4" strokeLinecap="round" strokeLinejoin="round">
+          <svg viewBox="0 0 24 24" className="h-7 w-7" fill="none" stroke="currentColor" strokeWidth="1.4" strokeLinecap="round" strokeLinejoin="round">
             <path d="M21 11.5a8.38 8.38 0 0 1-8.5 8.5 8.5 8.5 0 0 1-3.7-.85L3 21l1.85-5.8A8.5 8.5 0 1 1 21 11.5z" />
           </svg>
         )}
         {!open && (
-          <span className="absolute -top-1 -right-1 h-3 w-3 rounded-full bg-white ring-2 ring-black animate-pulse" />
+          <>
+            <span className="absolute -top-0.5 -right-0.5 h-3.5 w-3.5 rounded-full bg-[#C9A227] ring-2 ring-black animate-pulse" />
+            <span className="hidden sm:block absolute right-full mr-3 whitespace-nowrap rounded-full bg-black/90 px-4 py-2 text-[11px] uppercase tracking-[0.28em] text-white ring-1 ring-[#C9A227]/50 shadow-lg">
+              Need help? Ask us
+            </span>
+          </>
         )}
       </button>
 

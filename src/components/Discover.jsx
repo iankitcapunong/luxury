@@ -32,7 +32,7 @@ export default function Discover() {
             <p className="mt-7 text-white/85 text-[17px] leading-[1.85] font-light">
               Discretion, punctuality and composure are not features of the
               journey; they are the journey. Every element of the service is
-              <span className="italic"> non-negotiable</span>. When our cars
+              <span className="italic"> non-negotiable</span>. When our vehicles
               are called, nothing is left up to chance.
             </p>
           </div>

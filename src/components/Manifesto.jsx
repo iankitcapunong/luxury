@@ -5,15 +5,15 @@ export default function Manifesto() {
   const pillars = [
     {
       title: "Lifestyle",
-      body: "Luxury Transport is not a service you call. It is a standard you keep. The car is the room you arrive in, and we treat it with the seriousness of a private residence.",
+      body: "Luxury Transport is not a service you call. It is a standard you keep. The vehicle is the room you arrive in, and we treat it with the seriousness of a private residence.",
     },
     {
       title: "Movement",
       body: "Every journey is choreographed before it begins. Route, hour, refreshment, silence. The minute before pickup matters as much as the destination.",
     },
     {
-      title: "Tomorrow, Attended To",
-      body: "We are committed to providing luxury travel that is also environmentally friendly, as we intend to be here for many years to come. It is imperative that we have an electric option on the horizon. End-to-end concierge, paparazzi-aware routing, single-keystroke booking. The future of arrival, quietly.",
+      title: "The Future and Beyond",
+      body: "We are committed to providing luxury travel that is also environmentally friendly, and as we intend to be here for many years to come, an electric option is very much among our future aspirations. End-to-end concierge, paparazzi-aware routing, single-keystroke booking. The future of arrival, quietly.",
     },
   ];
 
@@ -60,10 +60,12 @@ export default function Manifesto() {
             Mercedes V-Class · Mercedes Sprinter · Mercedes Vito
           </p>
           <p className="mt-8 text-white/80 leading-[1.85] text-[17px] font-light max-w-2xl mx-auto">
-            It is a lifestyle, one to be maintained from the start of the
-            destination to its end. An effortless showcase of luxury travel,
-            with endless options between one door and the next. We are a
-            collective of chauffeurs, and the journey is our craft.
+            Redefining the art of movement. Each journey is not just a transfer
+            from one place to another, but a seamless, curated experience that
+            reflects the sophistication, discretion and refinement carried in
+            every aspect of your life. We are a collective with a variety of
+            vehicle options, every chauffeur hand-picked to ensure a flawless
+            experience.
           </p>
         </div>
 
@@ -71,11 +73,13 @@ export default function Manifesto() {
           <div className="editorial-rule justify-center mx-auto max-w-xs !text-white/60">
             Origin
           </div>
-          <p className="mt-6 font-display italic font-light text-xl sm:text-2xl leading-[1.6] text-white/90">
-            Several years ago, two great minds came together and began a
-            journey in search of luxury transport. To their astonishment,
-            there was a gap in the market crying for luxury travel. From
-            there, Luxury Transport was born.
+          <p className="mt-6 font-display italic font-light text-lg sm:text-xl leading-[1.7] text-white/90">
+            Several years ago I began a journey in search of luxury transport.
+            To my astonishment, there weren't many options beyond the
+            conventional: limousines, factory-issue Vitos and party buses, all
+            rather dated and not exactly suited to every occasion. That is when
+            Luxury Transport was born, with one mandatory theme echoing
+            throughout, luxury travel becoming a way of life.
           </p>
         </div>
 
@@ -87,7 +91,7 @@ export default function Manifesto() {
               style={{ transitionDelay: `${i * 100}ms` }}
             >
               <div className="font-display italic font-light text-6xl leading-none text-white/80">
-                {String(i + 1).padStart(2, "0")}
+                {i + 1}.
               </div>
               <div className="mt-5 mx-auto h-px w-12 bg-white/40" />
               <h3 className="mt-6 font-display text-2xl text-white tracking-wide">
