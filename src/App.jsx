@@ -10,6 +10,7 @@ import FuturePage from "./pages/FuturePage";
 import HowItWorksPage from "./pages/HowItWorksPage";
 import ServicesPage from "./pages/ServicesPage";
 import ClientsPage from "./pages/ClientsPage";
+import EnquiriesPage from "./pages/EnquiriesPage";
 
 export default function App() {
   const location = useLocation();
@@ -37,6 +38,7 @@ export default function App() {
           <Route path="/future" element={<FuturePage />} />
           <Route path="/how-it-works" element={<HowItWorksPage />} />
           <Route path="/services" element={<ServicesPage />} />
+          <Route path="/enquiries" element={<EnquiriesPage />} />
           <Route path="/clients" element={<ClientsPage />} />
         </Routes>
       </main>

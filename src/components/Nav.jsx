@@ -9,9 +9,10 @@ export default function Nav() {
   const isHome = location.pathname === "/";
   const links = [
     ["The Vision", "/vision"],
-    ["The Future", "/future"],
     ["How it works", "/how-it-works"],
     ["Services", "/services"],
+    ["The Future", "/future"],
+    ["Enquiries", "/enquiries"],
   ];
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 24);
