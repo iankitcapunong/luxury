@@ -106,9 +106,9 @@ export default function Manifesto() {
 
         <div className="reveal mt-20 max-w-2xl mx-auto text-center">
           <p className="font-display italic font-light text-2xl sm:text-3xl leading-[1.45] text-white">
-            Move in silence.
+            Seen by few.
             <br />
-            <span className="text-white/70">Discretion is our policy.</span>
+            <span className="text-white/70">Trusted by all.</span>
           </p>
         </div>
       </div>

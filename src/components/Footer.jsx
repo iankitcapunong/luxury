@@ -119,7 +119,7 @@ export default function Footer() {
             reserved
           </p>
           <p className="font-display italic font-light text-[14px] sm:text-[15px] normal-case tracking-normal text-white">
-            Move in silence. Discretion is our policy.
+            Seen by few. Trusted by all.
           </p>
         </div>
       </div>
