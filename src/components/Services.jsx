@@ -327,6 +327,11 @@ export default function Services({ onSelect }) {
                 title: "Massage seating",
                 body: "Reclining leather with on-seat massage, for the long miles and the late return.",
               },
+              {
+                n: "06",
+                title: "Child & family seating",
+                body: "Car seats and boosters fitted on request, so younger passengers travel just as safely.",
+              },
             ].map((item) => (
               <li
                 key={item.n}
