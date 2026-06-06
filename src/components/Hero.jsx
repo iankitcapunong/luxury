@@ -38,6 +38,13 @@ export default function Hero() {
 
       <div className="relative z-10 w-full pl-4 sm:pl-6 lg:pl-10 pr-4 sm:pr-6 grid grid-cols-1 lg:grid-cols-12 gap-16 items-end font-cormorant">
         <div className="lg:col-span-7">
+          <div
+            className="reveal mb-5 sm:mb-6 flex items-center gap-3 text-[10px] sm:text-[12px] uppercase tracking-[0.3em] sm:tracking-[0.34em] text-white/85 drop-shadow-[0_2px_6px_rgba(0,0,0,0.7)]"
+            style={{ transitionDelay: "80ms" }}
+          >
+            <span className="h-px w-8 bg-white/70 shrink-0" />
+            Private chauffeur · By introduction only
+          </div>
           <h1
             className="reveal h-display !font-cormorant text-[64px] sm:text-[96px] lg:text-[136px] leading-[1.0] text-white drop-shadow-[0_4px_18px_rgba(0,0,0,0.75)]"
             style={{ transitionDelay: "150ms" }}
