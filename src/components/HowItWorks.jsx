@@ -239,7 +239,7 @@ export default function HowItWorks({ selectedService, onSelectService }) {
         </div>
 
         {/* Quick inquiry form: fixed in the right column, description animates in/out on the left */}
-        <div className="mt-16 grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-14 items-start">
+        <div className="mt-20 grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-start">
           <div className="lg:pt-6 min-h-[1px]">
             {displayService ? (
               <div
@@ -340,19 +340,19 @@ export default function HowItWorks({ selectedService, onSelectService }) {
               </div>
             )}
           </div>
-          <div id="contact" className="reveal w-full lg:max-w-xs lg:ml-auto">
+          <div id="contact" className="reveal w-full lg:max-w-sm lg:ml-auto">
             <div className="relative">
-              <div className="absolute -top-2 -left-2 h-5 w-5 border-l border-t border-black/20" />
-              <div className="absolute -top-2 -right-2 h-5 w-5 border-r border-t border-black/20" />
-              <div className="absolute -bottom-2 -left-2 h-5 w-5 border-l border-b border-black/20" />
-              <div className="absolute -bottom-2 -right-2 h-5 w-5 border-r border-b border-black/20" />
+              <div className="absolute -top-2 -left-2 h-5 w-5 border-l border-t border-[#C9A227]/50" />
+              <div className="absolute -top-2 -right-2 h-5 w-5 border-r border-t border-[#C9A227]/50" />
+              <div className="absolute -bottom-2 -left-2 h-5 w-5 border-l border-b border-[#C9A227]/50" />
+              <div className="absolute -bottom-2 -right-2 h-5 w-5 border-r border-b border-[#C9A227]/50" />
 
               <form
                 onSubmit={(e) => {
                   e.preventDefault();
                   alert("Thank you. The team will be in touch shortly.");
                 }}
-                className="relative bg-white text-black p-4 sm:p-5 lg:p-6 border border-black/15 rounded-[15px] shadow-[0_30px_70px_-15px_rgba(0,0,0,0.25),0_8px_24px_-10px_rgba(0,0,0,0.2)] transition-all duration-700 ease-[cubic-bezier(0.22,1,0.36,1)] hover:-translate-y-1.5 hover:shadow-[0_50px_100px_-20px_rgba(0,0,0,0.35),0_10px_30px_-10px_rgba(0,0,0,0.25)]"
+                className="relative bg-white text-black p-5 sm:p-6 lg:p-8 border border-black/15 rounded-[15px] shadow-[0_40px_90px_-20px_rgba(0,0,0,0.3),0_8px_24px_-10px_rgba(0,0,0,0.2)] transition-all duration-700 ease-[cubic-bezier(0.22,1,0.36,1)] hover:-translate-y-1.5 hover:shadow-[0_55px_110px_-22px_rgba(0,0,0,0.4),0_10px_30px_-10px_rgba(0,0,0,0.25)]"
               >
                 <h3 className="font-display text-xl text-black">
                   Begin your{" "}
@@ -360,7 +360,7 @@ export default function HowItWorks({ selectedService, onSelectService }) {
                     journey.
                   </span>
                 </h3>
-                <div className="mt-2 h-px w-10 bg-black/20" />
+                <div className="mt-2 h-px w-10 bg-[#C9A227]/70" />
 
                 <div className="mt-4">
                   <select
@@ -535,17 +535,17 @@ export default function HowItWorks({ selectedService, onSelectService }) {
         </div>
 
         {/* Three steps: three columns below the form */}
-        <div className="mt-24 grid grid-cols-1 md:grid-cols-3 gap-10 lg:gap-12">
+        <div className="mt-28 lg:mt-32 grid grid-cols-1 md:grid-cols-3 gap-12 lg:gap-16">
           {steps.map((s, i) => (
             <div
               key={s.n}
               className="reveal group text-center transition-all duration-700 ease-[cubic-bezier(0.22,1,0.36,1)]"
               style={{ transitionDelay: `${i * 100}ms` }}
             >
-              <div className="font-display italic font-light text-7xl leading-none text-black transition-all duration-700">
+              <div className="font-display italic font-light text-7xl leading-none text-black transition-all duration-700 group-hover:text-[#C9A227]">
                 {s.n}
               </div>
-              <div className="mt-4 mx-auto h-px w-12 bg-black/40 transition-all duration-700 group-hover:bg-black group-hover:w-20" />
+              <div className="mt-4 mx-auto h-px w-12 bg-black/40 transition-all duration-700 group-hover:bg-[#C9A227] group-hover:w-20" />
               <h3 className="mt-6 font-display font-normal text-2xl text-black transition-all duration-700">
                 {s.title}
               </h3>
