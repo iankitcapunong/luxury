@@ -5,15 +5,15 @@ export default function Manifesto() {
   const pillars = [
     {
       title: "Lifestyle",
-      body: "Not a service you call, but a standard you keep. The vehicle is the room you arrive in, treated as a private residence.",
+      body: "Not a service you call, but a standard you keep. The vehicle, your private residence.",
     },
     {
       title: "Movement",
-      body: "Choreographed before it begins. Route, hour, refreshment, silence, all attended before pickup.",
+      body: "Choreographed before it begins. Route, hour, refreshment, silence.",
     },
     {
       title: "The Future and Beyond",
-      body: "Luxury travel, quietly sustainable. An electric option sits among our future aspirations. End-to-end concierge, paparazzi-aware routing, single-keystroke booking. The future of arrival, quietly.",
+      body: "Luxury travel, quietly sustainable. An electric future among our aspirations. The future of arrival, quietly.",
     },
   ];
 
@@ -61,8 +61,7 @@ export default function Manifesto() {
           </p>
           <p className="mt-8 text-white/80 leading-[1.85] text-[17px] font-light max-w-2xl mx-auto">
             Redefining the art of movement. Not a transfer, but a curated
-            experience, refined in every detail. A collective of vehicles,
-            every chauffeur hand-picked for a flawless journey.
+            experience, every chauffeur hand-picked for a flawless journey.
           </p>
         </div>
 
