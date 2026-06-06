@@ -8,18 +8,18 @@ export default function Services({ onSelect }) {
   const slideRef = useScrollSlide();
   const [activeFeature, setActiveFeature] = useState(null);
   const sprinterFeatures = [
-    { label: "Leather seats", x: 20, y: 86 },
-    { label: "Climate control", x: 50, y: 60 },
-    { label: "Phone chargers", x: 30, y: 80 },
-    { label: "Bottled water", x: 85, y: 70 },
-    { label: "Optional WiFi", x: 86, y: 14 },
-    { label: "Uniformed drivers", x: 50, y: 22 },
-    { label: "Umbrellas & tissues", x: 10, y: 30 },
-    { label: "Panoramic roof", x: 50, y: 6 },
-    { label: "Fireplace ambience", x: 82, y: 30 },
-    { label: "Refrigerator", x: 62, y: 36 },
-    { label: "Champagne bar", x: 47, y: 48 },
-    { label: "Massage seats", x: 80, y: 86 },
+    { label: "Leather seats", x: 16, y: 88 },
+    { label: "Climate control", x: 50, y: 58 },
+    { label: "Phone chargers", x: 27, y: 81 },
+    { label: "Bottled water", x: 87, y: 70 },
+    { label: "Optional WiFi", x: 89, y: 12 },
+    { label: "Uniformed drivers", x: 50, y: 20 },
+    { label: "Umbrellas & tissues", x: 8, y: 27 },
+    { label: "Panoramic roof", x: 50, y: 4 },
+    { label: "Fireplace ambience", x: 83, y: 27 },
+    { label: "Refrigerator", x: 63, y: 33 },
+    { label: "Champagne bar", x: 45, y: 46 },
+    { label: "Massage seats", x: 84, y: 88 },
     { label: "360° camera", x: 50, y: 16 },
   ];
   const panels = [
@@ -205,7 +205,7 @@ export default function Services({ onSelect }) {
                     activeFeature !== null
                       ? `${sprinterFeatures[activeFeature].x}% ${sprinterFeatures[activeFeature].y}%`
                       : "50% 50%",
-                  transform: activeFeature !== null ? "scale(2.4)" : "scale(1)",
+                  transform: activeFeature !== null ? "scale(3.4)" : "scale(1)",
                 }}
               />
               <div className="pointer-events-none absolute inset-0 bg-gradient-to-l from-black/40 via-transparent to-transparent lg:from-black/60" />
