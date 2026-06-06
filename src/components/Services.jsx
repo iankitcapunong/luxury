@@ -101,7 +101,7 @@ export default function Services({ onSelect }) {
       </div>
 
       {/* Editorial panels: alternating image/text rows, full bleed */}
-      <div id="features" ref={slideRef} className="mt-16 lg:mt-20">
+      <div id="features" ref={slideRef} className="mt-20 lg:mt-28">
         {panels.map((p, i) => {
           const reverse = i % 2 === 1;
           return (
@@ -112,12 +112,12 @@ export default function Services({ onSelect }) {
               <div
                 className={`slide-card ${
                   reverse ? "from-right lg:order-2" : "from-left"
-                } relative px-4 sm:px-8 lg:px-12 py-8 sm:py-10 lg:py-14`}
+                } relative px-4 sm:px-8 lg:px-16 py-10 sm:py-14 lg:py-24`}
               >
                 {/* Decorative offset frame */}
                 <span
                   aria-hidden="true"
-                  className={`pointer-events-none absolute hidden lg:block w-[88%] h-[78%] border border-black/15 rounded-[18px] transition-all duration-700 ease-[cubic-bezier(0.22,1,0.36,1)] group-hover:border-black/30 ${
+                  className={`pointer-events-none absolute hidden lg:block w-[88%] h-[78%] border border-black/15 rounded-[18px] transition-all duration-700 ease-[cubic-bezier(0.22,1,0.36,1)] group-hover:border-[#C9A227]/50 ${
                     reverse
                       ? "bottom-6 right-6 lg:bottom-8 lg:right-8 group-hover:bottom-5 group-hover:right-5"
                       : "top-6 left-6 lg:top-8 lg:left-8 group-hover:top-5 group-hover:left-5"
@@ -125,7 +125,7 @@ export default function Services({ onSelect }) {
                 />
 
                 <div
-                  className={`reveal-img ${reverse ? "from-bottom" : ""} relative overflow-hidden rounded-[15px] shadow-[0_30px_70px_-22px_rgba(0,0,0,0.45)] min-h-[260px] sm:min-h-[340px] lg:min-h-[520px]`}
+                  className={`reveal-img ${reverse ? "from-bottom" : ""} relative overflow-hidden rounded-[15px] shadow-[0_40px_90px_-28px_rgba(0,0,0,0.5)] min-h-[340px] sm:min-h-[460px] lg:min-h-[640px]`}
                   style={{ transitionDelay: "180ms" }}
                 >
                   <img
@@ -157,7 +157,7 @@ export default function Services({ onSelect }) {
               <div
                 className={`slide-card ${
                   reverse ? "from-left lg:order-1" : "from-right"
-                } flex items-center px-6 sm:px-8 lg:px-16 xl:px-24 py-8 sm:py-12 lg:py-20`}
+                } flex items-center px-6 sm:px-10 lg:px-20 xl:px-28 py-10 sm:py-14 lg:py-28`}
               >
                 <div className="max-w-md">
                   <div className="eyebrow !text-black !text-[12px] flex items-center gap-3">
@@ -166,7 +166,7 @@ export default function Services({ onSelect }) {
                   <h3 className="h-display !font-cormorant mt-5 text-3xl sm:text-4xl lg:text-5xl text-black leading-[1.04]">
                     {p.title}
                   </h3>
-                  <div className="mt-5 h-px w-12 bg-black/20 transition-all duration-700 group-hover:w-24 group-hover:bg-black" />
+                  <div className="mt-5 h-px w-12 bg-black/20 transition-all duration-700 group-hover:w-24 group-hover:bg-[#C9A227]" />
                   <p className="mt-7 text-black/80 leading-[1.85] font-light">
                     {p.body}
                   </p>
@@ -177,7 +177,7 @@ export default function Services({ onSelect }) {
                         e.preventDefault();
                         onSelect && onSelect(p.tag);
                       }}
-                      className="inline-flex items-center gap-2 text-[12px] uppercase tracking-[0.34em] text-black hover:text-black/70 transition-colors border-b border-black/40 hover:border-black pb-1"
+                      className="inline-flex items-center gap-2 text-[12px] uppercase tracking-[0.34em] text-black hover:text-black/70 transition-colors border-b border-black/40 hover:border-[#C9A227] pb-1"
                     >
                       Enquire
                       <Icon.ArrowRight className="h-3.5 w-3.5 transition-transform duration-500 group-hover:translate-x-1" />
