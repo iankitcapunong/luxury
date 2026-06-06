@@ -26,7 +26,7 @@ export default function Manifesto() {
       {/* Background video with cinematic vignette */}
       <div className="pointer-events-none absolute inset-0 z-0 bg-black">
         <video
-          src="/herosection.mp4"
+          src="/herosection_mayfair_final_loop.mp4"
           autoPlay
           muted
           loop
