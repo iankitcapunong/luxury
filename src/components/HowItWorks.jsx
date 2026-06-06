@@ -239,8 +239,8 @@ export default function HowItWorks({ selectedService, onSelectService }) {
         </div>
 
         {/* Quick inquiry form: fixed in the right column, description animates in/out on the left */}
-        <div className="mt-20 grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-start">
-          <div className="lg:pt-6 min-h-[1px]">
+        <div className="mt-20 max-w-xl mx-auto space-y-12">
+          <div className="min-h-[1px] text-center">
             {displayService ? (
               <div
                 key={isExiting ? "exit" : displayService}
@@ -250,7 +250,7 @@ export default function HowItWorks({ selectedService, onSelectService }) {
                     : "animate-fade-up"
                 }`}
               >
-                <div className="eyebrow !text-black !text-[12px] flex items-center gap-3">
+                <div className="eyebrow !text-black !text-[12px] flex items-center gap-3 justify-center">
                   <span className="hairline" /> Selected Service
                 </div>
                 <h3
@@ -268,7 +268,7 @@ export default function HowItWorks({ selectedService, onSelectService }) {
                   {displayService}
                 </h3>
                 <div
-                  className="mt-4 h-px w-12 bg-black/20"
+                  className="mt-4 h-px w-12 bg-black/20 mx-auto"
                   style={
                     isExiting
                       ? undefined
@@ -322,7 +322,7 @@ export default function HowItWorks({ selectedService, onSelectService }) {
                   {defaultServiceTitle}
                 </h3>
                 <div
-                  className="mt-4 h-px w-12 bg-black/20"
+                  className="mt-4 h-px w-12 bg-black/20 mx-auto"
                   style={{
                     animation: "fadeUp 0.8s cubic-bezier(0.22,1,0.36,1) both",
                     animationDelay: "200ms",
@@ -340,7 +340,7 @@ export default function HowItWorks({ selectedService, onSelectService }) {
               </div>
             )}
           </div>
-          <div id="contact" className="reveal w-full lg:max-w-sm lg:ml-auto">
+          <div id="contact" className="reveal w-full max-w-md mx-auto">
             <div className="relative">
               <div className="absolute -top-2 -left-2 h-5 w-5 border-l border-t border-[#C9A227]/50" />
               <div className="absolute -top-2 -right-2 h-5 w-5 border-r border-t border-[#C9A227]/50" />
