@@ -197,7 +197,7 @@ export default function Services({ onSelect }) {
             {/* Left: interior image with click-to-zoom */}
             <div className="relative min-h-[280px] lg:min-h-[420px] bg-black overflow-hidden lg:order-1">
               <img
-                src="/inside-s.png"
+                src="/inside-s_enhanced.png"
                 alt="Inside the Mercedes Sprinter"
                 className="absolute inset-0 h-full w-full object-cover transition-transform duration-[1200ms] ease-[cubic-bezier(0.22,1,0.36,1)]"
                 style={{
