@@ -26,7 +26,7 @@ export default function Services({ onSelect }) {
     {
       eyebrow: "Service One",
       title: "Airport Transfers",
-      body: "Met airside with a name card, a hot towel and a bottle of chilled water. Flights tracked from gate to kerbside, luggage attended before you can ask.",
+      body: "Met airside with a warm welcome, a hot towel and chilled water. Whether it is a family holiday, a honeymoon or an early start for work, your driver tracks the flight, attends to the luggage and has you moving in moments.",
       img: "/airport.png",
       slug: "airport-transfers",
       tag: "Airport Transfers",
@@ -34,7 +34,7 @@ export default function Services({ onSelect }) {
     {
       eyebrow: "Service Two",
       title: "Corporate Chauffeur",
-      body: "Day rates, board pickups, multi-stop schedules. Uniformed, DBS-checked and NDA-bound. Tinted glass standard. Silence, when you want it, standard too.",
+      body: "From a single meeting to a full day of stops, your chauffeur keeps you punctual and composed. Uniformed, DBS-checked and NDA-bound, with privacy and quiet whenever the day calls for it.",
       img: "/chauff.png",
       slug: "corporate-chauffeur",
       tag: "Corporate Chauffeur",
@@ -42,7 +42,7 @@ export default function Services({ onSelect }) {
     {
       eyebrow: "Service Three",
       title: "Personal Protection",
-      body: "SIA-trained close protection officers, paired with the vehicle and route. Discreet, vetted and rehearsed. From kerbside to door, an additional layer of composure for clients who require it.",
+      body: "Added peace of mind for anyone who wants it. SIA-trained close protection, paired to your vehicle and route, discreet and professional from the kerbside to the door.",
       img: "/vip_celeb.png",
       slug: "personal-protection",
       tag: "Personal Protection",
@@ -50,7 +50,7 @@ export default function Services({ onSelect }) {
     {
       eyebrow: "Service Four",
       title: "Weddings & Events",
-      body: "Bride, groom and party coordinated to the minute. Ribbons optional, immaculate interiors essential. Mercedes V Class for up to eight passengers, panoramic roof above them.",
+      body: "Weddings, birthdays, anniversaries and proms, every celebration arrives in style. Your party coordinated to the minute, ribbons on request, with a Mercedes V Class for up to eight and a panoramic roof above.",
       img: "/wedding.png",
       slug: "weddings-events",
       tag: "Weddings & Events",
@@ -58,7 +58,7 @@ export default function Services({ onSelect }) {
     {
       eyebrow: "Service Five",
       title: "Long Distance Hire",
-      body: "City to country, county to coast. Champagne bar, refrigerator and reclining leather for the miles ahead. Your driver knows the better coffee and the discreet stop.",
+      body: "City to country, county to coast. Travel in comfort with refreshments on board, reclining leather and a driver who knows the better coffee and the easy stop. The relaxed way to cover the miles.",
       img: "/longride.png",
       slug: "long-distance-hire",
       tag: "Long Distance Hire",
@@ -66,7 +66,7 @@ export default function Services({ onSelect }) {
     {
       eyebrow: "Service Six",
       title: "VIP & Celebrity",
-      body: "Discreet route planning, side entrances and private terminals, with trained close protection on board when required. Not every client faces paparazzi, but every client is met by a driver chosen for composure, vetted, and trained to forget what they have seen.",
+      body: "A standout arrival for any occasion that deserves one. Discreet route planning and private entrances when you want them, trained protection available on request, and a driver chosen for composure and quiet discretion.",
       img: "/vip_celeb.png",
       slug: "vip-celebrity",
       tag: "VIP & Celebrity",
@@ -74,7 +74,7 @@ export default function Services({ onSelect }) {
     {
       eyebrow: "Service Seven",
       title: "Private Airfield Transfers",
-      body: "Driven onto the apron, met at the steps. Coordinated with handlers and crew, our chauffeurs work the private terminals at Farnborough, Biggin Hill, Luton and beyond, quietly, and to the minute.",
+      body: "Met at the steps and driven onto the apron, coordinated with handlers and crew. Flying private for business or leisure, your transfer runs quietly and to the minute, from Farnborough and Biggin Hill to Luton and beyond.",
       img: "/airport.png",
       slug: "private-airfield",
       tag: "Private Airfield Transfers",
