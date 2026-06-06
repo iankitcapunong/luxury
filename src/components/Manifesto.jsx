@@ -5,15 +5,15 @@ export default function Manifesto() {
   const pillars = [
     {
       title: "Lifestyle",
-      body: "Luxury Transport is not a service you call. It is a standard you keep. The vehicle is the room you arrive in, and we treat it with the seriousness of a private residence.",
+      body: "Not a service you call, but a standard you keep. The vehicle is the room you arrive in, treated as a private residence.",
     },
     {
       title: "Movement",
-      body: "Every journey is choreographed before it begins. Route, hour, refreshment, silence. The minute before pickup matters as much as the destination.",
+      body: "Choreographed before it begins. Route, hour, refreshment, silence, all attended before pickup.",
     },
     {
       title: "The Future and Beyond",
-      body: "We are committed to providing luxury travel that is also environmentally friendly, and as we intend to be here for many years to come, an electric option is very much among our future aspirations. End-to-end concierge, paparazzi-aware routing, single-keystroke booking. The future of arrival, quietly.",
+      body: "Luxury travel, quietly sustainable. An electric option sits among our future aspirations. End-to-end concierge, paparazzi-aware routing, single-keystroke booking. The future of arrival, quietly.",
     },
   ];
 
@@ -60,12 +60,9 @@ export default function Manifesto() {
             Mercedes V-Class · Mercedes Sprinter · Mercedes Vito
           </p>
           <p className="mt-8 text-white/80 leading-[1.85] text-[17px] font-light max-w-2xl mx-auto">
-            Redefining the art of movement. Each journey is not just a transfer
-            from one place to another, but a seamless, curated experience that
-            reflects the sophistication, discretion and refinement carried in
-            every aspect of your life. We are a collective with a variety of
-            vehicle options, every chauffeur hand-picked to ensure a flawless
-            experience.
+            Redefining the art of movement. Not a transfer, but a curated
+            experience, refined in every detail. A collective of vehicles,
+            every chauffeur hand-picked for a flawless journey.
           </p>
         </div>
 
