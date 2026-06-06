@@ -59,7 +59,7 @@ export default function Services({ onSelect }) {
       eyebrow: "Service Five",
       title: "Long Distance Hire",
       body: "City to country, county to coast. Travel in comfort with refreshments on board, reclining leather and a driver who knows the better coffee and the easy stop. The relaxed way to cover the miles.",
-      img: "/longride_driver.png",
+      img: "/longride_driving.png",
       slug: "long-distance-hire",
       tag: "Long Distance Hire",
     },
