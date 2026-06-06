@@ -75,7 +75,7 @@ export default function Services({ onSelect }) {
       eyebrow: "Service Seven",
       title: "Private Airfield Transfers",
       body: "Met at the steps and driven onto the apron, coordinated with handlers and crew. Flying private for business or leisure, your transfer runs quietly and to the minute, from Farnborough and Biggin Hill to Luton and beyond.",
-      img: "/airport_noman.png",
+      img: "/private_airfield_nojet.png",
       slug: "private-airfield",
       tag: "Private Airfield Transfers",
     },
