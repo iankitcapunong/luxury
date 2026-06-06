@@ -543,7 +543,7 @@ export default function HowItWorks({ selectedService, onSelectService }) {
               style={{ transitionDelay: `${i * 100}ms` }}
             >
               <div className="font-display italic font-light text-7xl leading-none text-black transition-all duration-700 group-hover:text-[#C9A227]">
-                {s.n}
+                {s.n}.
               </div>
               <div className="mt-4 mx-auto h-px w-12 bg-black/40 transition-all duration-700 group-hover:bg-[#C9A227] group-hover:w-20" />
               <h3 className="mt-6 font-display font-normal text-2xl text-black transition-all duration-700">

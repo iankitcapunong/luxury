@@ -149,7 +149,7 @@ export default function Services({ onSelect }) {
 
                   {/* Numeral */}
                   <span className="pointer-events-none absolute bottom-5 right-6 font-display italic font-light text-5xl lg:text-6xl leading-none text-white drop-shadow-[0_2px_8px_rgba(0,0,0,0.65)]">
-                    {String(i + 1).padStart(2, "0")}
+                    {i + 1}.
                   </span>
                 </div>
               </div>
@@ -332,13 +332,13 @@ export default function Services({ onSelect }) {
                 title: "Child & family seating",
                 body: "Car seats and boosters fitted on request, so younger passengers travel just as safely.",
               },
-            ].map((item) => (
+            ].map((item, i) => (
               <li
                 key={item.n}
                 className="group flex items-start gap-5 border-t border-black/15 pt-6"
               >
                 <span className="font-display italic font-light text-3xl sm:text-4xl leading-none text-black/70 shrink-0 transition-colors duration-500 group-hover:text-black">
-                  {item.n}
+                  {i + 1}.
                 </span>
                 <div>
                   <h4 className="font-display text-xl sm:text-2xl text-black leading-tight">
