@@ -61,7 +61,8 @@ export default function Manifesto() {
           </p>
           <p className="mt-8 text-white/80 leading-[1.85] text-[17px] font-light max-w-2xl mx-auto">
             Redefining the art of movement. Not a transfer, but a curated
-            experience, every chauffeur hand-picked for a flawless journey.
+            experience. We are a collective with a variety of vehicle options,
+            every chauffeur hand-picked to ensure a flawless experience.
           </p>
         </div>
 
