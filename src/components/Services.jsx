@@ -330,7 +330,7 @@ export default function Services({ onSelect }) {
               {
                 n: "06",
                 title: "Child & family seating",
-                body: "Car seats and boosters fitted on request, so younger passengers travel just as safely.",
+                body: "Child seats and boosters fitted on request, so younger passengers travel just as safely.",
               },
             ].map((item, i) => (
               <li
