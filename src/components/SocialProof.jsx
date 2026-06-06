@@ -25,12 +25,12 @@ export default function SocialProof() {
             <br />
             <span className="text-white/70">We do not name our clients.</span>
           </h3>
-          <p className="mt-10 text-white/80 text-[17px] leading-[1.85] font-light max-w-2xl mx-auto">
+          <p className="mt-10 text-white/80 text-[19px] leading-[1.85] font-light max-w-2xl mx-auto">
             Discretion and privacy are fundamental, yet we have quietly carried
             names you would recognise, label rosters, visiting heads of state
             and the kind of clientele whose schedules never leave the room.
           </p>
-          <p className="mt-6 text-white/70 text-[15px] leading-[1.85] font-light max-w-xl mx-auto">
+          <p className="mt-6 text-white/70 text-[17px] leading-[1.85] font-light max-w-xl mx-auto">
             Hotels, concierges, labels and quietly discerning private clients.
             Names are kept where they should be, out of the conversation.
           </p>

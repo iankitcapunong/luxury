@@ -27,7 +27,7 @@ export default function Footer() {
       />
       <div className="container-x py-14 sm:py-20 lg:py-24 relative">
         {/* Editorial signature line */}
-        <div className="flex items-center justify-center mx-auto max-w-md mb-12 sm:mb-16 text-[10px] sm:text-[12px] uppercase tracking-[0.22em] sm:tracking-[0.34em] text-white whitespace-nowrap">
+        <div className="flex items-center justify-center mx-auto max-w-md mb-12 sm:mb-16 text-[12px] sm:text-[14px] uppercase tracking-[0.22em] sm:tracking-[0.34em] text-white whitespace-nowrap">
           <span className="h-px flex-1 bg-white/30 mr-3 sm:mr-5" />
           Luxury Transport, London. Private chauffeur, by introduction only.
           <span className="h-px flex-1 bg-white/30 ml-3 sm:ml-5" />
@@ -43,12 +43,12 @@ export default function Footer() {
                 <div className="font-display text-xl tracking-wide text-white">
                   Luxury Transport
                 </div>
-                <div className="mt-1 text-[12px] uppercase tracking-[0.34em] text-white/70">
+                <div className="mt-1 text-[14px] uppercase tracking-[0.34em] text-white/70">
                   Private Chauffeur, United Kingdom
                 </div>
               </div>
             </a>
-            <p className="mt-7 max-w-sm text-[15px] text-white/80 leading-[1.85] italic font-light">
+            <p className="mt-7 max-w-sm text-[17px] text-white/80 leading-[1.85] italic font-light">
               Safe, stylish and quietly professional passenger transport. A
               Mercedes collective, available across the United Kingdom, every
               hour of every day.
@@ -69,8 +69,8 @@ export default function Footer() {
 
           {cols.map((c) => (
             <div key={c.h} className="lg:col-span-3">
-              <div className="text-[12px] uppercase tracking-[0.34em] text-white font-medium">{c.h}</div>
-              <ul className="mt-5 space-y-3 text-[15px] text-white/85 font-light">
+              <div className="text-[14px] uppercase tracking-[0.34em] text-white font-medium">{c.h}</div>
+              <ul className="mt-5 space-y-3 text-[17px] text-white/85 font-light">
                 {c.l.map((x) => (
                   <li key={x}>
                     <a
@@ -86,8 +86,8 @@ export default function Footer() {
           ))}
 
           <div className="lg:col-span-4">
-            <div className="text-[12px] uppercase tracking-[0.34em] text-white font-medium">Contact</div>
-            <ul className="mt-5 space-y-3 text-[15px] text-white/85 font-light">
+            <div className="text-[14px] uppercase tracking-[0.34em] text-white font-medium">Contact</div>
+            <ul className="mt-5 space-y-3 text-[17px] text-white/85 font-light">
               <li className="flex items-center gap-3">
                 <Icon.Phone className="h-3.5 w-3.5 text-white" /> +44 (0)20
                 0000 0000
@@ -96,7 +96,7 @@ export default function Footer() {
                 <Icon.Mail className="h-3.5 w-3.5 text-white" />{" "}
                 bookings@luxurytransport.co.uk
               </li>
-              <li className="mt-4 pt-4 border-t border-white/15 text-white/70 text-[12px] uppercase tracking-[0.28em] leading-relaxed">
+              <li className="mt-4 pt-4 border-t border-white/15 text-white/70 text-[14px] uppercase tracking-[0.28em] leading-relaxed">
                 London, Manchester
                 <br />
                 Birmingham, Edinburgh
@@ -104,7 +104,7 @@ export default function Footer() {
               <li className="mt-5">
                 <a
                   href="/how-it-works"
-                  className="inline-block text-[12px] uppercase tracking-[0.28em] text-white border-b border-white/40 pb-1 hover:border-white transition-colors duration-500"
+                  className="inline-block text-[14px] uppercase tracking-[0.28em] text-white border-b border-white/40 pb-1 hover:border-white transition-colors duration-500"
                 >
                   Apply for membership
                 </a>
@@ -113,12 +113,12 @@ export default function Footer() {
           </div>
         </div>
 
-        <div className="mt-16 sm:mt-20 pt-8 border-t border-white/15 flex flex-col sm:flex-row items-center justify-between gap-4 text-[10px] sm:text-[12px] uppercase tracking-[0.18em] sm:tracking-[0.28em] text-white/65 text-center sm:text-left">
+        <div className="mt-16 sm:mt-20 pt-8 border-t border-white/15 flex flex-col sm:flex-row items-center justify-between gap-4 text-[12px] sm:text-[14px] uppercase tracking-[0.18em] sm:tracking-[0.28em] text-white/65 text-center sm:text-left">
           <p>
             © {new Date().getFullYear()} Luxury Transport Ltd. All rights
             reserved
           </p>
-          <p className="font-display italic font-light text-[14px] sm:text-[15px] normal-case tracking-normal text-white">
+          <p className="font-display italic font-light text-[16px] sm:text-[17px] normal-case tracking-normal text-white">
             Seen by few. Trusted by all.
           </p>
         </div>

@@ -13,7 +13,7 @@ export default function ExpressReserve() {
 
   return (
     <div className="w-full max-w-xl">
-      <p className="font-display italic font-light text-[18px] sm:text-[22px] text-white/70 text-center mb-5">
+      <p className="font-display italic font-light text-[20px] sm:text-[24px] text-white/70 text-center mb-5">
         Three steps. None of them yours.
       </p>
 
@@ -28,7 +28,7 @@ export default function ExpressReserve() {
           placeholder="Destination address"
           value={destination}
           onChange={(e) => setDestination(e.target.value)}
-          className="flex-1 rounded-xl bg-white/5 border border-white/15 px-4 py-3 text-base text-white placeholder:text-white/85 focus:outline-none focus:border-white/50 focus:bg-white/10 transition-colors"
+          className="flex-1 rounded-xl bg-white/5 border border-white/15 px-4 py-3 text-lg text-white placeholder:text-white/85 focus:outline-none focus:border-white/50 focus:bg-white/10 transition-colors"
         />
         <input
           type="datetime-local"
@@ -37,11 +37,11 @@ export default function ExpressReserve() {
           value={when}
           onChange={(e) => setWhen(e.target.value)}
           style={{ colorScheme: "dark" }}
-          className="rounded-xl bg-white/5 border border-white/15 px-4 py-3 text-base text-white focus:outline-none focus:border-white/50 focus:bg-white/10 transition-colors [&::-webkit-calendar-picker-indicator]:invert [&::-webkit-calendar-picker-indicator]:opacity-90 [&::-webkit-calendar-picker-indicator]:cursor-pointer"
+          className="rounded-xl bg-white/5 border border-white/15 px-4 py-3 text-lg text-white focus:outline-none focus:border-white/50 focus:bg-white/10 transition-colors [&::-webkit-calendar-picker-indicator]:invert [&::-webkit-calendar-picker-indicator]:opacity-90 [&::-webkit-calendar-picker-indicator]:cursor-pointer"
         />
         <button
           type="submit"
-          className="rounded-xl bg-white px-6 py-3 text-[12px] uppercase tracking-[0.28em] text-black font-medium transition-all duration-500 hover:bg-white/90 hover:tracking-[0.34em]"
+          className="rounded-xl bg-white px-6 py-3 text-[14px] uppercase tracking-[0.28em] text-black font-medium transition-all duration-500 hover:bg-white/90 hover:tracking-[0.34em]"
         >
           Reserve a Journey
         </button>

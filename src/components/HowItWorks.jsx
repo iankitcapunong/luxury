@@ -227,7 +227,7 @@ export default function HowItWorks({ selectedService, onSelectService }) {
     >
       <div className="container-x">
         <div className="max-w-2xl mx-auto text-center">
-          <div className="reveal eyebrow !text-black !text-[12px] flex items-center gap-3 justify-center">
+          <div className="reveal eyebrow !text-black !text-[14px] flex items-center gap-3 justify-center">
             <span className="hairline" /> The Process
           </div>
           <h2 className="reveal h-display mt-7 text-4xl sm:text-5xl lg:text-6xl text-black">
@@ -250,7 +250,7 @@ export default function HowItWorks({ selectedService, onSelectService }) {
                     : "animate-fade-up"
                 }`}
               >
-                <div className="eyebrow !text-black !text-[12px] flex items-center gap-3 justify-center">
+                <div className="eyebrow !text-black !text-[14px] flex items-center gap-3 justify-center">
                   <span className="hairline" /> Selected Service
                 </div>
                 <h3
@@ -296,7 +296,7 @@ export default function HowItWorks({ selectedService, onSelectService }) {
                 <button
                   type="button"
                   onClick={() => onSelectService && onSelectService(null)}
-                  className="mt-6 text-[12px] uppercase tracking-[0.28em] text-black hover:text-black/80 underline underline-offset-4 decoration-black/60 transition-colors"
+                  className="mt-6 text-[14px] uppercase tracking-[0.28em] text-black hover:text-black/80 underline underline-offset-4 decoration-black/60 transition-colors"
                   style={
                     isExiting
                       ? undefined
@@ -370,7 +370,7 @@ export default function HowItWorks({ selectedService, onSelectService }) {
                       onSelectService &&
                       onSelectService(e.target.value || null)
                     }
-                    className="w-full rounded-lg border border-black/15 bg-white px-3 py-2 text-xs text-black focus:outline-none focus:border-black transition appearance-none bg-no-repeat bg-right pr-8"
+                    className="w-full rounded-lg border border-black/15 bg-white px-3 py-2 text-sm text-black focus:outline-none focus:border-black transition appearance-none bg-no-repeat bg-right pr-8"
                     style={{
                       backgroundImage:
                         "url(\"data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20' fill='%23000000'><path d='M5.5 7.5l4.5 5 4.5-5z'/></svg>\")",
@@ -392,7 +392,7 @@ export default function HowItWorks({ selectedService, onSelectService }) {
                     required
                     type="email"
                     placeholder="Email address"
-                    className="w-full rounded-lg border border-black/15 bg-white px-3 py-2 text-xs placeholder:text-black/40 focus:outline-none focus:border-black transition"
+                    className="w-full rounded-lg border border-black/15 bg-white px-3 py-2 text-sm placeholder:text-black/40 focus:outline-none focus:border-black transition"
                   />
                   <div className="grid grid-cols-2 gap-2.5">
                     <input
@@ -400,20 +400,20 @@ export default function HowItWorks({ selectedService, onSelectService }) {
                       type="tel"
                       placeholder="Phone number"
                       pattern="[0-9+\s()-]{7,}"
-                      className="rounded-lg border border-black/15 bg-white px-3 py-2 text-xs placeholder:text-black/40 focus:outline-none focus:border-black transition"
+                      className="rounded-lg border border-black/15 bg-white px-3 py-2 text-sm placeholder:text-black/40 focus:outline-none focus:border-black transition"
                     />
                     <input
                       required
                       type="date"
                       aria-label="Journey date"
-                      className="rounded-lg border border-black/15 bg-white px-3 py-2 text-xs text-black focus:outline-none focus:border-black transition"
+                      className="rounded-lg border border-black/15 bg-white px-3 py-2 text-sm text-black focus:outline-none focus:border-black transition"
                     />
                   </div>
                   <div className="grid grid-cols-2 gap-2.5">
                     <select
                       value={pickup}
                       onChange={(e) => setPickup(e.target.value)}
-                      className="rounded-lg border border-black/15 bg-white px-3 py-2 text-xs text-black focus:outline-none focus:border-black transition appearance-none bg-no-repeat bg-right pr-8"
+                      className="rounded-lg border border-black/15 bg-white px-3 py-2 text-sm text-black focus:outline-none focus:border-black transition appearance-none bg-no-repeat bg-right pr-8"
                       style={{
                         backgroundImage:
                           "url(\"data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20' fill='%23000000'><path d='M5.5 7.5l4.5 5 4.5-5z'/></svg>\")",
@@ -438,7 +438,7 @@ export default function HowItWorks({ selectedService, onSelectService }) {
                     <select
                       value={destination}
                       onChange={(e) => setDestination(e.target.value)}
-                      className="rounded-lg border border-black/15 bg-white px-3 py-2 text-xs text-black focus:outline-none focus:border-black transition appearance-none bg-no-repeat bg-right pr-8"
+                      className="rounded-lg border border-black/15 bg-white px-3 py-2 text-sm text-black focus:outline-none focus:border-black transition appearance-none bg-no-repeat bg-right pr-8"
                       style={{
                         backgroundImage:
                           "url(\"data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20' fill='%23000000'><path d='M5.5 7.5l4.5 5 4.5-5z'/></svg>\")",
@@ -464,54 +464,54 @@ export default function HowItWorks({ selectedService, onSelectService }) {
 
                   {pickup === "Custom address" && (
                     <div className="animate-fade-up rounded-lg border border-black/15 bg-white p-4 space-y-3">
-                      <div className="text-[13px] uppercase tracking-[0.28em] text-black">
+                      <div className="text-[15px] uppercase tracking-[0.28em] text-black">
                         Pickup address
                       </div>
                       <input
                         required
                         placeholder="Street address"
-                        className="w-full rounded-md border border-black/15 bg-white px-3 py-2 text-sm placeholder:text-black/40 focus:outline-none focus:border-black transition"
+                        className="w-full rounded-md border border-black/15 bg-white px-3 py-2 text-base placeholder:text-black/40 focus:outline-none focus:border-black transition"
                       />
                       <div className="grid grid-cols-2 gap-3">
                         <input
                           placeholder="City / Town"
-                          className="rounded-md border border-black/15 bg-white px-3 py-2 text-sm placeholder:text-black/40 focus:outline-none focus:border-black transition"
+                          className="rounded-md border border-black/15 bg-white px-3 py-2 text-base placeholder:text-black/40 focus:outline-none focus:border-black transition"
                         />
                         <input
                           placeholder="Postcode"
-                          className="rounded-md border border-black/15 bg-white px-3 py-2 text-sm placeholder:text-black/40 focus:outline-none focus:border-black transition"
+                          className="rounded-md border border-black/15 bg-white px-3 py-2 text-base placeholder:text-black/40 focus:outline-none focus:border-black transition"
                         />
                       </div>
                       <input
                         placeholder="Notes for the driver (gate code, floor…)"
-                        className="w-full rounded-md border border-black/15 bg-white px-3 py-2 text-sm placeholder:text-black/40 focus:outline-none focus:border-black transition"
+                        className="w-full rounded-md border border-black/15 bg-white px-3 py-2 text-base placeholder:text-black/40 focus:outline-none focus:border-black transition"
                       />
                     </div>
                   )}
 
                   {destination === "Custom address" && (
                     <div className="animate-fade-up rounded-lg border border-black/15 bg-white p-4 space-y-3">
-                      <div className="text-[13px] uppercase tracking-[0.28em] text-black">
+                      <div className="text-[15px] uppercase tracking-[0.28em] text-black">
                         Destination address
                       </div>
                       <input
                         required
                         placeholder="Street address"
-                        className="w-full rounded-md border border-black/15 bg-white px-3 py-2 text-sm placeholder:text-black/40 focus:outline-none focus:border-black transition"
+                        className="w-full rounded-md border border-black/15 bg-white px-3 py-2 text-base placeholder:text-black/40 focus:outline-none focus:border-black transition"
                       />
                       <div className="grid grid-cols-2 gap-3">
                         <input
                           placeholder="City / Town"
-                          className="rounded-md border border-black/15 bg-white px-3 py-2 text-sm placeholder:text-black/40 focus:outline-none focus:border-black transition"
+                          className="rounded-md border border-black/15 bg-white px-3 py-2 text-base placeholder:text-black/40 focus:outline-none focus:border-black transition"
                         />
                         <input
                           placeholder="Postcode"
-                          className="rounded-md border border-black/15 bg-white px-3 py-2 text-sm placeholder:text-black/40 focus:outline-none focus:border-black transition"
+                          className="rounded-md border border-black/15 bg-white px-3 py-2 text-base placeholder:text-black/40 focus:outline-none focus:border-black transition"
                         />
                       </div>
                       <input
                         placeholder="Arrival notes (entrance, contact name…)"
-                        className="w-full rounded-md border border-black/15 bg-white px-3 py-2 text-sm placeholder:text-black/40 focus:outline-none focus:border-black transition"
+                        className="w-full rounded-md border border-black/15 bg-white px-3 py-2 text-base placeholder:text-black/40 focus:outline-none focus:border-black transition"
                       />
                     </div>
                   )}
@@ -519,12 +519,12 @@ export default function HowItWorks({ selectedService, onSelectService }) {
                   <textarea
                     rows="2"
                     placeholder="A line about your journey"
-                    className="w-full rounded-lg border border-black/15 bg-white px-3 py-2 text-xs placeholder:text-black/40 focus:outline-none focus:border-black transition resize-none"
+                    className="w-full rounded-lg border border-black/15 bg-white px-3 py-2 text-sm placeholder:text-black/40 focus:outline-none focus:border-black transition resize-none"
                   />
 
                   <button
                     type="submit"
-                    className="btn-primary w-full !rounded-[15px] !px-6 !py-2.5 !text-[11px] !tracking-[0.28em]"
+                    className="btn-primary w-full !rounded-[15px] !px-6 !py-2.5 !text-[13px] !tracking-[0.28em]"
                   >
                     Send Inquiry <Icon.ArrowRight className="h-3.5 w-3.5" />
                   </button>
@@ -549,7 +549,7 @@ export default function HowItWorks({ selectedService, onSelectService }) {
               <h3 className="mt-6 font-display font-normal text-2xl text-black transition-all duration-700">
                 {s.title}
               </h3>
-              <p className="mt-4 text-[15px] leading-[1.85] text-black/80 transition-all duration-700">
+              <p className="mt-4 text-[17px] leading-[1.85] text-black/80 transition-all duration-700">
                 {s.body}
               </p>
             </div>

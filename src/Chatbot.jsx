@@ -176,7 +176,7 @@ export default function Chatbot() {
         {!open && (
           <>
             <span className="absolute -top-0.5 -right-0.5 h-3.5 w-3.5 rounded-full bg-[#C9A227] ring-2 ring-black animate-pulse" />
-            <span className="hidden sm:block absolute right-full mr-3 whitespace-nowrap rounded-full bg-black/90 px-4 py-2 text-[11px] uppercase tracking-[0.28em] text-white ring-1 ring-[#C9A227]/50 shadow-lg">
+            <span className="hidden sm:block absolute right-full mr-3 whitespace-nowrap rounded-full bg-black/90 px-4 py-2 text-[13px] uppercase tracking-[0.28em] text-white ring-1 ring-[#C9A227]/50 shadow-lg">
               Need help? Ask us
             </span>
           </>
@@ -197,15 +197,15 @@ export default function Chatbot() {
             L
           </div>
           <div className="leading-tight">
-            <div className="font-serif text-sm">Luxury Transport Concierge</div>
-            <div className="text-[10px] uppercase tracking-widest-x text-white/60 flex items-center gap-1.5">
+            <div className="font-serif text-base">Luxury Transport Concierge</div>
+            <div className="text-[12px] uppercase tracking-widest-x text-white/60 flex items-center gap-1.5">
               <span className="h-1.5 w-1.5 rounded-full bg-emerald-400" /> Online. Replies instantly
             </div>
           </div>
         </div>
 
         {/* Messages */}
-        <div ref={scrollRef} className="px-4 py-4 h-[360px] overflow-y-auto space-y-3 text-sm">
+        <div ref={scrollRef} className="px-4 py-4 h-[360px] overflow-y-auto space-y-3 text-base">
           {messages.map((m, i) => (
             <Bubble key={i} from={m.from} text={m.text} />
           ))}
@@ -219,7 +219,7 @@ export default function Chatbot() {
               <button
                 key={q}
                 onClick={() => send(q)}
-                className="rounded-full border border-black/15 px-3 py-1 text-[11px] text-black/80
+                className="rounded-full border border-black/15 px-3 py-1 text-[13px] text-black/80
                            transition hover:border-black hover:text-black hover:bg-black/5"
               >
                 {q}
@@ -240,7 +240,7 @@ export default function Chatbot() {
             value={input}
             onChange={(e) => setInput(e.target.value)}
             placeholder="Ask anything: bookings, pricing, vehicles…"
-            className="flex-1 rounded-full border border-black/15 bg-white px-4 py-2.5 text-sm
+            className="flex-1 rounded-full border border-black/15 bg-white px-4 py-2.5 text-base
                        focus:outline-none focus:border-black transition"
           />
           <button
@@ -256,7 +256,7 @@ export default function Chatbot() {
             </svg>
           </button>
         </form>
-        <p className="px-4 pb-3 text-center text-[10px] uppercase tracking-widest-x text-black/60">
+        <p className="px-4 pb-3 text-center text-[12px] uppercase tracking-widest-x text-black/60">
           Discretion. Punctuality. Composure.
         </p>
       </div>

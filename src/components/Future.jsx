@@ -33,7 +33,7 @@ export default function Future() {
 
       <div className="container-x relative z-10">
         <div className="reveal max-w-prose mx-auto text-center" style={{ maxWidth: "62ch" }}>
-          <div className="editorial-rule justify-center mx-auto max-w-md !text-white/60 text-[10px] tracking-[0.34em]">
+          <div className="editorial-rule justify-center mx-auto max-w-md !text-white/60 text-[12px] tracking-[0.34em]">
             To the future, and beyond
           </div>
           <h2 className="!font-cormorant mt-8 text-[44px] sm:text-[56px] lg:text-[64px] leading-[1.05] text-white font-normal">
@@ -42,7 +42,7 @@ export default function Future() {
             <span className="italic font-light">Future.</span>
           </h2>
 
-          <p className="mt-10 text-[17px] sm:text-[19px] text-white/85 leading-[1.85] font-light">
+          <p className="mt-10 text-[19px] sm:text-[21px] text-white/85 leading-[1.85] font-light">
             Due to political risk, our armoured vehicles are being designed and
             ordered for clients who want that extra security, especially amid
             the current political unrest.
@@ -50,7 +50,7 @@ export default function Future() {
 
           <div className="mt-12 mx-auto h-px w-16 bg-white/40" />
 
-          <p className="mt-12 text-[17px] sm:text-[19px] text-white/85 leading-[1.85] font-light">
+          <p className="mt-12 text-[19px] sm:text-[21px] text-white/85 leading-[1.85] font-light">
             We are committed to providing luxury travel that is also
             environmentally friendly, and as we intend to be here for many
             years to come, an electric option is very much among our future

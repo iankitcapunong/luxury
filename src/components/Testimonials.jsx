@@ -56,7 +56,7 @@ export default function Testimonials() {
       ))}
 
       <div className="relative container-x py-20 sm:py-28 lg:py-44 max-w-4xl mx-auto text-center">
-        <div className="reveal !text-white text-[11px] sm:text-[13px] uppercase tracking-[0.28em] sm:tracking-[0.34em] flex items-center gap-3 justify-center">
+        <div className="reveal !text-white text-[13px] sm:text-[15px] uppercase tracking-[0.28em] sm:tracking-[0.34em] flex items-center gap-3 justify-center">
           <span className="h-px w-8 sm:w-12 bg-white" /> In Their Words
         </div>
         <h2 className="reveal mt-6 sm:mt-7 h-display !font-cormorant text-3xl sm:text-5xl lg:text-6xl text-white drop-shadow-[0_3px_10px_rgba(0,0,0,0.6)]">
@@ -74,10 +74,10 @@ export default function Testimonials() {
                 i === idx ? "opacity-100" : "opacity-0 pointer-events-none"
               }`}
             >
-              <p className="font-display !font-cormorant italic font-light text-lg sm:text-2xl lg:text-[34px] leading-[1.5] text-white max-w-3xl mx-auto drop-shadow-[0_2px_8px_rgba(0,0,0,0.55)]">
+              <p className="font-display !font-cormorant italic font-light text-xl sm:text-2xl lg:text-[34px] leading-[1.5] text-white max-w-3xl mx-auto drop-shadow-[0_2px_8px_rgba(0,0,0,0.55)]">
                 {q.q.replace(/[“”]/g, "")}
               </p>
-              <footer className="mt-10 text-[13px] uppercase tracking-[0.34em] text-white/90">
+              <footer className="mt-10 text-[15px] uppercase tracking-[0.34em] text-white/90">
                 <div className="font-display normal-case tracking-normal text-xl text-white">
                   {q.n}
                 </div>

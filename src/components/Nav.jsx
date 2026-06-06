@@ -49,7 +49,7 @@ export default function Nav() {
       >
         <div className="hidden md:grid grid-cols-[1fr_auto_1fr] items-center gap-8">
           {/* Left links */}
-          <ul className="flex items-center justify-end gap-10 text-[14px] font-cormorant uppercase tracking-[0.34em] font-medium text-white/90">
+          <ul className="flex items-center justify-end gap-10 text-[16px] font-cormorant uppercase tracking-[0.34em] font-medium text-white/90">
             {links.slice(0, 2).map(([label, path]) => (
               <li key={path}>
                 <a
@@ -75,16 +75,16 @@ export default function Nav() {
             aria-label="Luxury Transport home"
             className="flex flex-col items-center gap-1 shrink-0"
           >
-            <span className="grid h-11 w-11 lg:h-12 lg:w-12 place-items-center rounded-full border border-white/70 text-white font-display italic text-[18px] lg:text-[20px] font-bold">
+            <span className="grid h-11 w-11 lg:h-12 lg:w-12 place-items-center rounded-full border border-white/70 text-white font-display italic text-[20px] lg:text-[20px] font-bold">
               L
             </span>
-            <span className="font-cormorant uppercase tracking-[0.32em] text-white text-[10px] lg:text-[11px] font-medium">
+            <span className="font-cormorant uppercase tracking-[0.32em] text-white text-[12px] lg:text-[13px] font-medium">
               Luxury Transport
             </span>
           </a>
 
           {/* Right links */}
-          <ul className="flex items-center justify-start gap-10 text-[14px] font-cormorant uppercase tracking-[0.34em] font-medium text-white/90">
+          <ul className="flex items-center justify-start gap-10 text-[16px] font-cormorant uppercase tracking-[0.34em] font-medium text-white/90">
             {links.slice(2).map(([label, path]) => (
               <li key={path}>
                 <a
@@ -113,7 +113,7 @@ export default function Nav() {
             aria-label="Luxury Transport home"
             className="flex flex-col items-center gap-1 justify-self-center"
           >
-            <span className="grid h-9 w-9 place-items-center rounded-full border border-white/70 text-white font-display italic text-[16px] font-bold">
+            <span className="grid h-9 w-9 place-items-center rounded-full border border-white/70 text-white font-display italic text-[18px] font-bold">
               L
             </span>
             <span className="font-cormorant uppercase tracking-[0.28em] text-white text-[9px] font-medium">
@@ -142,7 +142,7 @@ export default function Nav() {
                 href={path}
                 onClick={(e) => goToPage(e, path)}
                 aria-current={location.pathname === path ? "page" : undefined}
-                className={`py-2 text-[15px] font-cormorant border-l-2 pl-3 transition-colors ${
+                className={`py-2 text-[17px] font-cormorant border-l-2 pl-3 transition-colors ${
                   location.pathname === path
                     ? "border-white text-white"
                     : "border-transparent text-white/70"

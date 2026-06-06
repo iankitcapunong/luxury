@@ -18,7 +18,7 @@ export default function CTA() {
         }}
       />
       <div className="container-x relative text-center max-w-3xl mx-auto">
-        <div className="reveal !text-white text-[11px] sm:text-[13px] uppercase tracking-[0.28em] sm:tracking-[0.34em] flex items-center gap-2 sm:gap-3 justify-center flex-wrap">
+        <div className="reveal !text-white text-[13px] sm:text-[15px] uppercase tracking-[0.28em] sm:tracking-[0.34em] flex items-center gap-2 sm:gap-3 justify-center flex-wrap">
           <span className="h-px w-8 sm:w-12 bg-white" /> Request Your Booking <span className="h-px w-8 sm:w-12 bg-white" />
         </div>
         <h2 className="reveal h-display !font-cormorant mt-6 sm:mt-8 text-4xl sm:text-6xl lg:text-7xl text-white">

@@ -85,7 +85,7 @@ export default function Services({ onSelect }) {
       <div className="container-x">
         <div className="reveal flex flex-col items-center text-center gap-7 max-w-2xl mx-auto">
           <div>
-            <div className="eyebrow !text-black !text-[12px] flex items-center gap-3 justify-center">
+            <div className="eyebrow !text-black !text-[14px] flex items-center gap-3 justify-center">
               <span className="hairline" /> The Offering
             </div>
             <h2 className="h-display mt-7 text-4xl sm:text-5xl lg:text-6xl text-black">
@@ -160,7 +160,7 @@ export default function Services({ onSelect }) {
                 } flex items-center px-6 sm:px-10 lg:px-20 xl:px-28 py-10 sm:py-14 lg:py-28`}
               >
                 <div className="max-w-md">
-                  <div className="eyebrow !text-black !text-[12px] flex items-center gap-3">
+                  <div className="eyebrow !text-black !text-[14px] flex items-center gap-3">
                     <span className="hairline" /> {p.eyebrow}
                   </div>
                   <h3 className="h-display !font-cormorant mt-5 text-3xl sm:text-4xl lg:text-5xl text-black leading-[1.04]">
@@ -177,7 +177,7 @@ export default function Services({ onSelect }) {
                         e.preventDefault();
                         onSelect && onSelect(p.tag);
                       }}
-                      className="inline-flex items-center gap-2 text-[12px] uppercase tracking-[0.34em] text-black hover:text-black/70 transition-colors border-b border-black/40 hover:border-[#C9A227] pb-1"
+                      className="inline-flex items-center gap-2 text-[14px] uppercase tracking-[0.34em] text-black hover:text-black/70 transition-colors border-b border-black/40 hover:border-[#C9A227] pb-1"
                     >
                       Enquire
                       <Icon.ArrowRight className="h-3.5 w-3.5 transition-transform duration-500 group-hover:translate-x-1" />
@@ -211,7 +211,7 @@ export default function Services({ onSelect }) {
               <div className="pointer-events-none absolute inset-0 bg-gradient-to-l from-black/40 via-transparent to-transparent lg:from-black/60" />
               {activeFeature !== null && (
                 <div
-                  className="pointer-events-none absolute z-10 -translate-x-1/2 -translate-y-1/2 rounded-full border border-white/40 bg-white/10 backdrop-blur-sm px-3 py-1 text-[10px] uppercase tracking-[0.28em] text-white whitespace-nowrap transition-opacity duration-500"
+                  className="pointer-events-none absolute z-10 -translate-x-1/2 -translate-y-1/2 rounded-full border border-white/40 bg-white/10 backdrop-blur-sm px-3 py-1 text-[12px] uppercase tracking-[0.28em] text-white whitespace-nowrap transition-opacity duration-500"
                   style={{
                     left: `${sprinterFeatures[activeFeature].x}%`,
                     top: `${sprinterFeatures[activeFeature].y}%`,
@@ -224,12 +224,12 @@ export default function Services({ onSelect }) {
 
             {/* Right: features list */}
             <div className="p-6 sm:p-8 lg:p-12 flex flex-col lg:order-2">
-              <div className="text-[11px] sm:text-[12px] uppercase tracking-[0.28em] sm:tracking-[0.34em] !text-white">Inside the Sprinter</div>
+              <div className="text-[13px] sm:text-[14px] uppercase tracking-[0.28em] sm:tracking-[0.34em] !text-white">Inside the Sprinter</div>
               <h3 className="font-display italic font-light text-3xl sm:text-4xl lg:text-5xl mt-4 text-white">
                 Quietly equipped.
               </h3>
               <div className="mt-5 h-px w-12 bg-white/60" />
-              <div className="mt-6 sm:mt-8 grid grid-cols-2 gap-x-4 sm:gap-x-6 gap-y-2.5 sm:gap-y-3 text-[13px] sm:text-[15px]">
+              <div className="mt-6 sm:mt-8 grid grid-cols-2 gap-x-4 sm:gap-x-6 gap-y-2.5 sm:gap-y-3 text-[15px] sm:text-[17px]">
                 {sprinterFeatures.map((f, i) => {
                   const isActive = activeFeature === i;
                   return (
@@ -256,7 +256,7 @@ export default function Services({ onSelect }) {
                 <button
                   type="button"
                   onClick={() => setActiveFeature(null)}
-                  className="mt-5 sm:mt-6 self-start text-[11px] uppercase tracking-[0.28em] text-white/60 hover:text-white transition-colors"
+                  className="mt-5 sm:mt-6 self-start text-[13px] uppercase tracking-[0.28em] text-white/60 hover:text-white transition-colors"
                 >
                   Reset view
                 </button>
@@ -267,7 +267,7 @@ export default function Services({ onSelect }) {
 
         {/* Chilled cabinet tile */}
         <div className="reveal mt-12 mx-auto max-w-2xl text-center px-6 sm:px-8">
-          <div className="eyebrow !text-black !text-[12px] flex items-center gap-3 justify-center">
+          <div className="eyebrow !text-black !text-[14px] flex items-center gap-3 justify-center">
             <span className="hairline" /> The Chilled Cabinet
           </div>
           <h3 className="!font-cormorant mt-7 text-3xl sm:text-4xl lg:text-5xl text-black leading-[1.05]">
@@ -275,7 +275,7 @@ export default function Services({ onSelect }) {
             <span className="italic font-light"> by default.</span>
           </h3>
           <div className="mt-6 mx-auto h-px w-12 bg-black/30" />
-          <p className="mt-7 text-[15px] sm:text-[17px] text-black/80 leading-[1.85] font-light">
+          <p className="mt-7 text-[17px] sm:text-[19px] text-black/80 leading-[1.85] font-light">
             Your bar, stocked to taste. Tell us your preferred champagne,
             spirits or soft drinks and we will have them chilled and waiting,
             restocked before every journey.{" "}
@@ -286,7 +286,7 @@ export default function Services({ onSelect }) {
         {/* Concierge extras */}
         <div className="reveal mt-20 mx-auto max-w-5xl px-2 sm:px-4">
           <div className="text-center">
-            <div className="eyebrow !text-black !text-[12px] flex items-center gap-3 justify-center">
+            <div className="eyebrow !text-black !text-[14px] flex items-center gap-3 justify-center">
               <span className="hairline" /> Concierge Extras
             </div>
             <h3 className="!font-cormorant mt-7 text-3xl sm:text-4xl lg:text-5xl text-black leading-[1.05]">
@@ -294,7 +294,7 @@ export default function Services({ onSelect }) {
               <span className="italic font-light"> still attended.</span>
             </h3>
             <div className="mt-6 mx-auto h-px w-12 bg-black/30" />
-            <p className="mt-7 text-[15px] sm:text-[17px] text-black/80 leading-[1.85] font-light max-w-xl mx-auto">
+            <p className="mt-7 text-[17px] sm:text-[19px] text-black/80 leading-[1.85] font-light max-w-xl mx-auto">
               The journey is rarely only the journey. A short list of the
               quieter things our desk arranges in parallel.
             </p>
@@ -344,7 +344,7 @@ export default function Services({ onSelect }) {
                   <h4 className="font-display text-xl sm:text-2xl text-black leading-tight">
                     {item.title}
                   </h4>
-                  <p className="mt-3 text-[15px] leading-[1.85] text-black/75 font-light">
+                  <p className="mt-3 text-[17px] leading-[1.85] text-black/75 font-light">
                     {item.body}
                   </p>
                 </div>

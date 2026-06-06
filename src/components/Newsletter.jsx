@@ -45,11 +45,11 @@ export default function Newsletter() {
               required
               type="email"
               placeholder="Email address"
-              className="flex-1 rounded-lg border border-black/15 bg-white px-4 py-3 text-sm text-black placeholder:text-black/40 focus:outline-none focus:border-black transition"
+              className="flex-1 rounded-lg border border-black/15 bg-white px-4 py-3 text-base text-black placeholder:text-black/40 focus:outline-none focus:border-black transition"
             />
             <button
               type="submit"
-              className="btn-primary !rounded-[15px] !px-7 !py-3 !text-[11px] !tracking-[0.28em] !bg-black !text-white hover:!bg-black/80"
+              className="btn-primary !rounded-[15px] !px-7 !py-3 !text-[13px] !tracking-[0.28em] !bg-black !text-white hover:!bg-black/80"
             >
               Subscribe <Icon.ArrowRight className="h-3.5 w-3.5" />
             </button>

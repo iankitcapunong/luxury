@@ -56,10 +56,10 @@ export default function Manifesto() {
             <br />
             <span className="italic font-light">A movement.</span>
           </h2>
-          <p className="mt-4 text-[11px] sm:text-[12px] uppercase tracking-[0.34em] text-white/55">
+          <p className="mt-4 text-[13px] sm:text-[14px] uppercase tracking-[0.34em] text-white/55">
             Mercedes V-Class · Mercedes Sprinter · Mercedes Vito
           </p>
-          <p className="mt-8 text-white/80 leading-[1.85] text-[17px] font-light max-w-2xl mx-auto">
+          <p className="mt-8 text-white/80 leading-[1.85] text-[19px] font-light max-w-2xl mx-auto">
             Redefining the art of movement. Not a transfer, but a curated
             experience. We are a collective with a variety of vehicle options,
             every chauffeur hand-picked to ensure a flawless experience.
@@ -70,7 +70,7 @@ export default function Manifesto() {
           <div className="editorial-rule justify-center mx-auto max-w-xs !text-white/60">
             Origin
           </div>
-          <p className="mt-6 font-display italic font-light text-lg sm:text-xl leading-[1.7] text-white/90">
+          <p className="mt-6 font-display italic font-light text-xl sm:text-xl leading-[1.7] text-white/90">
             Several years ago I began a journey in search of luxury transport.
             To my astonishment, there weren't many options beyond the
             conventional: limousines, factory-issue Vitos and party buses, all
@@ -94,7 +94,7 @@ export default function Manifesto() {
               <h3 className="mt-6 font-display text-2xl text-white tracking-wide">
                 {p.title}
               </h3>
-              <p className="mt-4 text-[15px] leading-[1.85] text-white/75 font-light">
+              <p className="mt-4 text-[17px] leading-[1.85] text-white/75 font-light">
                 {p.body}
               </p>
             </div>

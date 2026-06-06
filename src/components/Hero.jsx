@@ -39,7 +39,7 @@ export default function Hero() {
       <div className="relative z-10 w-full pl-4 sm:pl-6 lg:pl-10 pr-4 sm:pr-6 grid grid-cols-1 lg:grid-cols-12 gap-16 items-end font-cormorant">
         <div className="lg:col-span-7">
           <div
-            className="reveal mb-5 sm:mb-6 flex items-center gap-3 text-[10px] sm:text-[12px] uppercase tracking-[0.3em] sm:tracking-[0.34em] text-white/85 drop-shadow-[0_2px_6px_rgba(0,0,0,0.7)]"
+            className="reveal mb-5 sm:mb-6 flex items-center gap-3 text-[12px] sm:text-[14px] uppercase tracking-[0.3em] sm:tracking-[0.34em] text-white/85 drop-shadow-[0_2px_6px_rgba(0,0,0,0.7)]"
             style={{ transitionDelay: "80ms" }}
           >
             <span className="h-px w-8 bg-white/70 shrink-0" />
@@ -78,7 +78,7 @@ export default function Hero() {
             style={{ transitionDelay: "350ms" }}
           >
             <span className="mt-2 sm:mt-3 h-px w-6 sm:w-10 bg-white shrink-0" />
-            <p className="text-base sm:text-lg lg:text-[24px] text-white leading-relaxed font-light drop-shadow-[0_2px_6px_rgba(0,0,0,0.7)]">
+            <p className="text-lg sm:text-xl lg:text-[26px] text-white leading-relaxed font-light drop-shadow-[0_2px_6px_rgba(0,0,0,0.7)]">
               Your wish is our command. Fluent in the small things: the chilled
               water, the unspoken route, the door already open.
             </p>
