@@ -276,8 +276,9 @@ export default function Services({ onSelect }) {
           </h3>
           <div className="mt-6 mx-auto h-px w-12 bg-black/30" />
           <p className="mt-7 text-[15px] sm:text-[17px] text-black/80 leading-[1.85] font-light">
-            A fully stocked bar, the finest spirits and champagnes, stocked to
-            your specific tastes and restocked before each journey.{" "}
+            Your bar, stocked to taste. Tell us your preferred champagne,
+            spirits or soft drinks and we will have them chilled and waiting,
+            restocked before every journey.{" "}
             <span className="italic">Specifics can be ordered on request.</span>
           </p>
         </div>
@@ -304,7 +305,7 @@ export default function Services({ onSelect }) {
               {
                 n: "01",
                 title: "Fully stocked bar",
-                body: "The finest spirits and champagnes on board. Specifics can be ordered on request.",
+                body: "Stocked to your taste. Your preferred champagne, spirits or soft drinks, chilled and waiting on board.",
               },
               {
                 n: "02",
