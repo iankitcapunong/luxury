@@ -43,7 +43,7 @@ export default function Hero() {
             style={{ transitionDelay: "80ms" }}
           >
             <span className="h-px w-8 bg-white/70 shrink-0" />
-            Private chauffeur
+            Private chauffeur · By introduction only
           </div>
           <h1
             className="reveal h-display !font-cormorant text-[64px] sm:text-[96px] lg:text-[136px] leading-[1.0] text-white drop-shadow-[0_4px_18px_rgba(0,0,0,0.75)]"
