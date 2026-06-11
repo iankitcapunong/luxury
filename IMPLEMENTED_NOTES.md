@@ -58,11 +58,11 @@ This tracks what has been implemented from the review notes / screenshots provid
 - [x] **Hero video** replaced (London landmarks loop)
 - [x] **Body / label / form text enlarged** site-wide (headings unchanged)
 - [x] **Chatbot launcher** made larger and more visible
+- [x] Home hero slogan changed: "Arrive Composed." → **"Quietly Driven."**
 - [x] "Private chauffeur · By introduction only" surfaced on the **hero** (and kept in the footer) so the good quote isn't buried
 
 ---
 
 ## Not done / deferred
 - [ ] **Draft 2 items** (The Fleet, executive saloon / S-class, sustainable prestige, chauffeur academy, "quieter power", etc.) — these belong to the **separate Draft 2** project, not this site
-- [ ] Home hero slogan "Arrive Composed." — **kept for now** (your call)
 - [ ] Optional cleanup of unused media files in `/public` (awaiting go-ahead)

@@ -57,7 +57,7 @@ export default function Hero() {
                 textShadow: "0 2px 12px rgba(0,0,0,0.55)",
               }}
             >
-              Arrive
+              Quietly
             </span>
             <span
               className="block italic font-light"
@@ -70,7 +70,7 @@ export default function Hero() {
                 filter: "drop-shadow(0 4px 18px rgba(201,162,39,0.35))",
               }}
             >
-              Composed.
+              Driven.
             </span>
           </h1>
           <div
