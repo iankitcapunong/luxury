@@ -58,7 +58,7 @@ This tracks what has been implemented from the review notes / screenshots provid
 - [x] **Hero video** replaced (London landmarks loop)
 - [x] **Body / label / form text enlarged** site-wide (headings unchanged)
 - [x] **Chatbot launcher** made larger and more visible
-- [x] "Private chauffeur, by introduction only" surfaced on the hero, then **removed** per latest note
+- [x] "Private chauffeur · By introduction only" surfaced on the **hero** (and kept in the footer) so the good quote isn't buried
 
 ---
 
