@@ -142,12 +142,18 @@ export default function Nav() {
                 href={path}
                 onClick={(e) => goToPage(e, path)}
                 aria-current={location.pathname === path ? "page" : undefined}
-                className={`py-2 text-[17px] font-cormorant border-l-2 pl-3 transition-colors ${
-                  location.pathname === path
-                    ? "border-white text-white"
-                    : "border-transparent text-white/70"
+                className={`group flex items-center gap-3 py-2 text-[17px] font-cormorant uppercase tracking-[0.18em] transition-colors duration-300 ${
+                  location.pathname === path ? "text-white" : "text-white/70"
                 }`}
               >
+                <span
+                  aria-hidden="true"
+                  className={`h-px shrink-0 transition-all duration-300 ${
+                    location.pathname === path
+                      ? "w-7 bg-[#DAB85A]"
+                      : "w-4 bg-white/25"
+                  }`}
+                />
                 {l}
               </a>
             ))}

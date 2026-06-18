@@ -25,10 +25,25 @@
   }
   h1, h2, h3 {
     font-feature-settings: 'liga', 'kern', 'onum';
+    text-wrap: balance;
+  }
+  p {
+    text-wrap: pretty;
   }
   ::selection {
     background: #000000;
     color: var(--off-white);
+  }
+
+  /* Keyboard focus: a quiet, high-contrast ring that adapts to its
+     surface (ink on the off-white sections, light on the black ones).
+     Inputs keep their own focus-border treatment, so they're excluded. */
+  a:focus-visible,
+  button:focus-visible,
+  [tabindex]:focus-visible {
+    outline: 2px solid currentColor;
+    outline-offset: 3px;
+    border-radius: 1px;
   }
 }
 
@@ -103,7 +118,7 @@
   }
 
   /* Image-specific reveal: zoom-out + fade. Applied to the WRAPPER so the
-     inner <img>'s ken-burns transform is untouched. */
+     inner image's ken-burns transform is untouched. */
   .reveal-img {
     opacity: 0;
     transform: scale(1.08);

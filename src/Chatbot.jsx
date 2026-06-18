@@ -24,7 +24,7 @@ const intents = [
   {
     keys: ["book", "booking", "reserve", "reservation", "schedule"],
     reply:
-      "Booking is a single message. Share your date, pickup and destination, either through the inquiry form below, by email at bookings@luxurytransport.co.uk, or call +44 (0)20 0000 0000. We reply inside the hour with a vehicle, driver and quote.",
+      "Booking is a single message. Share your date, pickup and destination, either through the enquiry form below, by email at bookings@luxurytransport.co.uk, or call +44 (0)20 0000 0000. We reply inside the hour with a vehicle, driver and quote.",
   },
   {
     keys: ["price", "pricing", "cost", "quote", "rate", "how much", "fare"],
@@ -99,7 +99,7 @@ const intents = [
   {
     keys: ["contact", "phone", "call", "email", "speak", "human"],
     reply:
-      "Of course. +44 (0)20 0000 0000 (24/7 dispatch) or bookings@luxurytransport.co.uk. You can also use the inquiry form on this page and we'll be back to you within the hour.",
+      "Of course. +44 (0)20 0000 0000 (24/7 dispatch) or bookings@luxurytransport.co.uk. You can also use the enquiry form on this page and we'll be back to you within the hour.",
   },
   {
     keys: ["lost", "found", "left", "belonging"],
@@ -109,7 +109,7 @@ const intents = [
   {
     keys: ["thanks", "thank you", "cheers", "ta"],
     reply:
-      "My pleasure. Anything else I can answer? If not, the inquiry form on this page is the fastest way to get a real person on the case.",
+      "My pleasure. Anything else I can answer? If not, the enquiry form on this page is the fastest way to get a real person on the case.",
   },
 ];
 
@@ -122,7 +122,7 @@ function findReply(input) {
 }
 
 const fallback =
-  "I don't have an answer on hand for that. Let me hand you to a person. The fastest route is the inquiry form on this page, or email bookings@luxurytransport.co.uk and we'll reply inside the hour.";
+  "I don't have an answer on hand for that. Let me hand you to a person. The fastest route is the enquiry form on this page, or email bookings@luxurytransport.co.uk and we'll reply inside the hour.";
 
 export default function Chatbot() {
   const [open, setOpen] = useState(false);
@@ -284,9 +284,9 @@ function Typing() {
   return (
     <div className="flex justify-start">
       <div className="bg-white text-black border border-black/10 rounded-2xl rounded-bl-md px-4 py-3 flex items-center gap-1.5">
-        <span className="h-1.5 w-1.5 rounded-full bg-black animate-bounce" style={{ animationDelay: "0ms" }} />
-        <span className="h-1.5 w-1.5 rounded-full bg-black animate-bounce" style={{ animationDelay: "120ms" }} />
-        <span className="h-1.5 w-1.5 rounded-full bg-black animate-bounce" style={{ animationDelay: "240ms" }} />
+        <span className="h-1.5 w-1.5 rounded-full bg-black/70 animate-typing-dot motion-reduce:animate-none" style={{ animationDelay: "0ms" }} />
+        <span className="h-1.5 w-1.5 rounded-full bg-black/70 animate-typing-dot motion-reduce:animate-none" style={{ animationDelay: "160ms" }} />
+        <span className="h-1.5 w-1.5 rounded-full bg-black/70 animate-typing-dot motion-reduce:animate-none" style={{ animationDelay: "320ms" }} />
       </div>
     </div>
   );

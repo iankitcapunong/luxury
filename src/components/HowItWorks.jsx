@@ -35,7 +35,7 @@ export default function HowItWorks({ selectedService, onSelectService }) {
 
   const defaultServiceTitle = "A Private Chauffeur Service";
   const defaultServiceCopy =
-    "Every journey begins with a luxury chauffeur, uniformed, DBS checked, NDA bound, and trained for the quiet things: the chilled water, the door already open, the unspoken route. Choose a service above and the inquiry adjusts itself to suit the journey.";
+    "Every journey begins with a luxury chauffeur, uniformed, DBS checked, NDA bound, and trained for the quiet things: the chilled water, the door already open, the unspoken route. Choose a service above and the enquiry adjusts itself to suit the journey.";
 
   const serviceDescriptions = {
     "Airport & Long Distance":
@@ -204,7 +204,7 @@ export default function HowItWorks({ selectedService, onSelectService }) {
   const steps = [
     {
       n: "1",
-      title: "Inquiry",
+      title: "Enquiry",
       body: "Send your details by form, phone, or email. Your time is held the moment we hear from you.",
     },
     {
@@ -392,7 +392,7 @@ export default function HowItWorks({ selectedService, onSelectService }) {
                     required
                     type="email"
                     placeholder="Email address"
-                    className="w-full rounded-lg border border-black/15 bg-white px-3 py-2 text-sm placeholder:text-black/40 focus:outline-none focus:border-black transition"
+                    className="w-full rounded-lg border border-black/15 bg-white px-3 py-2 text-sm placeholder:text-black/55 focus:outline-none focus:border-black transition"
                   />
                   <div className="grid grid-cols-2 gap-2.5">
                     <input
@@ -400,7 +400,7 @@ export default function HowItWorks({ selectedService, onSelectService }) {
                       type="tel"
                       placeholder="Phone number"
                       pattern="[0-9+\s()-]{7,}"
-                      className="rounded-lg border border-black/15 bg-white px-3 py-2 text-sm placeholder:text-black/40 focus:outline-none focus:border-black transition"
+                      className="rounded-lg border border-black/15 bg-white px-3 py-2 text-sm placeholder:text-black/55 focus:outline-none focus:border-black transition"
                     />
                     <input
                       required
@@ -470,21 +470,21 @@ export default function HowItWorks({ selectedService, onSelectService }) {
                       <input
                         required
                         placeholder="Street address"
-                        className="w-full rounded-md border border-black/15 bg-white px-3 py-2 text-base placeholder:text-black/40 focus:outline-none focus:border-black transition"
+                        className="w-full rounded-md border border-black/15 bg-white px-3 py-2 text-base placeholder:text-black/55 focus:outline-none focus:border-black transition"
                       />
                       <div className="grid grid-cols-2 gap-3">
                         <input
                           placeholder="City / Town"
-                          className="rounded-md border border-black/15 bg-white px-3 py-2 text-base placeholder:text-black/40 focus:outline-none focus:border-black transition"
+                          className="rounded-md border border-black/15 bg-white px-3 py-2 text-base placeholder:text-black/55 focus:outline-none focus:border-black transition"
                         />
                         <input
                           placeholder="Postcode"
-                          className="rounded-md border border-black/15 bg-white px-3 py-2 text-base placeholder:text-black/40 focus:outline-none focus:border-black transition"
+                          className="rounded-md border border-black/15 bg-white px-3 py-2 text-base placeholder:text-black/55 focus:outline-none focus:border-black transition"
                         />
                       </div>
                       <input
                         placeholder="Notes for the driver (gate code, floor…)"
-                        className="w-full rounded-md border border-black/15 bg-white px-3 py-2 text-base placeholder:text-black/40 focus:outline-none focus:border-black transition"
+                        className="w-full rounded-md border border-black/15 bg-white px-3 py-2 text-base placeholder:text-black/55 focus:outline-none focus:border-black transition"
                       />
                     </div>
                   )}
@@ -497,21 +497,21 @@ export default function HowItWorks({ selectedService, onSelectService }) {
                       <input
                         required
                         placeholder="Street address"
-                        className="w-full rounded-md border border-black/15 bg-white px-3 py-2 text-base placeholder:text-black/40 focus:outline-none focus:border-black transition"
+                        className="w-full rounded-md border border-black/15 bg-white px-3 py-2 text-base placeholder:text-black/55 focus:outline-none focus:border-black transition"
                       />
                       <div className="grid grid-cols-2 gap-3">
                         <input
                           placeholder="City / Town"
-                          className="rounded-md border border-black/15 bg-white px-3 py-2 text-base placeholder:text-black/40 focus:outline-none focus:border-black transition"
+                          className="rounded-md border border-black/15 bg-white px-3 py-2 text-base placeholder:text-black/55 focus:outline-none focus:border-black transition"
                         />
                         <input
                           placeholder="Postcode"
-                          className="rounded-md border border-black/15 bg-white px-3 py-2 text-base placeholder:text-black/40 focus:outline-none focus:border-black transition"
+                          className="rounded-md border border-black/15 bg-white px-3 py-2 text-base placeholder:text-black/55 focus:outline-none focus:border-black transition"
                         />
                       </div>
                       <input
                         placeholder="Arrival notes (entrance, contact name…)"
-                        className="w-full rounded-md border border-black/15 bg-white px-3 py-2 text-base placeholder:text-black/40 focus:outline-none focus:border-black transition"
+                        className="w-full rounded-md border border-black/15 bg-white px-3 py-2 text-base placeholder:text-black/55 focus:outline-none focus:border-black transition"
                       />
                     </div>
                   )}
@@ -519,14 +519,14 @@ export default function HowItWorks({ selectedService, onSelectService }) {
                   <textarea
                     rows="2"
                     placeholder="A line about your journey"
-                    className="w-full rounded-lg border border-black/15 bg-white px-3 py-2 text-sm placeholder:text-black/40 focus:outline-none focus:border-black transition resize-none"
+                    className="w-full rounded-lg border border-black/15 bg-white px-3 py-2 text-sm placeholder:text-black/55 focus:outline-none focus:border-black transition resize-none"
                   />
 
                   <button
                     type="submit"
                     className="btn-primary w-full !rounded-[15px] !px-6 !py-2.5 !text-[13px] !tracking-[0.28em]"
                   >
-                    Send Inquiry <Icon.ArrowRight className="h-3.5 w-3.5" />
+                    Send Enquiry <Icon.ArrowRight className="h-3.5 w-3.5" />
                   </button>
                 </div>
               </form>

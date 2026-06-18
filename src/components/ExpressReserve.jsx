@@ -3,13 +3,42 @@ import { useState } from "react";
 export default function ExpressReserve() {
   const [destination, setDestination] = useState("");
   const [when, setWhen] = useState("");
+  const [submitted, setSubmitted] = useState(false);
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    alert(
-      "Thank you. A driver is being assigned to your journey. You'll see confirmation shortly.",
-    );
+    setSubmitted(true);
   };
+
+  if (submitted) {
+    return (
+      <div
+        className="w-full max-w-xl rounded-2xl border border-white/30 bg-black/70 backdrop-blur-md px-6 py-7 text-center shadow-[0_30px_70px_-20px_rgba(0,0,0,0.6)]"
+        role="status"
+        aria-live="polite"
+      >
+        <div className="mx-auto mb-4 h-px w-10 bg-[#DAB85A]" />
+        <p className="font-display italic font-light text-[22px] sm:text-[26px] text-white">
+          Received. Consider it handled.
+        </p>
+        <p className="mt-3 text-white/80 leading-relaxed font-light">
+          A driver is being assigned to your journey. We will confirm by return,
+          within the hour.
+        </p>
+        <button
+          type="button"
+          onClick={() => {
+            setSubmitted(false);
+            setDestination("");
+            setWhen("");
+          }}
+          className="mt-5 text-[12px] uppercase tracking-[0.28em] text-white/60 underline-offset-4 transition-colors hover:text-white"
+        >
+          Arrange another
+        </button>
+      </div>
+    );
+  }
 
   return (
     <div className="w-full max-w-xl">

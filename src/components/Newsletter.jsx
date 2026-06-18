@@ -1,8 +1,10 @@
+import { useState } from "react";
 import Icon from "./Icon";
 import useReveal from "../hooks/useReveal";
 
 export default function Newsletter() {
   const ref = useReveal();
+  const [subscribed, setSubscribed] = useState(false);
   return (
     <section
       ref={ref}
@@ -34,26 +36,39 @@ export default function Newsletter() {
               month, never anything you wouldn't read aloud.
             </p>
           </div>
-          <form
-            onSubmit={(e) => {
-              e.preventDefault();
-              alert("Thank you. The first dispatch arrives shortly.");
-            }}
-            className="lg:col-span-6 reveal flex flex-col sm:flex-row items-stretch gap-3"
-          >
-            <input
-              required
-              type="email"
-              placeholder="Email address"
-              className="flex-1 rounded-lg border border-black/15 bg-white px-4 py-3 text-base text-black placeholder:text-black/40 focus:outline-none focus:border-black transition"
-            />
-            <button
-              type="submit"
-              className="btn-primary !rounded-[15px] !px-7 !py-3 !text-[13px] !tracking-[0.28em] !bg-black !text-white hover:!bg-black/80"
+          {subscribed ? (
+            <div
+              className="lg:col-span-6 reveal flex items-center gap-4"
+              role="status"
+              aria-live="polite"
             >
-              Subscribe <Icon.ArrowRight className="h-3.5 w-3.5" />
-            </button>
-          </form>
+              <span className="h-px w-10 bg-[#C9A227] shrink-0" />
+              <p className="font-display italic font-light text-2xl lg:text-3xl text-black">
+                Noted. The first dispatch arrives shortly.
+              </p>
+            </div>
+          ) : (
+            <form
+              onSubmit={(e) => {
+                e.preventDefault();
+                setSubscribed(true);
+              }}
+              className="lg:col-span-6 reveal flex flex-col sm:flex-row items-stretch gap-3"
+            >
+              <input
+                required
+                type="email"
+                placeholder="Email address"
+                className="flex-1 rounded-lg border border-black/15 bg-white px-4 py-3 text-base text-black placeholder:text-black/55 focus:outline-none focus:border-black transition"
+              />
+              <button
+                type="submit"
+                className="btn-primary !rounded-[15px] !px-7 !py-3 !text-[13px] !tracking-[0.28em] !bg-black !text-white hover:!bg-black/80"
+              >
+                Subscribe <Icon.ArrowRight className="h-3.5 w-3.5" />
+              </button>
+            </form>
+          )}
         </div>
       </div>
     </section>

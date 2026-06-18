@@ -46,15 +46,14 @@ export default function Hero() {
             Private chauffeur · By introduction only
           </div>
           <h1
-            className="reveal h-display !font-cormorant text-[64px] sm:text-[96px] lg:text-[136px] leading-[1.0] text-white drop-shadow-[0_4px_18px_rgba(0,0,0,0.75)]"
+            className="reveal h-display !font-cormorant text-[58px] sm:text-[88px] lg:text-[112px] leading-[0.98] text-white drop-shadow-[0_4px_18px_rgba(0,0,0,0.75)]"
             style={{ transitionDelay: "150ms" }}
           >
             <span
-              className="block bg-clip-text text-transparent"
+              className="block"
               style={{
-                backgroundImage:
-                  "linear-gradient(180deg, #F5F0E6 0%, #F3E6BE 55%, #DAB85A 100%)",
-                textShadow: "0 2px 12px rgba(0,0,0,0.55)",
+                color: "#F5F0E6",
+                textShadow: "0 2px 14px rgba(0,0,0,0.55)",
               }}
             >
               Quietly
@@ -62,12 +61,8 @@ export default function Hero() {
             <span
               className="block italic font-light"
               style={{
-                backgroundImage:
-                  "linear-gradient(90deg, #C9A227 0%, #DAB85A 40%, #F3E6BE 70%, #F5F0E6 100%)",
-                WebkitBackgroundClip: "text",
-                backgroundClip: "text",
-                color: "transparent",
-                filter: "drop-shadow(0 4px 18px rgba(201,162,39,0.35))",
+                color: "#DAB85A",
+                textShadow: "0 3px 16px rgba(0,0,0,0.5)",
               }}
             >
               Driven.
